@@ -6,7 +6,6 @@ import Image from "next/image";
 const links = [
   { href: "#problema", label: "O problema" },
   { href: "#como-funciona", label: "Como funciona" },
-  { href: "#cases", label: "Cases" },
   { href: "#planos", label: "Planos" },
   { href: "#sobre", label: "Sobre" },
 ];

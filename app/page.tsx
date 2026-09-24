@@ -2,7 +2,6 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import Tiers from "@/components/Tiers";
-import Cases from "@/components/Cases";
 import Plans from "@/components/Plans";
 import About from "@/components/About";
 import FinalCta from "@/components/FinalCta";
@@ -16,7 +15,6 @@ export default function Home() {
         <Hero />
         <Problem />
         <Tiers />
-        <Cases />
         <Plans />
         <About />
       </main>
