@@ -10,7 +10,7 @@ const founders = [
   {
     name: "DANIEL LEITE",
     role: "CTO - Tecnologia e Produto",
-    desc: "Constrói cada site e sistema — da estrutura técnica ao design final. É quem faz o Vibe Coding acontecer sem perder qualidade.",
+    desc: "Constrói cada site e sistema — da estrutura técnica ao design final. É quem faz a presença online acontecer com os mais altos padrões de qualidade.",
     image: "/DANIEL.png",
   },
 ];
