@@ -14,32 +14,7 @@ export default function Hero() {
       </div>
       <div className="grid-lines" />
 
-      {/* 3D V Hero video:
-          - Mobile: preenche toda a tela (inset-0) com degradê preto suave e máscara radial
-          - Web / Desktop: como estava antes, ocupando o lado direito em tela cheia com fade lateral
-      */}
-      <div className="hero-vglass-wrap pointer-events-none absolute inset-0 z-[1] overflow-hidden md:bottom-0 md:top-0 md:right-0 md:left-auto md:w-[48%]">
-        <video
-          className="v-glass-blur absolute inset-0 h-full w-full object-cover mix-blend-screen opacity-85 blur-[34px]"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/Create_3D_V_video_202608251618.mp4" type="video/mp4" />
-        </video>
-        <video
-          className="v-glass relative h-full w-full object-cover mix-blend-screen"
-          autoPlay
-          muted
-          loop
-          playsInline
-        >
-          <source src="/Create_3D_V_video_202608251618.mp4" type="video/mp4" />
-        </video>
-      </div>
-
-      <div className="container-vibe relative z-[3]">
+      <div className="container-vibe relative md:static z-[3]">
         <div className="hero-content max-w-3xl text-center md:text-left mx-auto md:mx-0">
           <p className="pill-glass text-[11px] sm:text-xs inline-flex mb-4 sm:mb-6">
             <span className="dot" />
@@ -52,7 +27,32 @@ export default function Hero() {
             <span className="glow-cyan text-cyan">Seu negócio, não.</span>
           </h1>
 
-          <p className="mt-4 sm:mt-6 max-w-lg text-[0.9375rem] sm:text-base md:text-xl leading-relaxed text-fg-muted mx-auto md:mx-0">
+          {/* 3D V Video:
+              - Mobile: centralizado no fluxo entre H1 e subtítulo, sem texto na frente, com degradê suave e bordas arredondadas
+              - Desktop (md:): absoluto à direita, ocupando toda a altura da hero como antes
+          */}
+          <div className="hero-vglass-wrap pointer-events-none">
+            <video
+              className="v-glass-blur"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/Create_3D_V_video_202608251618.mp4" type="video/mp4" />
+            </video>
+            <video
+              className="v-glass"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/Create_3D_V_video_202608251618.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <p className="subtext mt-0 md:mt-8 max-w-lg text-[0.9375rem] sm:text-base md:text-xl leading-relaxed text-fg-muted mx-auto md:mx-0">
             A gente transforma audiência alugada em site, funil e sistema que ficam com você — não com o algoritmo. Design de alto impacto, na velocidade da inteligência artificial.
           </p>
 

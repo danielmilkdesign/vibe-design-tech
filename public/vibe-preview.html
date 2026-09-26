@@ -149,20 +149,21 @@ header {
 @media (min-width: 768px) { .hero { padding: 5.5rem 0 5.5rem; } }
 
 /* V-glass video element:
-   - Mobile: preenche toda a tela com máscara radial e degradê preto suave para eliminar pontas visíveis
+   - Mobile: centralizado entre H1 e subtítulo, sem texto na frente, com degradê preto suave e máscara radial para não ter pontas visíveis
    - Desktop (web): como estava antes, ocupando o lado direito em tela cheia com fade lateral
 */
 .hero-vglass-wrap {
-  position: absolute;
+  position: relative;
   z-index: 1;
   pointer-events: none;
-  inset: 0;
   width: 100%;
-  height: 100%;
+  max-width: 290px;
+  height: 240px;
+  margin: 1.25rem auto;
   background: transparent;
   overflow: hidden;
-  -webkit-mask-image: radial-gradient(ellipse 92% 78% at 50% 42%, #000 35%, transparent 82%);
-  mask-image: radial-gradient(ellipse 92% 78% at 50% 42%, #000 35%, transparent 82%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, #000 35%, transparent 85%);
+  mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, #000 35%, transparent 85%);
 }
 
 .hero-vglass-wrap::after {
@@ -171,26 +172,24 @@ header {
   inset: 0;
   z-index: 2;
   background:
-    radial-gradient(ellipse 75% 65% at 50% 42%, transparent 20%, rgba(0,0,0,0.85) 75%),
-    linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, transparent 20%, transparent 60%, #000000 98%);
+    radial-gradient(ellipse 75% 70% at 50% 50%, transparent 20%, rgba(0,0,0,0.85) 80%),
+    linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 25%, transparent 65%, #000 100%);
   pointer-events: none;
 }
 
 .hero-vglass-wrap video {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 38%;
+  object-fit: contain;
   display: block;
 }
 
 .hero-vglass-wrap .v-glass-blur {
   position: absolute;
   inset: 0;
-  filter: blur(34px);
+  filter: blur(28px);
   mix-blend-mode: screen;
   opacity: .85;
 }
@@ -200,37 +199,16 @@ header {
   mix-blend-mode: screen;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
   .hero-vglass-wrap {
-    inset: auto;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 48%;
-    height: 100%;
-    opacity: 1;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
-    mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
-  }
-
-  .hero-vglass-wrap::after {
-    background:
-      linear-gradient(to right, #000 0%, transparent 22%),
-      linear-gradient(to bottom, transparent 70%, #000 100%),
-      linear-gradient(to top, transparent 85%, #000 100%);
-  }
-
-  .hero-vglass-wrap video {
-    right: 0;
-    left: auto;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    max-width: 330px;
+    height: 270px;
   }
 }
 
 .hero-content {
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -252,7 +230,7 @@ header {
 }
 
 .hero p.subtext {
-  margin-top: 1.25rem;
+  margin-top: 0;
   max-width: 32rem;
   color: var(--fg-muted);
   font-size: 0.95rem;
@@ -264,7 +242,7 @@ header {
 }
 
 .hero-ctas {
-  margin-top: 1.75rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -300,21 +278,59 @@ header {
 }
 
 @media (min-width: 768px) {
+  .hero-container {
+    position: static !important;
+  }
+
   .hero-content {
     align-items: flex-start;
     text-align: left;
     margin: 0;
+    max-width: 44rem;
   }
+
+  .hero-vglass-wrap {
+    position: absolute;
+    inset: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 48%;
+    height: 100%;
+    max-width: none;
+    margin: 0;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
+  }
+
+  .hero-vglass-wrap::after {
+    background:
+      linear-gradient(to right, #000 0%, transparent 22%),
+      linear-gradient(to bottom, transparent 70%, #000 100%),
+      linear-gradient(to top, transparent 85%, #000 100%);
+  }
+
+  .hero-vglass-wrap video {
+    right: 0;
+    left: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .hero h1 {
     font-size: 5.5rem;
     margin-top: 1.25rem;
   }
+
   .hero p.subtext {
     margin-top: 2rem;
     font-size: 1.25rem;
     line-height: 1.5;
     max-width: 34rem;
   }
+
   .hero-ctas {
     justify-content: flex-start;
     margin-top: 2.25rem;
@@ -1088,17 +1104,7 @@ footer { padding: 3.5rem 0; }
     <div class="blob" style="width:420px;height:420px;bottom:-160px;left:-140px;opacity:.25;background:radial-gradient(circle, rgba(85,241,239,0.18), rgba(85,241,239,0) 70%);"></div>
     <div class="grid-lines"></div>
 
-    <!-- 3D V Hero video: preenche tela no mobile com degradê preto suave e fica na direita no desktop -->
-    <div class="hero-vglass-wrap">
-      <video class="v-glass-blur" autoplay muted loop playsinline>
-        <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
-      </video>
-      <video class="v-glass" autoplay muted loop playsinline>
-        <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="container" style="position:relative; z-index:3;">
+    <div class="container hero-container" style="z-index:3;">
       <div class="hero-content">
         <p class="pill-glass"><span class="dot"></span>Presença própria, não presença alugada</p>
 
@@ -1106,6 +1112,16 @@ footer { padding: 3.5rem 0; }
           Seu Instagram cresce.<br>
           <span class="glow-cyan">Seu negócio, não.</span>
         </h1>
+
+        <!-- 3D V Video: no mobile centralizado entre H1 e subtítulo sem texto na frente; no desktop à direita em tela cheia -->
+        <div class="hero-vglass-wrap">
+          <video class="v-glass-blur" autoplay muted loop playsinline>
+            <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
+          </video>
+          <video class="v-glass" autoplay muted loop playsinline>
+            <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
+          </video>
+        </div>
 
         <p class="subtext">
           A gente transforma audiência alugada em site, funil e sistema que ficam com você — não com o algoritmo. Design de alto impacto, na velocidade da inteligência artificial.
