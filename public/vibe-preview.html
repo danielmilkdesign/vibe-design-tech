@@ -915,6 +915,7 @@ footer { padding: 3.5rem 0; }
 .structure-card:hover .structure-line { border-color: rgba(31, 162, 160, 0.4); }
 .sample-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: center; }
 @media (min-width: 900px) { .sample-grid { grid-template-columns: 5fr 7fr; gap: 3.5rem; } }
+.sample-mockup-container { position: relative; width: 100%; }
 .sample-mockup-wrap { position: relative; display: block; text-decoration: none; }
 .sample-mockup-aura { position: absolute; inset: -10px; border-radius: 1.5rem; background: radial-gradient(circle, rgba(85,241,239,0.25), rgba(13,82,81,0.4) 60%, transparent 80%); filter: blur(20px); opacity: 0.7; transition: opacity 0.5s ease; pointer-events: none; }
 .sample-mockup-wrap:hover .sample-mockup-aura { opacity: 1; filter: blur(28px); }
@@ -925,6 +926,92 @@ footer { padding: 3.5rem 0; }
 .sample-img-box { width: 100%; overflow: hidden; background: #000; }
 .sample-img-box img { transition: transform 0.7s ease; }
 .sample-mockup-wrap:hover .sample-img-box img { transform: scale(1.02); }
+.sample-badge {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(6, 20, 20, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.85);
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+.sample-badge:hover {
+  transform: translateY(-3px) scale(1.03);
+  border-color: rgba(85, 241, 239, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9), 0 0 20px rgba(85, 241, 239, 0.2);
+}
+.sample-badge-1 {
+  top: -1.25rem;
+  right: -0.5rem;
+}
+.sample-badge-2 {
+  bottom: -1.25rem;
+  right: -0.5rem;
+}
+@media (min-width: 768px) {
+  .sample-badge-1 { top: -1.75rem; right: -1.5rem; }
+  .sample-badge-2 { bottom: -1.75rem; right: -1.5rem; }
+}
+.sample-badge-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.sample-badge-icon-proof {
+  background: #0D5251;
+  color: var(--cyan);
+  box-shadow: 0 0 15px rgba(13, 82, 81, 0.6);
+}
+.sample-badge-icon-step {
+  background: #55F1EF;
+  color: #000000;
+  box-shadow: 0 0 15px rgba(85, 241, 239, 0.45);
+}
+.sample-badge-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+.sample-badge-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: var(--fg-muted);
+  line-height: 1.2;
+  margin-top: 0.2rem;
+}
+.sample-link-caminhos {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  text-decoration: none;
+  border-bottom: 2px solid rgba(85, 241, 239, 0.6);
+  padding-bottom: 0.25rem;
+  transition: all 0.25s ease;
+}
+.sample-link-caminhos:hover {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  transform: translateX(3px);
+}
 </style>
 </head>
 <body>
@@ -1077,39 +1164,68 @@ footer { padding: 3.5rem 0; }
     <div class="container" style="position:relative; z-index:1;">
       <div class="sample-grid">
         <div class="sample-text-col">
-          <p class="eyebrow section-eyebrow">AMOSTRA DE ENTREGA</p>
+          <p class="eyebrow section-eyebrow">/ AMOSTRA DE ENTREGA</p>
           <h2 class="section-h2" style="font-size:clamp(2rem, 4.5vw, 3.25rem); line-height:1.02; margin-top:1rem;">Do primeiro clique ao<br><span style="color:var(--cyan);">próximo passo.</span></h2>
           <p style="margin-top:1.5rem; font-size:1.05rem; line-height:1.6; color:var(--fg-muted); max-width:480px;">Uma experiência que organiza a atenção em camadas: posicionamento, prova, ação. Sem excesso, sem ruído.</p>
-          <div style="margin-top:2rem;">
-            <a href="https://victor-belichar-personal.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-outline" style="display:inline-flex; align-items:center; gap:.5rem; border-color:rgba(85,241,239,0.6); color:var(--cyan); background:rgba(85,241,239,0.08);">
-              <span>Ver projeto ao vivo</span>
+          <div style="margin-top:2.25rem;">
+            <a href="#como-funciona" class="sample-link-caminhos">
+              <span>Conhecer os caminhos</span>
               <svg style="width:16px;height:16px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
             </a>
           </div>
         </div>
 
-        <div class="sample-mockup-col">
-          <a href="https://victor-belichar-personal.vercel.app/" target="_blank" rel="noopener noreferrer" class="sample-mockup-wrap">
-            <div class="sample-mockup-aura"></div>
-            <div class="sample-mockup-frame">
-              <div class="sample-browser-bar">
-                <div style="display:flex; gap:6px;">
-                  <span style="width:10px; height:10px; border-radius:50%; background:#ff5f56; display:inline-block;"></span>
-                  <span style="width:10px; height:10px; border-radius:50%; background:#ffbd2e; display:inline-block;"></span>
-                  <span style="width:10px; height:10px; border-radius:50%; background:#27c93f; display:inline-block;"></span>
+        <div class="sample-mockup-col" style="padding: 1.5rem 0.5rem;">
+          <div class="sample-mockup-container">
+            <a href="https://victor-belichar-personal.vercel.app/" target="_blank" rel="noopener noreferrer" class="sample-mockup-wrap">
+              <div class="sample-mockup-aura"></div>
+              <div class="sample-mockup-frame">
+                <div class="sample-browser-bar">
+                  <div style="display:flex; gap:6px;">
+                    <span style="width:10px; height:10px; border-radius:50%; background:#ff5f56; display:inline-block;"></span>
+                    <span style="width:10px; height:10px; border-radius:50%; background:#ffbd2e; display:inline-block;"></span>
+                    <span style="width:10px; height:10px; border-radius:50%; background:#27c93f; display:inline-block;"></span>
+                  </div>
+                  <span class="sample-browser-url">victor-belichar-personal.vercel.app</span>
+                  <span style="font-family:'Space Mono',monospace; font-size:.625rem; color:var(--cyan); text-transform:uppercase; display:flex; align-items:center; gap:4px;">
+                    <span style="width:6px; height:6px; border-radius:50%; background:var(--cyan); display:inline-block;"></span> Live
+                  </span>
                 </div>
-                <span class="sample-browser-url">victor-belichar-personal.vercel.app</span>
-                <span style="font-family:'Space Mono',monospace; font-size:.625rem; color:var(--cyan); text-transform:uppercase; display:flex; align-items:center; gap:4px;">
-                  <span style="width:6px; height:6px; border-radius:50%; background:var(--cyan); display:inline-block;"></span> Live
-                </span>
+                <div class="sample-img-box">
+                  <img src="sample-delivery.png" alt="Amostra de Entrega — Victor Belichar Treinador" style="width:100%; height:auto; display:block; object-fit:cover;">
+                </div>
               </div>
-              <div class="sample-img-box">
-                <img src="sample-delivery.png" alt="Amostra de Entrega — Victor Belichar Treinador" style="width:100%; height:auto; display:block; object-fit:cover;">
+            </a>
+
+            <!-- Floating Card 1: Top Right (Prova organizada) -->
+            <div class="sample-badge sample-badge-1">
+              <div class="sample-badge-icon sample-badge-icon-proof">
+                <svg style="width:20px;height:20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+              <div>
+                <div class="sample-badge-title">Prova organizada</div>
+                <div class="sample-badge-sub">Antes, depois, confiança.</div>
               </div>
             </div>
-          </a>
+
+            <!-- Floating Card 2: Bottom Right (Próximo passo claro) -->
+            <div class="sample-badge sample-badge-2">
+              <div class="sample-badge-icon sample-badge-icon-step">
+                <svg style="width:20px;height:20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <circle cx="12" cy="12" r="9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12 7v5l3 2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div>
+                <div class="sample-badge-title">Próximo passo claro</div>
+                <div class="sample-badge-sub">WhatsApp + agenda.</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
