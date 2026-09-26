@@ -5,7 +5,7 @@ const founders = [
     name: "VICTOR BELICHAR",
     role: "CEO - COMERCIAL E RELACIONAMENTO",
     desc: "Estrutura as ofertas, atende cada cliente e mantém o Instagram da VIBE — a ponte entre quem procura presença própria e o produto certo.",
-    image: "/VICTOR.png",
+    image: "/VICTOR2.png",
   },
   {
     name: "DANIEL LEITE",
