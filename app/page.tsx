@@ -2,6 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Problem from "@/components/Problem";
 import WhatChanges from "@/components/WhatChanges";
+import SampleDelivery from "@/components/SampleDelivery";
 import Tiers from "@/components/Tiers";
 import Plans from "@/components/Plans";
 import About from "@/components/About";
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <Problem />
         <WhatChanges />
+        <SampleDelivery />
         <Tiers />
         <Plans />
         <About />
