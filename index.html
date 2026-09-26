@@ -1337,6 +1337,127 @@ footer { padding: 3.5rem 0; }
   color: var(--cyan);
   flex-shrink: 0;
 }
+
+/* --- FAQ --- */
+.faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+@media (min-width: 1024px) {
+  .faq-grid {
+    grid-template-columns: 5fr 7fr;
+    gap: 4rem;
+  }
+  .faq-col-left {
+    position: sticky;
+    top: 7rem;
+    align-self: start;
+  }
+}
+.faq-h2 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: clamp(2.25rem, 5.5vw, 3.85rem);
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  color: #FFFFFF;
+  word-break: break-word;
+}
+.faq-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  line-height: 1.6;
+  color: var(--fg-muted);
+  margin-top: 1.5rem;
+  max-width: 28rem;
+}
+.faq-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(85, 241, 239, 0.4);
+  padding-bottom: 4px;
+}
+.faq-cta-link:hover {
+  border-bottom-color: var(--cyan);
+  transform: translateX(4px);
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+  transition: background-color 0.2s ease;
+}
+.faq-item:first-child {
+  border-top: 1px solid var(--line);
+}
+.faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--fg);
+}
+.faq-question {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  transition: color 0.2s ease;
+}
+.faq-item.active .faq-question {
+  color: var(--cyan);
+}
+.faq-icon-box {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--cyan);
+  transition: transform 0.3s ease;
+}
+.faq-item.active .faq-icon-box {
+  transform: rotate(180deg);
+}
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+.faq-item.active .faq-content {
+  max-height: 300px;
+  opacity: 1;
+}
+.faq-answer {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.875rem, 1.8vw, 0.975rem);
+  line-height: 1.65;
+  color: var(--fg-muted);
+  padding-bottom: 1.5rem;
+}
 </style>
 </head>
 <body>
@@ -1349,6 +1470,7 @@ footer { padding: 3.5rem 0; }
       <a href="#como-funciona">Como funciona</a>
       <a href="#planos">Planos</a>
       <a href="#sobre">Sobre</a>
+      <a href="#faq">FAQ</a>
     </nav>
     <a href="#final-cta" class="pill-glass"><span class="dot"></span>Agendar análise</a>
   </div>
@@ -1830,6 +1952,128 @@ footer { padding: 3.5rem 0; }
       </div>
     </div>
   </section>
+
+  <section id="faq" class="section-pad border-b">
+    <div class="container">
+      <div class="faq-grid">
+        <div class="faq-col-left">
+          <p class="eyebrow section-eyebrow" style="color:var(--cyan)">/ FAQ</p>
+          <h2 class="faq-h2">
+            ANTES DE COMEÇAR,<br>
+            <span style="color:var(--cyan)">TIRE O RUÍDO.</span>
+          </h2>
+          <p class="faq-desc">
+            Sem promessa nebulosa. Sem letra miúda escondida. Se ainda faltar alguma resposta, a demo é o lugar certo para perguntar.
+          </p>
+          <div>
+            <a href="https://wa.me/5547997576577?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20algumas%20d%C3%BAvidas%20sobre%20a%20VIBE." target="_blank" rel="noopener noreferrer" class="faq-cta-link">
+              FALAR COM A EQUIPE &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="faq-col-right">
+          <div class="faq-list">
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">O DOMÍNIO ESTÁ INCLUÍDO?</span>
+                <span class="faq-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-content">
+                <p class="faq-answer">
+                  O domínio pode ser contratado à parte ou conectado ao projeto. A gente orienta o registro para que a propriedade fique sempre com você.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">EU POSSO EDITAR O CONTEÚDO?</span>
+                <span class="faq-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-content">
+                <p class="faq-answer">
+                  Sim. No Site Base, você recebe acesso ao painel para editar fotos e textos. Nos planos com suporte, a equipe também pode fazer as atualizações combinadas.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">QUANTO TEMPO LEVA PARA O SITE FICAR PRONTO?</span>
+                <span class="faq-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-content">
+                <p class="faq-answer">
+                  O prazo depende do plano e do envio dos materiais. Na demo, apresentamos o cronograma adequado ao seu projeto antes de começar.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">PRECISO TER LOGO, FOTOS E TEXTOS PRONTOS?</span>
+                <span class="faq-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-content">
+                <p class="faq-answer">
+                  Não necessariamente. A conversa inicial serve justamente para mapear o que você já tem, o que precisa ser organizado e o que deve ser produzido.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">O SITE FUNCIONA NO CELULAR?</span>
+                <span class="faq-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-content">
+                <p class="faq-answer">
+                  Sim. Todos os projetos são pensados mobile-first e testados para celular, tablet e desktop.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button type="button" class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">O QUE ACONTECE DEPOIS DA DEMO?</span>
+                <span class="faq-icon-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-content">
+                <p class="faq-answer">
+                  Você recebe uma recomendação do caminho mais adequado ao seu momento. A contratação só acontece se fizer sentido para você.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <section id="final-cta" class="final-cta border-b">
@@ -1864,5 +2108,22 @@ footer { padding: 3.5rem 0; }
   </div>
 </footer>
 
+<script>
+  document.querySelectorAll('.faq-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const item = trigger.closest('.faq-item');
+      const isActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('active');
+        const btn = i.querySelector('.faq-trigger');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+      if (!isActive) {
+        item.classList.add('active');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
 </body>
 </html>
