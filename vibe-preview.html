@@ -1149,79 +1149,123 @@ footer { padding: 3.5rem 0; }
 /* --- COMO FUNCIONA (20 MINUTOS) --- */
 .como-funciona-header {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
-  align-items: flex-end;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .como-funciona-header {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 2.5rem;
+  }
 }
 .como-funciona-title-col {
-  max-width: 650px;
+  max-width: 42rem;
 }
 .como-funciona-h2 {
   font-family: 'Big Shoulders Display', sans-serif;
-  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
-  font-weight: 900;
-  line-height: 0.95;
+  font-size: clamp(2rem, 5.5vw, 3.75rem);
+  font-weight: 800;
+  line-height: 1.02;
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
   color: #FFFFFF;
+  word-break: break-word;
 }
 .como-funciona-desc-col {
-  max-width: 440px;
-  margin-bottom: 0.5rem;
+  max-width: 28rem;
 }
 .como-funciona-desc {
   font-family: 'Inter', sans-serif;
-  font-size: 1.05rem;
+  font-size: clamp(0.875rem, 2vw, 1rem);
   line-height: 1.6;
   color: var(--fg-muted);
 }
-.como-funciona-divider {
-  width: 100%;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.08);
-  margin: 2rem 0;
-}
 .como-funciona-grid {
+  margin-top: 2.5rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
 }
-.como-funciona-col {
-  padding: 1.5rem 1.75rem 2rem;
-  position: relative;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
+@media (min-width: 640px) {
+  .como-funciona-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+  }
 }
-.como-funciona-col:first-child {
-  padding-left: 0;
+@media (min-width: 1024px) {
+  .como-funciona-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
-.como-funciona-col:last-child {
-  border-right: none;
-  padding-right: 0;
+.como-funciona-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0d0d0d;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+@media (min-width: 640px) {
+  .como-funciona-card {
+    border-radius: 1.5rem;
+    padding: 1.75rem;
+  }
+}
+.como-funciona-card:hover {
+  transform: translateY(-5px);
+  border-color: #1FA2A0;
+  background: rgba(13, 82, 81, 0.15);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.7), 0 0 25px rgba(31, 162, 160, 0.3);
+}
+.como-funciona-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.como-funciona-num-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.35rem 0.75rem;
+  transition: all 0.3s ease;
+}
+.como-funciona-card:hover .como-funciona-num-badge {
+  border-color: rgba(31, 162, 160, 0.6);
+  background: rgba(13, 82, 81, 0.25);
 }
 .como-funciona-num {
   font-family: 'Space Mono', monospace;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #2ee59d;
-  display: inline-block;
-  margin-bottom: 0.75rem;
+  color: var(--cyan);
+  text-shadow: 0 0 12px rgba(85, 241, 239, 0.35);
+  letter-spacing: 0.05em;
 }
-.como-funciona-num-line {
-  width: 28px;
-  height: 2px;
-  background: #2ee59d;
-  margin-bottom: 1.5rem;
-  opacity: 0.85;
+.como-funciona-card-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px rgba(85, 241, 239, 0.8);
+  opacity: 0.7;
 }
 .como-funciona-col-title {
   font-family: 'Big Shoulders Display', sans-serif;
-  font-size: 1.45rem;
-  font-weight: 900;
-  line-height: 1.05;
-  letter-spacing: 0.02em;
+  font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
   color: #FFFFFF;
   margin-bottom: 0.75rem;
@@ -1232,19 +1276,52 @@ footer { padding: 3.5rem 0; }
   line-height: 1.6;
   color: var(--fg-muted);
 }
-.como-funciona-footer {
+.como-funciona-card-divider {
+  margin-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.25rem;
+  transition: border-color 0.3s ease;
+}
+.como-funciona-card:hover .como-funciona-card-divider {
+  border-color: rgba(31, 162, 160, 0.4);
+}
+.como-funciona-footer-card {
+  margin-top: 2rem;
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: space-between;
-  align-items: center;
   gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0d0d0d;
+  padding: 1.25rem 1.5rem;
+}
+@media (min-width: 640px) {
+  .como-funciona-footer-card {
+    border-radius: 1.5rem;
+    padding: 1.5rem 2rem;
+    margin-top: 2.75rem;
+  }
+}
+@media (min-width: 768px) {
+  .como-funciona-footer-card {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 .como-funciona-footer-left {
   display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.875rem;
+}
+@media (min-width: 640px) {
+  .como-funciona-footer-left {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
 }
 .como-funciona-badge-item {
   display: flex;
@@ -1252,83 +1329,13 @@ footer { padding: 3.5rem 0; }
   gap: 0.625rem;
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
-  color: #94a3b8;
+  color: rgba(255, 255, 255, 0.8);
 }
 .como-funciona-badge-icon {
   width: 18px;
   height: 18px;
-  color: #2ee59d;
+  color: var(--cyan);
   flex-shrink: 0;
-}
-.como-funciona-footer-right {
-  display: flex;
-  align-items: center;
-}
-.como-funciona-cta-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: 'Space Mono', monospace;
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #2ee59d;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-.como-funciona-cta-link svg {
-  width: 16px;
-  height: 16px;
-  transition: transform 0.2s ease;
-}
-.como-funciona-cta-link:hover {
-  color: #55F1EF;
-}
-.como-funciona-cta-link:hover svg {
-  transform: translateX(4px);
-}
-@media (max-width: 991px) {
-  .como-funciona-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .como-funciona-col {
-    padding: 1.5rem;
-  }
-  .como-funciona-col:nth-child(2n) {
-    border-right: none;
-    padding-right: 0;
-  }
-  .como-funciona-col:nth-child(2n+1) {
-    padding-left: 0;
-  }
-  .como-funciona-col:nth-child(1),
-  .como-funciona-col:nth-child(2) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-}
-@media (max-width: 640px) {
-  .como-funciona-grid {
-    grid-template-columns: 1fr;
-  }
-  .como-funciona-col {
-    border-right: none !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 1.5rem 0 !important;
-  }
-  .como-funciona-col:last-child {
-    border-bottom: none;
-  }
-  .como-funciona-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
-  }
-  .como-funciona-footer-left {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.875rem;
-  }
 }
 </style>
 </head>
@@ -1572,21 +1579,19 @@ footer { padding: 3.5rem 0; }
   </section>
 
   <!-- SEÇÃO: COMO FUNCIONA (EM 20 MINUTOS, VOCÊ SAI COM CLAREZA) -->
-  <section id="como-funciona" class="section-pad border-b relative overflow-hidden" style="background:#020606;">
-    <div class="blob" style="width:520px; height:520px; top:-100px; left:-100px; opacity:0.18; background:radial-gradient(circle, rgba(34, 197, 94, 0.4), rgba(0,0,0,0) 70%);"></div>
-    <div class="blob" style="width:480px; height:480px; bottom:-80px; right:-80px; opacity:0.22; background:radial-gradient(circle, rgba(85, 241, 239, 0.35), rgba(0,0,0,0) 70%);"></div>
+  <section id="como-funciona" class="section-pad border-b relative overflow-hidden bg-alt">
     <div class="grid-lines"></div>
 
-    <div class="container relative" style="z-index:10;">
-      <!-- Header -->
+    <div class="blob" style="width:450px; height:450px; top:-100px; left:-100px; opacity:0.18; background:radial-gradient(circle, rgba(85,241,239,0.3) 0%, transparent 70%);"></div>
+    <div class="blob" style="width:450px; height:450px; bottom:-80px; right:-80px; opacity:0.25; background:radial-gradient(circle, rgba(13,82,81,0.5) 0%, transparent 70%);"></div>
+
+    <div class="container relative" style="z-index:1;">
       <div class="como-funciona-header">
         <div class="como-funciona-title-col">
-          <p class="eyebrow" style="color:#2ee59d; display:flex; align-items:center; gap:6px;">
-            / COMO FUNCIONA
-          </p>
+          <p class="eyebrow section-eyebrow" style="color:var(--cyan);">/ COMO FUNCIONA</p>
           <h2 class="section-h2 como-funciona-h2">
             EM 20 MINUTOS, VOCÊ SAI<br>
-            <span style="color:var(--cyan);">COM CLAREZA.</span>
+            <span style="color:var(--cyan);" class="glow-cyan">COM CLAREZA.</span>
           </h2>
         </div>
         <div class="como-funciona-desc-col">
@@ -1596,57 +1601,73 @@ footer { padding: 3.5rem 0; }
         </div>
       </div>
 
-      <!-- Divider -->
-      <div class="como-funciona-divider"></div>
-
-      <!-- 4 Colunas -->
       <div class="como-funciona-grid">
-        <!-- 01 -->
-        <div class="como-funciona-col">
-          <span class="como-funciona-num">01</span>
-          <div class="como-funciona-num-line"></div>
-          <h3 class="como-funciona-col-title">ENTENDEMOS O CENÁRIO</h3>
-          <p class="como-funciona-col-text">
-            Instagram, atendimento, oferta e os gargalos que estão travando o crescimento.
-          </p>
+        <div class="como-funciona-card">
+          <div>
+            <div class="como-funciona-card-top">
+              <div class="como-funciona-num-badge">
+                <span class="como-funciona-num">01</span>
+              </div>
+              <div class="como-funciona-card-dot"></div>
+            </div>
+            <h3 class="como-funciona-col-title">ENTENDEMOS O CENÁRIO</h3>
+            <p class="como-funciona-col-text">
+              Instagram, atendimento, oferta e os gargalos que estão travando o crescimento.
+            </p>
+          </div>
+          <div class="como-funciona-card-divider"></div>
         </div>
 
-        <!-- 02 -->
-        <div class="como-funciona-col">
-          <span class="como-funciona-num">02</span>
-          <div class="como-funciona-num-line"></div>
-          <h3 class="como-funciona-col-title">DESENHAMOS A OPORTUNIDADE</h3>
-          <p class="como-funciona-col-text">
-            O que pode virar página, prova, agendamento ou automação para o seu momento.
-          </p>
+        <div class="como-funciona-card">
+          <div>
+            <div class="como-funciona-card-top">
+              <div class="como-funciona-num-badge">
+                <span class="como-funciona-num">02</span>
+              </div>
+              <div class="como-funciona-card-dot"></div>
+            </div>
+            <h3 class="como-funciona-col-title">DESENHAMOS A OPORTUNIDADE</h3>
+            <p class="como-funciona-col-text">
+              O que pode virar página, prova, agendamento ou automação para o seu momento.
+            </p>
+          </div>
+          <div class="como-funciona-card-divider"></div>
         </div>
 
-        <!-- 03 -->
-        <div class="como-funciona-col">
-          <span class="como-funciona-num">03</span>
-          <div class="como-funciona-num-line"></div>
-          <h3 class="como-funciona-col-title">CONSTRUÍMOS A ESTRUTURA</h3>
-          <p class="como-funciona-col-text">
-            Design, copy e tecnologia em uma experiência que faz sentido para o seu negócio.
-          </p>
+        <div class="como-funciona-card">
+          <div>
+            <div class="como-funciona-card-top">
+              <div class="como-funciona-num-badge">
+                <span class="como-funciona-num">03</span>
+              </div>
+              <div class="como-funciona-card-dot"></div>
+            </div>
+            <h3 class="como-funciona-col-title">CONSTRUÍMOS A ESTRUTURA</h3>
+            <p class="como-funciona-col-text">
+              Design, copy e tecnologia em uma experiência que faz sentido para o seu negócio.
+            </p>
+          </div>
+          <div class="como-funciona-card-divider"></div>
         </div>
 
-        <!-- 04 -->
-        <div class="como-funciona-col">
-          <span class="como-funciona-num">04</span>
-          <div class="como-funciona-num-line"></div>
-          <h3 class="como-funciona-col-title">VOCÊ EVOLUI COM CLAREZA</h3>
-          <p class="como-funciona-col-text">
-            Suporte e próximos passos sem dependência de improviso ou promessa nebulosa.
-          </p>
+        <div class="como-funciona-card">
+          <div>
+            <div class="como-funciona-card-top">
+              <div class="como-funciona-num-badge">
+                <span class="como-funciona-num">04</span>
+              </div>
+              <div class="como-funciona-card-dot"></div>
+            </div>
+            <h3 class="como-funciona-col-title">VOCÊ EVOLUI COM CLAREZA</h3>
+            <p class="como-funciona-col-text">
+              Suporte e próximos passos sem dependência de improviso ou promessa nebulosa.
+            </p>
+          </div>
+          <div class="como-funciona-card-divider"></div>
         </div>
       </div>
 
-      <!-- Divider -->
-      <div class="como-funciona-divider"></div>
-
-      <!-- Footer -->
-      <div class="como-funciona-footer">
+      <div class="como-funciona-footer-card">
         <div class="como-funciona-footer-left">
           <div class="como-funciona-badge-item">
             <svg class="como-funciona-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -1664,10 +1685,10 @@ footer { padding: 3.5rem 0; }
           </div>
         </div>
 
-        <div class="como-funciona-footer-right">
-          <a href="#final-cta" class="como-funciona-cta-link">
+        <div style="display:flex;">
+          <a href="#final-cta" class="btn-cyan" style="font-family:'Space Mono',monospace; font-size:0.8125rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase;">
             <span>QUERO AGENDAR MINHA ANÁLISE</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg style="width:16px; height:16px; margin-left:6px;" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </a>
