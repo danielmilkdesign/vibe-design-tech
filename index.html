@@ -899,6 +899,8 @@ footer { padding: 3.5rem 0; }
 .footer-row { display:flex; flex-direction:column; align-items:center; justify-content:space-between; gap:1.5rem; text-align:center; }
 @media (min-width:768px) { .footer-row { flex-direction:row; text-align:left; } }
 .footer-tag, .footer-copy { font-family:'Space Mono',monospace; font-size:.6875rem; color:var(--fg-muted); text-transform:uppercase; letter-spacing:.02em; }
+.section-header-flex { display:flex; flex-direction:column; gap:1.25rem; margin-top:1rem; margin-bottom:2.5rem; }
+@media (min-width:768px) { .section-header-flex { flex-direction:row; justify-content:space-between; align-items:flex-end; } }
 </style>
 </head>
 <body>
@@ -947,7 +949,10 @@ footer { padding: 3.5rem 0; }
     <div class="grid-lines"></div>
     <div class="container" style="position:relative; z-index:1;">
       <p class="eyebrow section-eyebrow">O problema</p>
-      <h2 class="section-h2 nowrap-title">Loja alugada não vira patrimônio</h2>
+      <div class="section-header-flex">
+        <h2 class="section-h2" style="margin:0; max-width:640px;">O link da bio é uma porta.<br><span style="color:var(--cyan);">Não é uma casa.</span></h2>
+        <p style="max-width:440px; font-size:1rem; color:var(--fg-muted); line-height:1.6; margin:0;">Você pode continuar alugando a atenção do algoritmo — ou começar a construir um lugar que trabalha para o seu negócio todos os dias.</p>
+      </div>
       <div class="cards-3">
         <div class="problem-card">
           <div class="problem-card-img">

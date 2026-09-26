@@ -24,9 +24,15 @@ export default function Problem() {
       <div className="grid-lines" />
       <div className="container-vibe relative z-[1]">
         <p className="eyebrow text-cyan">O problema</p>
-        <h2 className="mt-4 max-w-2xl font-display text-3xl sm:text-5xl md:text-6xl font-extrabold uppercase leading-[1.02] text-fg break-words">
-          Loja alugada não vira patrimônio
-        </h2>
+        <div className="mt-4 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <h2 className="max-w-2xl font-display text-3xl sm:text-5xl md:text-6xl font-extrabold uppercase leading-[1.02] text-fg break-words">
+            O link da bio é uma porta.<br />
+            <span className="text-cyan">Não é uma casa.</span>
+          </h2>
+          <p className="max-w-md text-sm sm:text-base text-fg-muted leading-relaxed">
+            Você pode continuar alugando a atenção do algoritmo — ou começar a construir um lugar que trabalha para o seu negócio todos os dias.
+          </p>
+        </div>
 
         <div className="mt-10 sm:mt-14 grid gap-6 md:grid-cols-3">
           {items.map((item) => (
