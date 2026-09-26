@@ -901,6 +901,18 @@ footer { padding: 3.5rem 0; }
 .footer-tag, .footer-copy { font-family:'Space Mono',monospace; font-size:.6875rem; color:var(--fg-muted); text-transform:uppercase; letter-spacing:.02em; }
 .section-header-flex { display:flex; flex-direction:column; gap:1.25rem; margin-top:1rem; margin-bottom:2.5rem; }
 @media (min-width:768px) { .section-header-flex { flex-direction:row; justify-content:space-between; align-items:flex-end; } }
+.structure-card { border-radius: 1.5rem; border: 1px solid rgba(255, 255, 255, 0.1); background: #0d0d0d; padding: 2rem 1.75rem; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease; }
+.structure-card:hover { transform: translateY(-6px); border-color: #1FA2A0; background: rgba(13, 82, 81, 0.15); box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.7), 0 0 25px rgba(31, 162, 160, 0.3); }
+.structure-top { display: flex; align-items: center; justify-content: space-between; }
+.structure-num { font-family: 'Space Mono', monospace; font-size: 1.75rem; font-weight: 700; letter-spacing: 0.05em; color: var(--cyan); text-shadow: 0 0 12px rgba(85, 241, 239, 0.35); transition: all 0.3s ease; }
+.structure-card:hover .structure-num { text-shadow: 0 0 18px rgba(85, 241, 239, 0.65); }
+.structure-icon { display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; border-radius: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.1); background: rgba(255, 255, 255, 0.04); transition: all 0.3s ease; }
+.structure-card:hover .structure-icon { border-color: rgba(31, 162, 160, 0.6); background: rgba(13, 82, 81, 0.25); }
+.structure-tag { margin-top: 1.5rem; font-family: 'Space Mono', monospace; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cyan); }
+.structure-title { margin-top: 0.75rem; font-family: 'Big Shoulders Display', sans-serif; font-size: 1.65rem; font-weight: 800; text-transform: uppercase; line-height: 1.1; letter-spacing: -0.01em; color: #FFFFFF; }
+.structure-desc { margin-top: 1rem; font-size: 0.9375rem; line-height: 1.6; color: rgba(255, 255, 255, 0.8); }
+.structure-line { margin-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.1); transition: border-color 0.3s ease; }
+.structure-card:hover .structure-line { border-color: rgba(31, 162, 160, 0.4); }
 </style>
 </head>
 <body>
@@ -980,6 +992,66 @@ footer { padding: 3.5rem 0; }
             <h3>Sem recorrência</h3>
             <p>Preço trava porque a entrega parece informal. Sem presença própria, fica difícil cobrar como quem realmente entrega resultado.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="o-que-muda" class="section-pad border-b bg-alt">
+    <div class="grid-lines"></div>
+    <div class="container" style="position:relative; z-index:1;">
+      <p class="eyebrow section-eyebrow">/ O que muda</p>
+      <h2 class="section-h2" style="max-width:750px;">Não entregamos só um site.<br><span style="color:var(--cyan);">Construímos uma estrutura.</span></h2>
+      <div class="cards-3" style="margin-top:2.5rem;">
+        <div class="structure-card">
+          <div>
+            <div class="structure-top">
+              <span class="structure-num">01</span>
+              <div class="structure-icon">
+                <svg style="width:24px;height:24px;color:var(--cyan);" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </div>
+            </div>
+            <p class="structure-tag">CLAREZA</p>
+            <h3 class="structure-title">O visitante entende o próximo passo.</h3>
+            <p class="structure-desc">Seu método, sua oferta e seu diferencial deixam de depender de explicações no direct.</p>
+          </div>
+          <div class="structure-line"></div>
+        </div>
+
+        <div class="structure-card">
+          <div>
+            <div class="structure-top">
+              <span class="structure-num">02</span>
+              <div class="structure-icon">
+                <svg style="width:24px;height:24px;color:var(--cyan);" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+            </div>
+            <p class="structure-tag">PROVA</p>
+            <h3 class="structure-title">Seu resultado continua trabalhando.</h3>
+            <p class="structure-desc">Antes e depois, depoimentos e transformações ganham um lugar fixo para construir confiança.</p>
+          </div>
+          <div class="structure-line"></div>
+        </div>
+
+        <div class="structure-card">
+          <div>
+            <div class="structure-top">
+              <span class="structure-num">03</span>
+              <div class="structure-icon">
+                <svg style="width:24px;height:24px;color:var(--cyan);" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </div>
+            </div>
+            <p class="structure-tag">CONVERSÃO</p>
+            <h3 class="structure-title">A atenção vira ação.</h3>
+            <p class="structure-desc">O lead chega mais preparado ao WhatsApp, ao agendamento ou ao próximo passo da venda.</p>
+          </div>
+          <div class="structure-line"></div>
         </div>
       </div>
     </div>
