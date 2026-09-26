@@ -35,7 +35,7 @@ export default function Nav() {
 
         <div className="flex items-center gap-2 sm:gap-3">
           <a href="#final-cta" className="pill-glass text-[10px] sm:text-xs px-3 py-1.5 sm:px-4 sm:py-2 transition-transform hover:scale-[1.03]">
-            <span className="dot"></span>Agendar demo
+            <span className="dot"></span>Agendar análise
           </a>
 
           {/* Mobile menu button */}

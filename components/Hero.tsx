@@ -57,7 +57,7 @@ export default function Hero() {
             href="#final-cta"
             className="rounded-full bg-cyan px-7 py-3.5 text-center font-body text-sm font-semibold text-black shadow-[0_18px_50px_-14px_rgba(85,241,239,0.55)] transition-transform hover:scale-[1.03]"
           >
-            Agendar demo
+            Agendar análise
           </a>
           <a
             href="#como-funciona"

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function FinalCta() {
   const waLink =
     "https://wa.me/5592992027059?text=" +
-    encodeURIComponent("Olá! Vim pelo site da VIBE Design Tech e gostaria de agendar uma demonstração de 20 minutos.");
+    encodeURIComponent("Olá! Vim pelo site da VIBE Design Tech e gostaria de agendar uma análise de 20 minutos.");
 
   const igLink = "https://instagram.com/vibedesigntech";
 
@@ -20,7 +20,7 @@ export default function FinalCta() {
       </div>
 
       <div className="container-vibe relative z-[3] text-center">
-        <p className="pill-glass mx-auto text-[11px] sm:text-xs"><span className="dot"></span>Agendar demo</p>
+        <p className="pill-glass mx-auto text-[11px] sm:text-xs"><span className="dot"></span>Agendar análise</p>
         <h2 className="mx-auto mt-6 max-w-3xl font-display text-3xl sm:text-5xl md:text-6xl font-extrabold uppercase leading-[1.02] text-fg break-words">
           Sua presença própria começa numa conversa de 20 minutos
         </h2>
