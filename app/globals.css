@@ -147,6 +147,51 @@ button:focus-visible {
 }
 
 /* V-glass hero image composited with mix-blend-mode so its black backdrop disappears */
+.hero-vglass-wrap {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  -webkit-mask-image: radial-gradient(ellipse 92% 78% at 50% 42%, #000 35%, transparent 82%);
+  mask-image: radial-gradient(ellipse 92% 78% at 50% 42%, #000 35%, transparent 82%);
+}
+
+.hero-vglass-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    radial-gradient(ellipse 75% 65% at 50% 42%, transparent 20%, rgba(0,0,0,0.85) 75%),
+    linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, transparent 20%, transparent 60%, #000000 98%);
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .hero-vglass-wrap {
+    inset: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 48%;
+    height: 100%;
+    opacity: 1;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
+  }
+
+  .hero-vglass-wrap::after {
+    background:
+      linear-gradient(to right, #000 0%, transparent 22%),
+      linear-gradient(to bottom, transparent 70%, #000 100%),
+      linear-gradient(to top, transparent 85%, #000 100%);
+  }
+}
+
 .v-glass {
   mix-blend-mode: screen;
   pointer-events: none;
@@ -154,6 +199,6 @@ button:focus-visible {
 .v-glass-blur {
   filter: blur(34px);
   mix-blend-mode: screen;
-  opacity: 0.8;
+  opacity: 0.85;
   pointer-events: none;
 }

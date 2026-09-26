@@ -143,26 +143,104 @@ header {
 .hero {
   position: relative; overflow: hidden;
   border-bottom: 1px solid var(--line);
-  padding: 2.25rem 0 3rem;
+  padding: 3rem 0 3.5rem;
 }
-@media (min-width: 640px) { .hero { padding: 3.5rem 0 4rem; } }
-@media (min-width: 768px) { .hero { padding: 5rem 0 5rem; } }
+@media (min-width: 640px) { .hero { padding: 4rem 0 4.5rem; } }
+@media (min-width: 768px) { .hero { padding: 5.5rem 0 5.5rem; } }
 
-.hero-grid {
+/* V-glass video element:
+   - Mobile: preenche toda a tela com máscara radial e degradê preto suave para eliminar pontas visíveis
+   - Desktop (web): como estava antes, ocupando o lado direito em tela cheia com fade lateral
+*/
+.hero-vglass-wrap {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  -webkit-mask-image: radial-gradient(ellipse 92% 78% at 50% 42%, #000 35%, transparent 82%);
+  mask-image: radial-gradient(ellipse 92% 78% at 50% 42%, #000 35%, transparent 82%);
+}
+
+.hero-vglass-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    radial-gradient(ellipse 75% 65% at 50% 42%, transparent 20%, rgba(0,0,0,0.85) 75%),
+    linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, transparent 20%, transparent 60%, #000000 98%);
+  pointer-events: none;
+}
+
+.hero-vglass-wrap video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 38%;
+  display: block;
+}
+
+.hero-vglass-wrap .v-glass-blur {
+  position: absolute;
+  inset: 0;
+  filter: blur(34px);
+  mix-blend-mode: screen;
+  opacity: .85;
+}
+
+.hero-vglass-wrap .v-glass {
+  position: relative;
+  mix-blend-mode: screen;
+}
+
+@media (min-width: 768px) {
+  .hero-vglass-wrap {
+    inset: auto;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 48%;
+    height: 100%;
+    opacity: 1;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
+  }
+
+  .hero-vglass-wrap::after {
+    background:
+      linear-gradient(to right, #000 0%, transparent 22%),
+      linear-gradient(to bottom, transparent 70%, #000 100%),
+      linear-gradient(to top, transparent 85%, #000 100%);
+  }
+
+  .hero-vglass-wrap video {
+    right: 0;
+    left: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  max-width: 46rem;
+  margin: 0 auto;
 }
 
-.hero-badge {
-  order: 1;
-  margin-bottom: 0.85rem;
-}
-
-.hero-title {
-  order: 2;
-  font-size: clamp(2.35rem, 10vw, 3.75rem);
+.hero h1 {
+  font-size: clamp(2.35rem, 9.5vw, 3.6rem);
   line-height: 0.98;
   letter-spacing: -0.02em;
   max-width: 46rem;
@@ -170,80 +248,49 @@ header {
   overflow-wrap: break-word;
   text-transform: uppercase;
   font-weight: 800;
+  margin-top: 0.85rem;
 }
 
-.hero-vglass-box {
-  order: 3;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 260px;
-  height: 220px;
-  margin: 0.75rem auto 1rem;
-  pointer-events: none;
-}
-.hero-vglass-box video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-}
-.hero-vglass-box .v-glass-blur {
-  filter: blur(28px);
-  mix-blend-mode: screen;
-  opacity: .75;
-}
-.hero-vglass-box .v-glass {
-  position: relative;
-  mix-blend-mode: screen;
-}
-
-.hero-subtext {
-  order: 4;
-  margin: 0 auto;
+.hero p.subtext {
+  margin-top: 1.25rem;
   max-width: 32rem;
   color: var(--fg-muted);
   font-size: 0.95rem;
   line-height: 1.55;
 }
+.hero p.subtext strong {
+  color: var(--fg);
+  font-weight: 600;
+}
 
 .hero-ctas {
-  order: 5;
-  margin-top: 1.25rem;
+  margin-top: 1.75rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 0.65rem;
-  width: 100%;
+  gap: 0.75rem;
+  width: auto;
   flex-wrap: wrap;
 }
 
 .hero-ctas .btn-cyan,
 .hero-ctas .btn-outline {
   width: auto;
-  padding: 0.75rem 1.15rem;
+  padding: 0.75rem 1.25rem;
   font-size: 0.8125rem;
   white-space: nowrap;
 }
 
 @media (min-width: 640px) {
-  .hero-title {
+  .hero h1 {
     font-size: 4.5rem;
     line-height: 1.02;
     letter-spacing: -0.01em;
   }
-  .hero-vglass-box {
-    max-width: 280px;
-    height: 260px;
-  }
   .hero-ctas {
     gap: 1rem;
-    margin-top: 1.75rem;
+    margin-top: 2rem;
   }
   .hero-ctas .btn-cyan,
   .hero-ctas .btn-outline {
@@ -253,42 +300,24 @@ header {
 }
 
 @media (min-width: 768px) {
-  .hero-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    align-items: center;
+  .hero-content {
+    align-items: flex-start;
     text-align: left;
-    gap: 0 2rem;
-  }
-  .hero-badge {
-    grid-column: span 7;
-    margin-bottom: 1.25rem;
-    display: flex;
-    justify-content: flex-start;
-  }
-  .hero-title {
-    grid-column: span 7;
-    font-size: 5.5rem;
-  }
-  .hero-vglass-box {
-    grid-column: 8 / span 5;
-    grid-row: 1 / span 4;
-    max-width: none;
-    height: 480px;
     margin: 0;
   }
-  .hero-subtext {
-    grid-column: span 7;
-    margin: 1.75rem 0 0;
+  .hero h1 {
+    font-size: 5.5rem;
+    margin-top: 1.25rem;
+  }
+  .hero p.subtext {
+    margin-top: 2rem;
     font-size: 1.25rem;
     line-height: 1.5;
+    max-width: 34rem;
   }
   .hero-ctas {
-    grid-column: span 7;
-    margin-top: 2rem;
     justify-content: flex-start;
-    gap: 1rem;
-    width: auto;
+    margin-top: 2.25rem;
   }
 }
 
@@ -1059,27 +1088,26 @@ footer { padding: 3.5rem 0; }
     <div class="blob" style="width:420px;height:420px;bottom:-160px;left:-140px;opacity:.25;background:radial-gradient(circle, rgba(85,241,239,0.18), rgba(85,241,239,0) 70%);"></div>
     <div class="grid-lines"></div>
 
-    <div class="container" style="position:relative; z-index:3;">
-      <div class="hero-grid">
-        <div class="hero-badge">
-          <p class="pill-glass"><span class="dot"></span>Presença própria, não presença alugada</p>
-        </div>
+    <!-- 3D V Hero video: preenche tela no mobile com degradê preto suave e fica na direita no desktop -->
+    <div class="hero-vglass-wrap">
+      <video class="v-glass-blur" autoplay muted loop playsinline>
+        <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
+      </video>
+      <video class="v-glass" autoplay muted loop playsinline>
+        <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
+      </video>
+    </div>
 
-        <h1 class="hero-title">
+    <div class="container" style="position:relative; z-index:3;">
+      <div class="hero-content">
+        <p class="pill-glass"><span class="dot"></span>Presença própria, não presença alugada</p>
+
+        <h1>
           Seu Instagram cresce.<br>
           <span class="glow-cyan">Seu negócio, não.</span>
         </h1>
 
-        <div class="hero-vglass-box">
-          <video class="v-glass-blur" autoplay muted loop playsinline>
-            <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
-          </video>
-          <video class="v-glass" autoplay muted loop playsinline>
-            <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
-          </video>
-        </div>
-
-        <p class="subtext hero-subtext">
+        <p class="subtext">
           A gente transforma audiência alugada em site, funil e sistema que ficam com você — não com o algoritmo. Design de alto impacto, na velocidade da inteligência artificial.
         </p>
 
