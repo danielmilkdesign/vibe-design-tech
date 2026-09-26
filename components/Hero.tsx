@@ -45,14 +45,11 @@ export default function Hero() {
         <h1 className="max-w-3xl font-display text-[clamp(2.15rem,9.5vw,3.6rem)] leading-[0.98] font-extrabold uppercase tracking-tight text-fg animate-fade-up [animation-delay:80ms] sm:text-7xl sm:leading-[1.02] md:text-8xl break-words">
           Seu Instagram cresce.
           <br />
-          <span className="glow-cyan">Seu negócio, não.</span>
+          <span className="glow-cyan">Seu site converte.</span>
         </h1>
 
         <p className="mt-5 max-w-lg text-base text-fg-muted animate-fade-up [animation-delay:160ms] sm:mt-8 sm:text-lg md:text-xl">
-          A gente transforma audiência alugada em{" "}
-          <strong className="font-semibold text-fg">site, funil e sistema que ficam com você</strong>{" "}
-          — não com o algoritmo. Design de alto impacto, na velocidade
-          da inteligência artificial.
+          Transformamos sua audiência em uma presença própria que explica seu método, organiza suas provas e leva o lead até o agendamento, sem depender apenas do direct ou do algoritmo.
         </p>
 
         <div className="pointer-events-auto mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 animate-fade-up [animation-delay:240ms]">
