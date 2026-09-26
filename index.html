@@ -204,6 +204,7 @@ header {
 
 /* Mobile 3D V Video:
    - Centralizado entre H1 e subtítulo, preenchendo toda a lateral da tela (100vw)
+   - Tamanho aumentado para destaque visual de alto impacto (scale 1.65x)
    - Degradê suave entre o texto e o vídeo para eliminar qualquer linha dura
 */
 .hero-vglass-mobile {
@@ -213,41 +214,41 @@ header {
   transform: translateX(-50%);
   width: 100vw;
   max-width: 100vw;
-  height: 290px;
+  height: 340px;
   margin-top: 0.25rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   background: transparent;
   overflow: hidden;
   pointer-events: none;
   z-index: 2;
   -webkit-mask-image: linear-gradient(to bottom,
     transparent 0%,
-    rgba(0, 0, 0, 0.08) 6%,
-    rgba(0, 0, 0, 0.35) 14%,
-    rgba(0, 0, 0, 0.8) 25%,
-    #000 36%,
-    #000 64%,
-    rgba(0, 0, 0, 0.8) 75%,
-    rgba(0, 0, 0, 0.35) 86%,
-    rgba(0, 0, 0, 0.08) 94%,
+    rgba(0, 0, 0, 0.08) 4%,
+    rgba(0, 0, 0, 0.45) 10%,
+    rgba(0, 0, 0, 0.85) 18%,
+    #000 25%,
+    #000 75%,
+    rgba(0, 0, 0, 0.85) 82%,
+    rgba(0, 0, 0, 0.45) 90%,
+    rgba(0, 0, 0, 0.08) 96%,
     transparent 100%);
   mask-image: linear-gradient(to bottom,
     transparent 0%,
-    rgba(0, 0, 0, 0.08) 6%,
-    rgba(0, 0, 0, 0.35) 14%,
-    rgba(0, 0, 0, 0.8) 25%,
-    #000 36%,
-    #000 64%,
-    rgba(0, 0, 0, 0.8) 75%,
-    rgba(0, 0, 0, 0.35) 86%,
-    rgba(0, 0, 0, 0.08) 94%,
+    rgba(0, 0, 0, 0.08) 4%,
+    rgba(0, 0, 0, 0.45) 10%,
+    rgba(0, 0, 0, 0.85) 18%,
+    #000 25%,
+    #000 75%,
+    rgba(0, 0, 0, 0.85) 82%,
+    rgba(0, 0, 0, 0.45) 90%,
+    rgba(0, 0, 0, 0.08) 96%,
     transparent 100%);
 }
 @media (min-width: 480px) {
   .hero-vglass-mobile {
-    height: 330px;
+    height: 390px;
     margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
   }
 }
 @media (min-width: 768px) {
@@ -262,11 +263,11 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 260px;
-  height: 220px;
+  width: 320px;
+  height: 270px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(85,241,239,0.24) 0%, rgba(85,241,239,0.06) 50%, transparent 75%);
-  filter: blur(28px);
+  background: radial-gradient(circle, rgba(85,241,239,0.28) 0%, rgba(85,241,239,0.08) 50%, transparent 75%);
+  filter: blur(34px);
   pointer-events: none;
   z-index: 1;
 }
@@ -280,12 +281,12 @@ header {
   background:
     linear-gradient(to bottom,
       transparent 0%,
-      rgba(0, 0, 0, 0.25) 12%,
-      rgba(0, 0, 0, 0.7) 24%,
-      transparent 42%,
-      transparent 58%,
-      rgba(0, 0, 0, 0.7) 76%,
-      rgba(0, 0, 0, 0.25) 88%,
+      rgba(0, 0, 0, 0.2) 10%,
+      rgba(0, 0, 0, 0.65) 20%,
+      transparent 38%,
+      transparent 62%,
+      rgba(0, 0, 0, 0.65) 80%,
+      rgba(0, 0, 0, 0.2) 90%,
       transparent 100%);
 }
 
@@ -298,10 +299,16 @@ header {
   object-position: center;
   display: block;
   mix-blend-mode: screen;
+  transform: scale(1.65);
+}
+@media (min-width: 480px) {
+  .hero-vglass-mobile video {
+    transform: scale(1.75);
+  }
 }
 
 .hero-vglass-mobile .v-glass-blur {
-  filter: blur(26px);
+  filter: blur(28px);
   mix-blend-mode: screen;
   opacity: .85;
   z-index: 2;
