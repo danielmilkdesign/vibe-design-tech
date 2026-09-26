@@ -290,3 +290,189 @@ button:focus-visible {
   opacity: 0.85;
   pointer-events: none;
 }
+
+/* --- COMO FUNCIONA (20 MINUTOS) --- */
+.como-funciona-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.como-funciona-title-col {
+  max-width: 650px;
+}
+.como-funciona-h2 {
+  font-family: var(--font-display, 'Big Shoulders Display', sans-serif);
+  font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+  color: #FFFFFF;
+}
+.como-funciona-desc-col {
+  max-width: 440px;
+  margin-bottom: 0.5rem;
+}
+.como-funciona-desc {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.62);
+}
+.como-funciona-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 2rem 0;
+}
+.como-funciona-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.como-funciona-col {
+  padding: 1.5rem 1.75rem 2rem;
+  position: relative;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+.como-funciona-col:first-child {
+  padding-left: 0;
+}
+.como-funciona-col:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+.como-funciona-num {
+  font-family: var(--font-mono, 'Space Mono', monospace);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #2ee59d;
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+.como-funciona-num-line {
+  width: 28px;
+  height: 2px;
+  background: #2ee59d;
+  margin-bottom: 1.5rem;
+  opacity: 0.85;
+}
+.como-funciona-col-title {
+  font-family: var(--font-display, 'Big Shoulders Display', sans-serif);
+  font-size: 1.45rem;
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 0.75rem;
+}
+.como-funciona-col-text {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.62);
+}
+.como-funciona-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.como-funciona-footer-left {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.como-funciona-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 0.875rem;
+  color: #94a3b8;
+}
+.como-funciona-badge-icon {
+  width: 18px;
+  height: 18px;
+  color: #2ee59d;
+  flex-shrink: 0;
+}
+.como-funciona-footer-right {
+  display: flex;
+  align-items: center;
+}
+.como-funciona-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono, 'Space Mono', monospace);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #2ee59d;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.como-funciona-cta-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+.como-funciona-cta-link:hover {
+  color: #55F1EF;
+}
+.como-funciona-cta-link:hover svg {
+  transform: translateX(4px);
+}
+@media (max-width: 991px) {
+  .como-funciona-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .como-funciona-col {
+    padding: 1.5rem;
+  }
+  .como-funciona-col:nth-child(2n) {
+    border-right: none;
+    padding-right: 0;
+  }
+  .como-funciona-col:nth-child(2n+1) {
+    padding-left: 0;
+  }
+  .como-funciona-col:nth-child(1),
+  .como-funciona-col:nth-child(2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+@media (max-width: 640px) {
+  .como-funciona-grid {
+    grid-template-columns: 1fr;
+  }
+  .como-funciona-col {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem 0 !important;
+  }
+  .como-funciona-col:last-child {
+    border-bottom: none;
+  }
+  .como-funciona-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .como-funciona-footer-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.875rem;
+  }
+}
+

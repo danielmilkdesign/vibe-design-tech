@@ -24,13 +24,13 @@ const tiers = [
 
 export default function Tiers() {
   return (
-    <section id="como-funciona" className="relative overflow-hidden border-b border-line bg-bg-alt py-16 md:py-28">
+    <section id="caminhos" className="relative overflow-hidden border-b border-line bg-bg-alt py-16 md:py-28">
       <div className="pointer-events-none absolute right-[-60px] top-[-40px] z-0 w-[220px] opacity-[0.14] sm:w-[280px]">
         <Image src="/v-glass.webp" alt="" width={1094} height={1134} className="v-glass h-auto w-full rotate-[14deg]" aria-hidden />
       </div>
 
       <div className="container-vibe relative z-[1]">
-        <p className="eyebrow text-cyan">Como funciona</p>
+        <p className="eyebrow text-cyan">Caminhos de Entrada</p>
         <h2 className="mt-4 max-w-2xl font-display text-3xl sm:text-5xl md:text-6xl font-extrabold uppercase leading-[1.02] text-fg break-words">
           Três profundidades. Você escolhe onde entrar.
         </h2>

@@ -36,7 +36,7 @@ export default function SampleDelivery() {
 
             <div className="mt-8 flex items-center gap-4">
               <a
-                href="#como-funciona"
+                href="#caminhos"
                 className="group inline-flex items-center gap-2 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-cyan transition-all duration-300 hover:text-white"
               >
                 <span className="border-b-2 border-cyan/60 pb-0.5 group-hover:border-white transition-colors">Conhecer os caminhos</span>
