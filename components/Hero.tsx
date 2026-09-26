@@ -14,7 +14,30 @@ export default function Hero() {
       </div>
       <div className="grid-lines" />
 
-      <div className="container-vibe relative md:static z-[3]">
+      {/* 3D V Video DESKTOP (Web): fica à direita em z-index 1; o texto em container fica à frente em z-index 10 */}
+      <div className="hero-vglass-desktop">
+        <video
+          className="v-glass-blur"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/Create_3D_V_video_202608251618.mp4" type="video/mp4" />
+        </video>
+        <video
+          className="v-glass"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/Create_3D_V_video_202608251618.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      {/* Conteúdo textual da Hero: z-index 10 garantindo que fique 100% à frente no desktop */}
+      <div className="container-vibe hero-container relative z-10">
         <div className="hero-content max-w-3xl text-center md:text-left mx-auto md:mx-0">
           <p className="pill-glass text-[11px] sm:text-xs inline-flex mb-4 sm:mb-6">
             <span className="dot" />
@@ -27,11 +50,8 @@ export default function Hero() {
             <span className="glow-cyan text-cyan">Seu negócio, não.</span>
           </h1>
 
-          {/* 3D V Video:
-              - Mobile: centralizado no fluxo entre H1 e subtítulo, sem texto na frente, com degradê suave e bordas arredondadas
-              - Desktop (md:): absoluto à direita, ocupando toda a altura da hero como antes
-          */}
-          <div className="hero-vglass-wrap pointer-events-none">
+          {/* 3D V Video MOBILE: conforme modelo da 2ª imagem, centralizado entre H1 e subtítulo com degradê preto */}
+          <div className="hero-vglass-mobile">
             <video
               className="v-glass-blur"
               autoPlay

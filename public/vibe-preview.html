@@ -148,36 +148,102 @@ header {
 @media (min-width: 640px) { .hero { padding: 4rem 0 4.5rem; } }
 @media (min-width: 768px) { .hero { padding: 5.5rem 0 5.5rem; } }
 
-/* V-glass video element:
-   - Mobile: centralizado entre H1 e subtítulo, sem texto na frente, com degradê preto suave e máscara radial para não ter pontas visíveis
-   - Desktop (web): como estava antes, ocupando o lado direito em tela cheia com fade lateral
+/* Desktop 3D V Video (Web):
+   - Fica em z-index 1 à direita ocupando toda a altura da hero
+   - O texto fica em z-index 10 garantindo que fique 100% NA FRENTE
 */
-.hero-vglass-wrap {
+.hero-vglass-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hero-vglass-desktop {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
+  }
+  .hero-vglass-desktop::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+      linear-gradient(to right, #000 0%, transparent 25%),
+      linear-gradient(to bottom, transparent 70%, #000 100%),
+      linear-gradient(to top, transparent 85%, #000 100%);
+    pointer-events: none;
+  }
+  .hero-vglass-desktop video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  .hero-vglass-desktop .v-glass-blur {
+    filter: blur(34px);
+    mix-blend-mode: screen;
+    opacity: .85;
+  }
+  .hero-vglass-desktop .v-glass {
+    position: relative;
+    mix-blend-mode: screen;
+  }
+}
+
+/* Mobile 3D V Video:
+   - Conforme Modelo da Imagem 2: centralizado entre H1 e subtítulo, sem texto na frente
+   - Efeito degradê preto suave e máscara radial para não ter pontas ou bordas visíveis
+*/
+.hero-vglass-mobile {
+  display: block;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
   width: 100%;
-  max-width: 290px;
-  height: 240px;
-  margin: 1.25rem auto;
-  background: transparent;
+  max-width: 280px;
+  height: 255px;
+  margin: 1.25rem auto 1.5rem auto;
+  background: radial-gradient(circle at 50% 50%, rgba(85, 241, 239, 0.18) 0%, rgba(85, 241, 239, 0.04) 45%, transparent 70%);
   overflow: hidden;
   -webkit-mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, #000 35%, transparent 85%);
   mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, #000 35%, transparent 85%);
 }
+@media (min-width: 480px) {
+  .hero-vglass-mobile {
+    max-width: 320px;
+    height: 280px;
+  }
+}
+@media (min-width: 768px) {
+  .hero-vglass-mobile {
+    display: none !important;
+  }
+}
 
-.hero-vglass-wrap::after {
+.hero-vglass-mobile::after {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 2;
   background:
     radial-gradient(ellipse 75% 70% at 50% 50%, transparent 20%, rgba(0,0,0,0.85) 80%),
-    linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 25%, transparent 65%, #000 100%);
+    linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, transparent 25%, transparent 65%, #000 100%);
   pointer-events: none;
 }
 
-.hero-vglass-wrap video {
+.hero-vglass-mobile video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -186,29 +252,26 @@ header {
   display: block;
 }
 
-.hero-vglass-wrap .v-glass-blur {
-  position: absolute;
-  inset: 0;
+.hero-vglass-mobile .v-glass-blur {
   filter: blur(28px);
   mix-blend-mode: screen;
   opacity: .85;
 }
 
-.hero-vglass-wrap .v-glass {
+.hero-vglass-mobile .v-glass {
   position: relative;
   mix-blend-mode: screen;
 }
 
-@media (min-width: 480px) {
-  .hero-vglass-wrap {
-    max-width: 330px;
-    height: 270px;
-  }
+/* Container de conteúdo textual: no web fica sempre na frente com z-index 10 */
+.hero-container {
+  position: relative;
+  z-index: 10;
 }
 
 .hero-content {
   position: relative;
-  z-index: 3;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,6 +290,8 @@ header {
   text-transform: uppercase;
   font-weight: 800;
   margin-top: 0.85rem;
+  position: relative;
+  z-index: 10;
 }
 
 .hero p.subtext {
@@ -235,6 +300,8 @@ header {
   color: var(--fg-muted);
   font-size: 0.95rem;
   line-height: 1.55;
+  position: relative;
+  z-index: 10;
 }
 .hero p.subtext strong {
   color: var(--fg);
@@ -250,6 +317,8 @@ header {
   gap: 0.75rem;
   width: auto;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
 }
 
 .hero-ctas .btn-cyan,
@@ -278,10 +347,6 @@ header {
 }
 
 @media (min-width: 768px) {
-  .hero-container {
-    position: static !important;
-  }
-
   .hero-content {
     align-items: flex-start;
     text-align: left;
@@ -289,39 +354,10 @@ header {
     max-width: 44rem;
   }
 
-  .hero-vglass-wrap {
-    position: absolute;
-    inset: auto;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 48%;
-    height: 100%;
-    max-width: none;
-    margin: 0;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
-    mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
-  }
-
-  .hero-vglass-wrap::after {
-    background:
-      linear-gradient(to right, #000 0%, transparent 22%),
-      linear-gradient(to bottom, transparent 70%, #000 100%),
-      linear-gradient(to top, transparent 85%, #000 100%);
-  }
-
-  .hero-vglass-wrap video {
-    right: 0;
-    left: auto;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
   .hero h1 {
     font-size: 5.5rem;
     margin-top: 1.25rem;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.85);
   }
 
   .hero p.subtext {
@@ -329,6 +365,7 @@ header {
     font-size: 1.25rem;
     line-height: 1.5;
     max-width: 34rem;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.85);
   }
 
   .hero-ctas {
@@ -1104,7 +1141,18 @@ footer { padding: 3.5rem 0; }
     <div class="blob" style="width:420px;height:420px;bottom:-160px;left:-140px;opacity:.25;background:radial-gradient(circle, rgba(85,241,239,0.18), rgba(85,241,239,0) 70%);"></div>
     <div class="grid-lines"></div>
 
-    <div class="container hero-container" style="z-index:3;">
+    <!-- 3D V Video DESKTOP (Web): fica à direita em z-index 1; o texto em container fica à frente em z-index 10 -->
+    <div class="hero-vglass-desktop">
+      <video class="v-glass-blur" autoplay muted loop playsinline>
+        <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
+      </video>
+      <video class="v-glass" autoplay muted loop playsinline>
+        <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Conteúdo da Hero (em z-index 10 garantindo que o texto fica 100% na frente) -->
+    <div class="container hero-container">
       <div class="hero-content">
         <p class="pill-glass"><span class="dot"></span>Presença própria, não presença alugada</p>
 
@@ -1113,8 +1161,8 @@ footer { padding: 3.5rem 0; }
           <span class="glow-cyan">Seu negócio, não.</span>
         </h1>
 
-        <!-- 3D V Video: no mobile centralizado entre H1 e subtítulo sem texto na frente; no desktop à direita em tela cheia -->
-        <div class="hero-vglass-wrap">
+        <!-- 3D V Video MOBILE: conforme modelo da imagem 2, centralizado entre H1 e subtítulo com degradê preto -->
+        <div class="hero-vglass-mobile">
           <video class="v-glass-blur" autoplay muted loop playsinline>
             <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
           </video>

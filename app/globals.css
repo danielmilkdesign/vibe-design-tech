@@ -147,36 +147,93 @@ button:focus-visible {
 }
 
 /* V-glass hero image composited with mix-blend-mode so its black backdrop disappears */
-/* V-glass hero image:
-   - Mobile: centralizado entre H1 e subtítulo, sem texto na frente, com degradê preto suave e máscara radial para não ter pontas visíveis
-   - Desktop (web): posicionado de forma absoluta à direita (largura 48%, altura 100%) como antes
+/* Desktop 3D V Video (Web):
+   - Fica em z-index 1 à direita ocupando toda a altura da hero
+   - O texto fica em z-index 10 garantindo que fique 100% NA FRENTE
 */
-.hero-vglass-wrap {
+.hero-vglass-desktop {
+  display: none;
+}
+@media (min-width: 768px) {
+  .hero-vglass-desktop {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
+  }
+  .hero-vglass-desktop::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+      linear-gradient(to right, #000 0%, transparent 25%),
+      linear-gradient(to bottom, transparent 70%, #000 100%),
+      linear-gradient(to top, transparent 85%, #000 100%);
+    pointer-events: none;
+  }
+  .hero-vglass-desktop video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+}
+
+/* Mobile 3D V Video:
+   - Conforme Modelo da Imagem 2: centralizado entre H1 e subtítulo, sem texto na frente
+   - Efeito degradê preto suave e máscara radial para não ter pontas ou bordas visíveis
+*/
+.hero-vglass-mobile {
+  display: block;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
   width: 100%;
-  max-width: 290px;
-  height: 240px;
-  margin: 1.25rem auto;
-  background: transparent;
+  max-width: 280px;
+  height: 255px;
+  margin: 1.25rem auto 1.5rem auto;
+  background: radial-gradient(circle at 50% 50%, rgba(85, 241, 239, 0.18) 0%, rgba(85, 241, 239, 0.04) 45%, transparent 70%);
   overflow: hidden;
   -webkit-mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, #000 35%, transparent 85%);
   mask-image: radial-gradient(ellipse 90% 85% at 50% 50%, #000 35%, transparent 85%);
 }
+@media (min-width: 480px) {
+  .hero-vglass-mobile {
+    max-width: 320px;
+    height: 280px;
+  }
+}
+@media (min-width: 768px) {
+  .hero-vglass-mobile {
+    display: none !important;
+  }
+}
 
-.hero-vglass-wrap::after {
+.hero-vglass-mobile::after {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 2;
   background:
     radial-gradient(ellipse 75% 70% at 50% 50%, transparent 20%, rgba(0,0,0,0.85) 80%),
-    linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 25%, transparent 65%, #000 100%);
+    linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, transparent 25%, transparent 65%, #000 100%);
   pointer-events: none;
 }
 
-.hero-vglass-wrap video {
+.hero-vglass-mobile video {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -185,51 +242,12 @@ button:focus-visible {
   display: block;
 }
 
-@media (min-width: 480px) {
-  .hero-vglass-wrap {
-    max-width: 330px;
-    height: 270px;
-  }
-}
-
-@media (min-width: 768px) {
-  .hero-vglass-wrap {
-    position: absolute;
-    inset: auto;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 48%;
-    height: 100%;
-    max-width: none;
-    margin: 0;
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
-    mask-image: linear-gradient(to right, transparent 0%, #000 20%, #000 100%);
-  }
-
-  .hero-vglass-wrap::after {
-    background:
-      linear-gradient(to right, #000 0%, transparent 22%),
-      linear-gradient(to bottom, transparent 70%, #000 100%),
-      linear-gradient(to top, transparent 85%, #000 100%);
-  }
-
-  .hero-vglass-wrap video {
-    right: 0;
-    left: auto;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-}
-
 .v-glass {
   mix-blend-mode: screen;
   pointer-events: none;
 }
 .v-glass-blur {
-  filter: blur(34px);
+  filter: blur(28px);
   mix-blend-mode: screen;
   opacity: 0.85;
   pointer-events: none;
