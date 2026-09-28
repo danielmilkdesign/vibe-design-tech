@@ -25,6 +25,8 @@ const founders: Founder[] = [
     role: "CTO - Tecnologia e Produto",
     desc: "Constrói cada site e sistema — da estrutura técnica ao design final. É quem faz a presença online acontecer com os mais altos padrões de qualidade.",
     image: "/DANIEL.png",
+    minibio:
+      "Daniel Rodrigo Leite é Senior Product Designer com mais de 14 anos de trajetória em design e 6+ anos dedicados a produtos digitais. Especialista em Product Discovery, UX Research e Design Systems, combina metodologia sólida com IA Generativa para construir experiências digitais simples, escaláveis e orientadas a resultados em setores como fintech, healthtech, B2B e SaaS. Com histórico comprovado em otimização de jornadas e redução em até 50% no tempo de desenvolvimento de produtos, atua também como Líder de Projetos Especiais na comunidade ManaUX e mentor em hackathons e iniciativas de inovação.",
   },
 ];
 

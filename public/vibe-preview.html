@@ -1956,6 +1956,11 @@ footer { padding: 3.5rem 0; }
             <h3 class="founder-name">Daniel Leite</h3>
             <p class="founder-role">CTO - Tecnologia e Produto</p>
             <p class="founder-desc">Constrói cada site e sistema — da estrutura técnica ao design final. É quem faz a presença online acontecer com os mais altos padrões de qualidade.</p>
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+              <button type="button" onclick="openMinibioModal('daniel')" class="pill-glass" style="cursor:pointer; font-size: 0.75rem; padding: 0.45rem 1rem; display: inline-flex; align-items: center; gap: 0.5rem; color: var(--cyan); border-color: rgba(85,241,239,0.35); background: rgba(85,241,239,0.08); transition: transform 0.2s;">
+                <span class="dot"></span>Minibio →
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -2117,22 +2122,22 @@ footer { padding: 3.5rem 0; }
   </div>
 </footer>
 
-<!-- Modal Minibio Victor Belichar -->
+<!-- Modal Minibio Dinâmico -->
 <div id="minibioModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.85); backdrop-filter:blur(12px); align-items:center; justify-content:center; padding:1rem;" onclick="closeMinibioModal()">
-  <div style="position:relative; width:100%; max-width:540px; background:#080d11; border:1px solid rgba(85,241,239,0.35); border-radius:1.5rem; padding:1.75rem; box-shadow:0 0 50px rgba(85,241,239,0.2); color:#fff;" onclick="event.stopPropagation()">
+  <div style="position:relative; width:100%; max-width:560px; background:#080d11; border:1px solid rgba(85,241,239,0.35); border-radius:1.5rem; padding:1.75rem; box-shadow:0 0 50px rgba(85,241,239,0.2); color:#fff;" onclick="event.stopPropagation()">
     <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1.25rem; margin-bottom:1.25rem;">
       <div style="display:flex; align-items:center; gap:1rem;">
-        <img src="VICTOR2.png" alt="Victor Belichar" style="width:52px; height:52px; border-radius:1rem; border:1px solid rgba(85,241,239,0.3); object-fit:cover; object-position:top;">
+        <img id="minibioImg" src="VICTOR2.png" alt="Foto" style="width:56px; height:56px; border-radius:1rem; border:1px solid rgba(85,241,239,0.3); object-fit:cover; object-position:top;">
         <div>
           <span class="pill-glass" style="font-size:0.65rem; padding:0.2rem 0.5rem; margin-bottom:0.25rem; display:inline-flex;"><span class="dot"></span>Minibio</span>
-          <h3 style="font-family:'Syne',sans-serif; font-size:1.25rem; font-weight:800; text-transform:uppercase; margin:0;">Victor Belichar</h3>
-          <p style="font-family:'Space Mono',monospace; font-size:0.7rem; color:var(--cyan); margin:0.15rem 0 0; text-transform:uppercase;">CEO - Comercial e Relacionamento</p>
+          <h3 id="minibioName" style="font-family:'Syne',sans-serif; font-size:1.25rem; font-weight:800; text-transform:uppercase; margin:0;">Victor Belichar</h3>
+          <p id="minibioRole" style="font-family:'Space Mono',monospace; font-size:0.7rem; color:var(--cyan); margin:0.15rem 0 0; text-transform:uppercase;">CEO - Comercial e Relacionamento</p>
         </div>
       </div>
       <button type="button" onclick="closeMinibioModal()" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); color:var(--fg-muted); width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:1rem; line-height:1;" aria-label="Fechar">✕</button>
     </div>
     <div style="max-height:60vh; overflow-y:auto; line-height:1.7; font-size:0.925rem; color:#e2e8f0;">
-      <p style="margin:0;">Victor Belichar é Coordenador de Projetos de Design com mais de 12 anos de experiência na criação e gestão de produtos digitais, marcas e estratégias visuais. Com sólida bagagem em UX/UI, Design Thinking e Direção de Criação, lidera equipes multidisciplinares alinhando inovação, organização de processos e foco nos objetivos de negócio e na experiência do usuário. Une visão estratégica de produto, facilidade de comunicação e gestão ágil para orquestrar entregas eficientes entre times de design, desenvolvimento e clientes, transformando problemas complexos em soluções intuitivas e de alto impacto.</p>
+      <p id="minibioText" style="margin:0;"></p>
     </div>
     <div style="margin-top:1.5rem; display:flex; justify-content:flex-end;">
       <button type="button" onclick="closeMinibioModal()" class="btn-cyan" style="font-size:0.8rem; padding:0.5rem 1.25rem; cursor:pointer;">Fechar</button>
@@ -2141,7 +2146,27 @@ footer { padding: 3.5rem 0; }
 </div>
 
 <script>
-  function openMinibioModal() {
+  const bios = {
+    victor: {
+      name: "Victor Belichar",
+      role: "CEO - Comercial e Relacionamento",
+      image: "VICTOR2.png",
+      text: "Victor Belichar é Coordenador de Projetos de Design com mais de 12 anos de experiência na criação e gestão de produtos digitais, marcas e estratégias visuais. Com sólida bagagem em UX/UI, Design Thinking e Direção de Criação, lidera equipes multidisciplinares alinhando inovação, organização de processos e foco nos objetivos de negócio e na experiência do usuário. Une visão estratégica de produto, facilidade de comunicação e gestão ágil para orquestrar entregas eficientes entre times de design, desenvolvimento e clientes, transformando problemas complexos em soluções intuitivas e de alto impacto."
+    },
+    daniel: {
+      name: "Daniel Leite",
+      role: "CTO - Tecnologia e Produto",
+      image: "DANIEL.png",
+      text: "Daniel Rodrigo Leite é Senior Product Designer com mais de 14 anos de trajetória em design e 6+ anos dedicados a produtos digitais. Especialista em Product Discovery, UX Research e Design Systems, combina metodologia sólida com IA Generativa para construir experiências digitais simples, escaláveis e orientadas a resultados em setores como fintech, healthtech, B2B e SaaS. Com histórico comprovado em otimização de jornadas e redução em até 50% no tempo de desenvolvimento de produtos, atua também como Líder de Projetos Especiais na comunidade ManaUX e mentor em hackathons e iniciativas de inovação."
+    }
+  };
+
+  function openMinibioModal(personKey) {
+    const data = bios[personKey] || bios.victor;
+    document.getElementById('minibioImg').src = data.image;
+    document.getElementById('minibioName').textContent = data.name;
+    document.getElementById('minibioRole').textContent = data.role;
+    document.getElementById('minibioText').textContent = data.text;
     const m = document.getElementById('minibioModal');
     if (m) m.style.display = 'flex';
   }
