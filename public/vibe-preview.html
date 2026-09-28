@@ -146,7 +146,20 @@ header {
   padding: 6rem 0 3.5rem;
 }
 @media (min-width: 640px) { .hero { padding: 7.5rem 0 4.5rem; } }
-@media (min-width: 768px) { .hero { padding: 9.5rem 0 5.5rem; } }
+@media (min-width: 768px) { .hero { padding: 8.5rem 0 5.5rem; } }
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 2rem;
+  }
+}
 
 /* Desktop 3D V Video (Web):
    - Fica em z-index 1 à direita ocupando toda a altura da hero
@@ -1482,45 +1495,34 @@ footer { padding: 3.5rem 0; }
     <div class="blob" style="width:420px;height:420px;bottom:-160px;left:-140px;opacity:.25;background:radial-gradient(circle, rgba(85,241,239,0.18), rgba(85,241,239,0) 70%);"></div>
     <div class="grid-lines"></div>
 
-    <!-- 3D V Video DESKTOP (Web): fica à direita em z-index 1; o texto em container fica à frente em z-index 10 -->
-    <div class="hero-vglass-desktop">
-      <video class="v-glass-blur" autoplay muted loop playsinline>
-        <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
-      </video>
-      <video class="v-glass" autoplay muted loop playsinline>
-        <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
-      </video>
-    </div>
+    <div class="container hero-container" style="position:relative; z-index:10;">
+      <div class="hero-grid" style="display:grid; grid-template-columns:1fr; gap:2.5rem; align-items:center;">
+        <!-- Coluna Esquerda: Texto -->
+        <div class="hero-content" style="max-width:620px;">
+          <p class="pill-glass" style="margin-bottom:1.5rem;"><span class="dot"></span>Sites e sistemas para negócios de saúde e fitness</p>
 
-    <!-- Conteúdo da Hero (em z-index 10 garantindo que o texto fica 100% na frente) -->
-    <div class="container hero-container">
-      <div class="hero-content">
-        <p class="pill-glass"><span class="dot"></span>⚡ DESIGN TECH • UI/UX & DIGITAL PRODUCTS</p>
+          <h1 style="margin:0 0 1.5rem; font-size:clamp(2.2rem, 4.5vw, 62px); line-height:1.0; font-weight:800; text-transform:uppercase; color:#fff;">
+            Criamos produtos digitais<br>
+            de alta performance que<br>
+            <span class="glow-cyan" style="color:var(--cyan);">aceleram o seu negócio</span>
+          </h1>
 
-        <h1>
-          Criamos produtos<br>
-          digitais de alta<br>
-          performance que<br>
-          <span class="glow-cyan">aceleram o seu<br>negócio.</span>
-        </h1>
+          <p class="subtext" style="font-size:1.05rem; line-height:1.6; color:var(--fg-muted); margin:0 0 2rem; max-width:540px;">
+            Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps e soluções prontas focadas em conversão.
+          </p>
 
-        <!-- 3D V Video MOBILE: conforme modelo da imagem 2, centralizado entre H1 e subtítulo com degradê preto -->
-        <div class="hero-vglass-mobile">
-          <video class="v-glass-blur" autoplay muted loop playsinline>
-            <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
-          </video>
-          <video class="v-glass" autoplay muted loop playsinline>
-            <source src="Create_3D_V_video_202608251618.mp4" type="video/mp4">
-          </video>
+          <div class="hero-ctas" style="display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="#caminhos" class="btn-cyan">Explorar soluções</a>
+            <a href="#final-cta" class="btn-outline">Agendar Diagnóstico Gratuito</a>
+          </div>
         </div>
 
-        <p class="subtext">
-          Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps e soluções prontas focadas em conversão.
-        </p>
-
-        <div class="hero-ctas">
-          <a href="#caminhos" class="btn-cyan">Explorar Soluções</a>
-          <a href="#final-cta" class="btn-outline">Agendar Diagnóstico Gratuito</a>
+        <!-- Coluna Direita: Mockup Interativo Genérico -->
+        <div class="hero-interactive-col" style="width:100%; display:flex; align-items:center; justify-content:center;">
+          <div style="position:relative; width:100%; aspect-ratio:1760/1328; max-width:620px;">
+            <div style="position:absolute; inset:-10px; border-radius:2rem; background:rgba(85,241,239,0.12); filter:blur(40px); pointer-events:none;"></div>
+            <iframe src="vibe-hero-interativo-generico.html" title="VIBE Hero Interativo" style="width:100%; height:100%; border:none; background:transparent; overflow:hidden; display:block;"></iframe>
+          </div>
         </div>
       </div>
     </div>
