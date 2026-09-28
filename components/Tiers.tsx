@@ -5,20 +5,20 @@ const tiers = [
     n: "01",
     name: "Site Base",
     desc: "Uma página de vitrine: sobre, alunos, valores e contato. Você mesmo edita fotos e textos. Hospedagem inclusa.",
-    image: "/tier-base.jpg",
+    image: "/site base.png",
     demoUrl: "https://victor-belichar-personal.vercel.app/",
   },
   {
     n: "02",
     name: "Site + Personalização",
     desc: "Tudo do Site Base, com design exclusivo pro seu posicionamento, agendamento integrado e manutenção mensal feita por nós.",
-    image: "/tier-custom.jpg",
+    image: "/site + personalizacao.png",
   },
   {
     n: "03",
     name: "App / Sistema Completo",
     desc: "Sistema sob medida com automações via WhatsApp e n8n — do primeiro contato ao acompanhamento do aluno. Escopo em consultoria dedicada.",
-    image: "/tier-sistema.jpg",
+    image: "/app sistema completo.png",
   },
 ];
 
