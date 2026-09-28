@@ -15,7 +15,7 @@ export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-black/80 backdrop-blur-xl">
+    <header className="fixed top-0 left-0 right-0 w-full z-50 border-b border-line bg-black/80 backdrop-blur-xl">
       <div className="container-vibe flex h-16 sm:h-20 md:h-24 items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
           <Image src="/logo.png" alt="VIBE Design Tech" width={264} height={80} priority className="h-8 sm:h-11 md:h-14 w-auto" />

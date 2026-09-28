@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section id="top" className="hero relative overflow-hidden border-b border-line pb-12 pt-10 sm:pb-16 sm:pt-16 md:pt-20">
+    <section id="top" className="hero relative overflow-hidden border-b border-line pb-12 pt-24 sm:pb-16 sm:pt-32 md:pt-36">
       {/* Background ambient glows */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div
