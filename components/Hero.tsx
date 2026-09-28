@@ -44,7 +44,7 @@ export default function Hero() {
             ⚡ DESIGN TECH • UI/UX & DIGITAL PRODUCTS
           </p>
 
-          <h1 className="font-display text-[clamp(2.35rem,8.5vw,4.2rem)] leading-[0.95] font-extrabold uppercase tracking-tight text-fg sm:text-7xl sm:leading-[0.98] md:text-8xl break-words">
+          <h1 className="font-display text-[clamp(2.5rem,6.5vw,80px)] md:text-[80px] leading-[0.95] font-extrabold uppercase tracking-tight text-fg break-words">
             Criamos produtos
             <br />
             digitais de alta
