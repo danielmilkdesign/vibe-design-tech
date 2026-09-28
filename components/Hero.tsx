@@ -26,10 +26,12 @@ export default function Hero() {
               Sites e sistemas para negócios de saúde e fitness
             </p>
 
-            <h1 className="font-display text-[clamp(2.35rem,9vw,3.8rem)] leading-[0.98] font-extrabold uppercase tracking-tight text-fg sm:text-7xl sm:leading-[1.02] md:text-8xl break-words">
-              Seu Instagram atrai.
+            <h1 className="font-display text-[clamp(2.35rem,8.5vw,4.2rem)] leading-[0.95] font-extrabold uppercase tracking-tight text-fg sm:text-7xl sm:leading-[0.98] md:text-8xl break-words">
+              Seu Instagram
               <br />
-              <span className="glow-cyan text-cyan">Seu site converte.</span>
+              atrai.
+              <br />
+              Seu site converte.
             </h1>
 
             {/* Showcase no Mobile (visível apenas em telas menores que lg) */}
