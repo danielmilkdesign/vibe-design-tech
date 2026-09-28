@@ -18,18 +18,17 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Coluna Esquerda: Conteúdo textual */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <p className="pill-glass text-[11px] sm:text-xs inline-flex mb-4 sm:mb-6">
-              <span className="dot" />
-              Sites e sistemas para negócios de saúde e fitness
-            </p>
-
-            <h1 className="font-display text-[clamp(2.3rem,4.5vw,60px)] xl:text-[66px] leading-[0.98] font-extrabold uppercase tracking-tight text-white break-words">
-              Criamos produtos digitais
+            <h1 className="font-display text-[clamp(2.5rem,5vw,72px)] xl:text-[80px] leading-[0.98] font-extrabold uppercase tracking-tight text-white break-words">
+              Criamos produtos
               <br />
-              de alta performance que
+              digitais de alta
+              <br />
+              performance que
               <br />
               <span className="glow-cyan text-cyan">
-                aceleram o seu negócio
+                aceleram o seu
+                <br />
+                negócio.
               </span>
             </h1>
 
