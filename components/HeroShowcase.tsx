@@ -25,7 +25,7 @@ const HOTSPOTS: Hotspot[] = [
     title: "Presença & Autoridade Imediata",
     description: "Sua casa digital com design de alto impacto, carregamento instantâneo e identidade premium.",
     metric: "100% sob seu controle",
-    top: "20%",
+    top: "16%",
     left: "14%",
     align: "left",
     color: "cyan",
@@ -37,7 +37,7 @@ const HOTSPOTS: Hotspot[] = [
     title: "Metodologia Visual & Clara",
     description: "Explica suas etapas de treino, nutrição e acompanhamento para valorizar o ticket do seu serviço.",
     metric: "Elimina dúvidas e objeções",
-    top: "52%",
+    top: "50%",
     left: "4%",
     align: "left",
     color: "cyan",
@@ -49,7 +49,7 @@ const HOTSPOTS: Hotspot[] = [
     title: "Resultados & Depoimentos Reais",
     description: "Galeria de antes e depois com avaliações 5 estrelas que despertam desejo imediato no lead.",
     metric: "+Confiança comprovada",
-    top: "60%",
+    top: "58%",
     right: "4%",
     align: "right",
     color: "cyan",
@@ -61,7 +61,7 @@ const HOTSPOTS: Hotspot[] = [
     title: "Chamada de Ação Direta",
     description: "Botão estratégico direto para WhatsApp ou formulário, transformando cliques em alunos pagantes.",
     metric: "Zero atrito de fechamento",
-    top: "81%",
+    top: "80%",
     right: "12%",
     align: "right",
     color: "lime",
@@ -109,11 +109,11 @@ export default function HeroShowcase() {
       {/* Ambient cyan background glow aura */}
       <div className="pointer-events-none absolute -inset-8 -z-10 rounded-full bg-cyan/20 blur-3xl transition-opacity duration-700 opacity-70 group-hover:opacity-100" />
       <div
-        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[400px] w-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[100px] transition-all duration-700"
+        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[100px] transition-all duration-700"
         style={{
           background: isHovered
-            ? "radial-gradient(circle, rgba(85,241,239,0.38) 0%, rgba(85,241,239,0.09) 60%, transparent 80%)"
-            : "radial-gradient(circle, rgba(85,241,239,0.24) 0%, rgba(85,241,239,0.04) 60%, transparent 80%)",
+            ? "radial-gradient(circle, rgba(85,241,239,0.4) 0%, rgba(85,241,239,0.1) 60%, transparent 80%)"
+            : "radial-gradient(circle, rgba(85,241,239,0.25) 0%, rgba(85,241,239,0.05) 60%, transparent 80%)",
         }}
       />
 
@@ -124,10 +124,10 @@ export default function HeroShowcase() {
           transform: `perspective(1000px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg) scale3d(${isHovered ? 1.02 : 1}, ${isHovered ? 1.02 : 1}, 1)`,
         }}
       >
-        {/* The Base Hybrid V + Site Image */}
-        <div className="relative aspect-[1.15/1] w-full overflow-hidden rounded-2xl transition-all duration-500">
+        {/* The Base download.png Image */}
+        <div className="relative aspect-[1.12/1] w-full overflow-hidden rounded-2xl transition-all duration-500">
           <Image
-            src="/vibe-hero-hybrid-v-site.png"
+            src="/download.png"
             alt="VIBE Sistema e Site Base Interativo para Saúde e Fitness"
             fill
             sizes="(max-width: 768px) 100vw, 640px"
@@ -155,10 +155,14 @@ export default function HeroShowcase() {
                   onMouseLeave={() => setActiveHotspot(null)}
                   onClick={() => setActiveHotspot(isActive ? null : spot.id)}
                 >
-                  {/* Invisible hotspot touch target with interactive halo */}
+                  {/* Hotspot interactive halo and trigger target */}
                   <div
                     className={`h-12 w-32 rounded-full transition-all duration-300 flex items-center justify-center ${
-                      isActive ? "bg-cyan/15 ring-2 ring-cyan/60" : "hover:bg-cyan/10"
+                      isActive
+                        ? isLime
+                          ? "bg-[#d8ff3f]/15 ring-2 ring-[#d8ff3f]/60"
+                          : "bg-cyan/15 ring-2 ring-cyan/60"
+                        : "hover:bg-cyan/10"
                     }`}
                   />
 
@@ -191,11 +195,11 @@ export default function HeroShowcase() {
                       </span>
                     </div>
                     <h4 className="text-xs font-bold text-white mb-1 font-display tracking-wide uppercase">
-                      {spot.title}
-                    </h4>
-                    <p className="text-[11px] leading-snug text-white/80 font-body">
-                      {spot.description}
-                    </p>
+                  {spot.title}
+                </h4>
+                <p className="text-[11px] leading-snug text-white/80 font-body">
+                  {spot.description}
+                </p>
                   </div>
                 </div>
               );
