@@ -122,7 +122,7 @@ export default function HeroShowcase() {
         {/* The Base Image */}
         <div className="relative aspect-[1.12/1] w-full overflow-hidden rounded-2xl border border-cyan/20 bg-black/40 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.9),0_0_40px_rgba(85,241,239,0.15)] transition-shadow duration-500 hover:shadow-[0_25px_70px_-10px_rgba(0,0,0,0.95),0_0_50px_rgba(85,241,239,0.3)]">
           <Image
-            src="/site base.png"
+            src="/site-base.png"
             alt="VIBE Sistema e Site Base Interativo para Saúde e Fitness"
             fill
             sizes="(max-width: 768px) 100vw, 620px"
