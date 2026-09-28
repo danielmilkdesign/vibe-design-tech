@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIBE DESIGN TECH — Estúdio de Produtos Digitais & Design Tech</title>
+  <meta name="description" content="Estúdio de design e tecnologia especializado na criação de produtos digitais de alta performance: Landing Pages, Web Apps, UI/UX e Templates de Alta Conversão." />
+  <link rel="icon" type="image/png" href="FAVICON.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #000000;
+      --bg-card: #050b0c;
+      --bg-surface: #0a1415;
+      --fg: #ffffff;
+      --fg-muted: rgba(255, 255, 255, 0.65);
+      --cyan: #55f1ef;
+      --cyan-glow: rgba(85, 241, 239, 0.4);
+      --lime: #baff38;
+      --line: rgba(255, 255, 255, 0.12);
+      --line-cyan: rgba(85, 241, 239, 0.3);
+      --font-display: 'Big Shoulders Display', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    ::selection {
+      background: var(--cyan);
+      color: #000;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        padding: 0 2.5rem;
+      }
+    }
+
+    /* Typography Utilities */
+    .font-display { font-family: var(--font-display); }
+    .font-mono { font-family: var(--font-mono); }
+    .text-cyan { color: var(--cyan); }
+    .text-lime { color: var(--lime); }
+    .glow-cyan {
+      text-shadow: 0 0 25px var(--cyan-glow);
+    }
+
+    /* Background FX */
+    .ambient-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(140px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .grid-lines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: radial-gradient(circle at 50% 30%, black 0%, black 40%, transparent 80%);
+      -webkit-mask-image: radial-gradient(circle at 50% 30%, black 0%, black 40%, transparent 80%);
+    }
+
+    /* Badges & Pills */
+    .pill-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 1.1rem;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(85, 241, 239, 0.4);
+      backdrop-filter: blur(14px);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      box-shadow: 0 0 20px rgba(85, 241, 239, 0.15);
+    }
+
+    .pill-badge .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--cyan);
+      box-shadow: 0 0 10px var(--cyan);
+      animation: pulseDot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--cyan);
+      color: #000000;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.85rem;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 30px rgba(85, 241, 239, 0.5);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 0 45px rgba(85, 241, 239, 0.8);
+      background: #76f6f4;
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--fg);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.85rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      background: rgba(85, 241, 239, 0.08);
+      box-shadow: 0 0 25px rgba(85, 241, 239, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.82);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--line);
+      padding: 1rem 0;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.6rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-logo svg {
+      width: 28px;
+      height: 28px;
+      color: var(--cyan);
+    }
+
+    nav.nav-links {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--fg-muted);
+    }
+
+    @media (min-width: 860px) {
+      nav.nav-links { display: flex; }
+    }
+
+    nav.nav-links a {
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    nav.nav-links a:hover {
+      color: var(--cyan);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      padding: 5rem 0 6rem;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (min-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.75rem, 8.5vw, 5.2rem);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin: 1.5rem 0 1.25rem;
+    }
+
+    .hero-subheadline {
+      font-size: 1.1rem;
+      color: var(--fg-muted);
+      max-width: 36rem;
+      line-height: 1.65;
+      margin-bottom: 2.25rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    /* Hero Interactive Tech Card */
+    .hero-tech-card {
+      position: relative;
+      border-radius: 1.5rem;
+      border: 1px solid rgba(85, 241, 239, 0.35);
+      background: linear-gradient(135deg, rgba(5, 15, 16, 0.92) 0%, rgba(2, 6, 7, 0.96) 100%);
+      padding: 2rem;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(85, 241, 239, 0.15);
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .hero-tech-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--cyan);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.9), 0 0 55px rgba(85, 241, 239, 0.25);
+    }
+
+    .tech-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .window-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .window-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .window-dots span:nth-child(1) { background: #ff5f56; }
+    .window-dots span:nth-child(2) { background: #ffbd2e; }
+    .window-dots span:nth-child(3) { background: #27c93f; }
+
+    .code-terminal {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.8;
+    }
+
+    .code-keyword { color: #ff7b72; }
+    .code-var { color: var(--cyan); }
+    .code-string { color: var(--lime); }
+    .code-comment { color: rgba(255, 255, 255, 0.4); }
+
+    .tech-badges-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .mini-badge {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 0.75rem;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+    }
+
+    /* Metrics Strip */
+    .metrics-strip {
+      padding: 3.5rem 0;
+      border-bottom: 1px solid var(--line);
+      background: #020606;
+    }
+
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .metrics-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .metric-item {
+      text-align: center;
+    }
+
+    .metric-value {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1;
+      color: var(--cyan);
+      margin-bottom: 0.4rem;
+    }
+
+    .metric-label {
+      font-size: 0.85rem;
+      color: var(--fg-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    /* Section Headers */
+    .section-pad {
+      padding: 6rem 0;
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+
+    .section-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      max-width: 48rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--fg-muted);
+      max-width: 36rem;
+      margin-bottom: 3.5rem;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+
+    @media (min-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1.5rem;
+      padding: 2.25rem;
+      display: flex;
+      flex-col: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s ease;
+    }
+
+    .service-card:hover {
+      border-color: var(--cyan);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.8), 0 0 30px rgba(85, 241, 239, 0.2);
+    }
+
+    .service-card .num {
+      font-family: var(--font-mono);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--cyan);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: var(--fg-muted);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .deliverables-list {
+      list-style: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 1.25rem;
+      margin-top: auto;
+    }
+
+    .deliverables-list li {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .deliverables-list li::before {
+      content: "✦";
+      color: var(--cyan);
+      font-size: 0.75rem;
+    }
+
+    /* Template Showcase Flagship Cards */
+    .templates-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 992px) {
+      .templates-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+    }
+
+    .flagship-card {
+      background: linear-gradient(145deg, #050e10 0%, #020607 100%);
+      border: 1px solid rgba(85, 241, 239, 0.4);
+      border-radius: 1.75rem;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(85, 241, 239, 0.15);
+    }
+
+    .flagship-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      background: rgba(186, 255, 56, 0.1);
+      border: 1px solid var(--lime);
+      color: var(--lime);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .flagship-card h3 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .flagship-card p {
+      color: var(--fg-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 32rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .feature-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-tag {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 9999px;
+      padding: 0.4rem 0.9rem;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+    }
+
+    .side-templates-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .secondary-template-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .secondary-template-card:hover {
+      border-color: rgba(255, 255, 255, 0.25);
+      transform: translateX(4px);
+    }
+
+    .status-soon {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .secondary-template-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .secondary-template-card p {
+      font-size: 0.88rem;
+      color: var(--fg-muted);
+      line-height: 1.55;
+    }
+
+    /* Methodology Section */
+    .methodology-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .methodology-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .method-card {
+      background: #04090a;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 1.5rem;
+      padding: 2.25rem;
+      position: relative;
+    }
+
+    .method-icon {
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+      display: inline-block;
+    }
+
+    .method-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      color: #fff;
+    }
+
+    .method-card p {
+      font-size: 0.92rem;
+      color: var(--fg-muted);
+      line-height: 1.6;
+    }
+
+    /* Final CTA Section */
+    .final-cta {
+      padding: 7rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 50%, rgba(85, 241, 239, 0.12) 0%, transparent 70%);
+    }
+
+    .cta-container {
+      max-width: 48rem;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      font-weight: 900;
+      line-height: 0.98;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .cta-sub {
+      font-size: 1.15rem;
+      color: var(--fg-muted);
+      margin-bottom: 2.5rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 3rem 0;
+      background: #000;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-flex {
+        flex-direction: row;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Navigation Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#inicio" class="brand-logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        <span>VIBE <span class="text-cyan">DESIGN TECH</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#inicio">Início</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#templates">Templates</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20diagn%C3%B3stico%20de%20produto%20digital." target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 0.6rem 1.4rem; font-size: 0.82rem;">
+        Falar com Especialista
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="hero-section">
+    <div class="ambient-glow" style="top: -200px; right: -150px; width: 650px; height: 650px; background: radial-gradient(circle, rgba(85,241,239,0.35), transparent 70%);"></div>
+    <div class="ambient-glow" style="bottom: -150px; left: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(186,255,56,0.18), transparent 70%);"></div>
+    <div class="grid-lines"></div>
+
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Left Column: Copy & Actions -->
+        <div>
+          <div class="pill-badge">
+            <span class="dot"></span>
+            <span>⚡ DESIGN TECH • UI/UX & DIGITAL PRODUCTS</span>
+          </div>
+
+          <h1 class="hero-headline">
+            Criamos produtos digitais de alta performance que <span class="text-cyan glow-cyan">aceleram o seu negócio.</span>
+          </h1>
+
+          <p class="hero-subheadline">
+            Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps e soluções prontas focadas em conversão.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#servicos" class="btn-primary">
+              Explorar Soluções
+            </a>
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20diagn%C3%B3stico%20gratuito." target="_blank" rel="noopener noreferrer" class="btn-outline">
+              Agendar Diagnóstico Gratuito
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Tech Card -->
+        <div>
+          <div class="hero-tech-card">
+            <div class="tech-card-header">
+              <div class="window-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="font-mono" style="font-size: 0.75rem; color: var(--cyan);">vibe-engine-v2.0.ts</span>
+            </div>
+
+            <div class="code-terminal">
+              <div><span class="code-comment">// Proposta de Valor VIBE</span></div>
+              <div><span class="code-keyword">const</span> <span class="code-var">digitalProduct</span> = {</div>
+              <div style="padding-left: 1.25rem;"><span class="code-var">ui_ux:</span> <span class="code-string">"High-End & Conversion-First"</span>,</div>
+              <div style="padding-left: 1.25rem;"><span class="code-var">stack:</span> <span class="code-string">"Next.js + AI Accelerated"</span>,</div>
+              <div style="padding-left: 1.25rem;"><span class="code-var">performance:</span> <span class="code-string">"Sub-second load (&lt;1s)"</span>,</div>
+              <div style="padding-left: 1.25rem;"><span class="code-var">ownership:</span> <span class="code-string">"100% código próprio"</span></div>
+              <div>};</div>
+              <div style="margin-top: 0.5rem;"><span class="code-keyword">export default</span> <span class="code-var">digitalProduct</span>;</div>
+            </div>
+
+            <div class="tech-badges-grid">
+              <div class="mini-badge">
+                <span style="color: var(--cyan);">⚡</span>
+                <span>Vibe Coding & IA</span>
+              </div>
+              <div class="mini-badge">
+                <span style="color: var(--lime);">✦</span>
+                <span>Design Systems</span>
+              </div>
+              <div class="mini-badge">
+                <span style="color: var(--cyan);">🚀</span>
+                <span>PageSpeed 99+</span>
+              </div>
+              <div class="mini-badge">
+                <span style="color: var(--lime);">🔒</span>
+                <span>Sem Dependência</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Strip -->
+  <section class="metrics-strip">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <div class="metric-value">99.8%</div>
+          <div class="metric-label">Score PageSpeed</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">&lt; 1s</div>
+          <div class="metric-label">Carregamento Ultra-rápido</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">+300%</div>
+          <div class="metric-label">Percepção de Valor</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">100%</div>
+          <div class="metric-label">Ativo Próprio & Escalável</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Section -->
+  <section id="servicos" class="section-pad">
+    <div class="container">
+      <span class="section-eyebrow">/ O QUE FAZEMOS</span>
+      <h2 class="section-title">Soluções Estratégicas em <span class="text-cyan">Design & Tecnologia</span></h2>
+      <p class="section-desc">
+        Desenvolvemos ativos digitais sob medida para negócios que exigem sofisticação visual, engenharia moderna e foco obsessivo em conversão.
+      </p>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div>
+            <div class="num">01</div>
+            <h3>High-Converting Landing Pages</h3>
+            <p>Páginas ultra otimizadas para lançamentos, SaaS, serviços B2B, infoprodutos e especialistas que precisam escalar vendas.</p>
+          </div>
+          <ul class="deliverables-list">
+            <li>Copywriting persuasivo e estratégico</li>
+            <li>UI/UX exclusivo e responsivo</li>
+            <li>SEO avançado e estruturação de dados</li>
+            <li>Velocidade máxima de carregamento</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div>
+            <div class="num">02</div>
+            <h3>Web Apps & Dashboards</h3>
+            <p>Interfaces complexas, plataformas web e sistemas responsivos construídos com stacks modernas e foco na experiência do usuário.</p>
+          </div>
+          <ul class="deliverables-list">
+            <li>Prototipagem rápida em alta fidelidade</li>
+            <li>Integração com APIs & automações (n8n)</li>
+            <li>Design Systems modulares e escaláveis</li>
+            <li>Engenharia com Next.js, React e IA</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div>
+            <div class="num">03</div>
+            <h3>Templates & Soluções Prontas</h3>
+            <p>Ativos pré-construídos e validados para nichos específicos, prontos para rodar e acelerar seu time-to-market.</p>
+          </div>
+          <ul class="deliverables-list">
+            <li>Implementação em tempo recorde</li>
+            <li>Customização visual para sua marca</li>
+            <li>Hospedagem e setup inclusos</li>
+            <li>Suporte técnico dedicado</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Templates & Products Ecosystem (Where Fitness/Personal enters as Flagship) -->
+  <section id="templates" class="section-pad" style="background: #020708;">
+    <div class="container">
+      <span class="section-eyebrow">/ ECOSSISTEMA DE PRODUTOS</span>
+      <h2 class="section-title">Templates Validados de <span class="text-cyan">Alta Conversão</span></h2>
+      <p class="section-desc">
+        Soluções completas e prontas para rodar em nichos estratégicos. Estruturas testadas para gerar autoridade e agendamentos.
+      </p>
+
+      <div class="templates-grid">
+        <!-- Flagship Product: VIBE Fit Pro -->
+        <div class="flagship-card">
+          <span class="flagship-badge">● DISPONÍVEL • PRODUTO FLAGSHIP</span>
+          <h3>VIBE Fit Pro (Nicho Fitness & Saúde)</h3>
+          <p>
+            A estrutura definitiva para personal trainers, consultorias esportivas e nutricionistas aumentarem suas conversões e pararem de depender apenas do algoritmo.
+          </p>
+
+          <div class="feature-tags">
+            <span class="feature-tag">📅 Agendamento Integrado</span>
+            <span class="feature-tag">💪 Apresentação de Método</span>
+            <span class="feature-tag">⭐ Prova Social & Depoimentos</span>
+            <span class="feature-tag">💳 Checkout / WhatsApp</span>
+          </div>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="https://victor-belichar-personal.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Ver Demonstração Ao Vivo ↗
+            </a>
+            <a href="https://wa.me/5511999999999?text=Quero%20adquirir%20o%20template%20VIBE%20Fit%20Pro." target="_blank" rel="noopener noreferrer" class="btn-outline">
+              Adquirir Template
+            </a>
+          </div>
+        </div>
+
+        <!-- Upcoming Templates -->
+        <div class="side-templates-stack">
+          <div class="secondary-template-card">
+            <span class="status-soon">Em Breve</span>
+            <h4>VIBE Expert (Consultores & Mentores)</h4>
+            <p>Funil estratégico e landing page minimalista focada em autoridade, qualificação de leads e fechamento de clientes de alto ticket.</p>
+          </div>
+
+          <div class="secondary-template-card">
+            <span class="status-soon">Em Breve</span>
+            <h4>VIBE SaaS & Tech (Startups)</h4>
+            <p>Interface moderna em dark mode para apresentação de softwares, micro-SaaS e plataformas web com documentação e planos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methodology & Differential -->
+  <section id="metodologia" class="section-pad">
+    <div class="container">
+      <span class="section-eyebrow">/ DIFERENCIAL TÉCNICO</span>
+      <h2 class="section-title">Como a VIBE entrega em <span class="text-cyan">Tempo Recorde</span></h2>
+      <p class="section-desc">
+        Combinamos maestria em design visual com automações inteligentes e IA para acelerar cada fase do desenvolvimento.
+      </p>
+
+      <div class="methodology-grid">
+        <div class="method-card">
+          <div class="method-icon">⚡</div>
+          <h3>Vibe Coding & IA</h3>
+          <p>Utilizamos inteligência artificial avançada para acelerar a escrita de código limpo, testes e otimizações, reduzindo o tempo de entrega de semanas para dias.</p>
+        </div>
+
+        <div class="method-card">
+          <div class="method-icon">🎨</div>
+          <h3>Design Systems Modulares</h3>
+          <p>Criamos sistemas de design padronizados que garantem consistência visual impecável, escalabilidade futura e facilidade total de manutenção.</p>
+        </div>
+
+        <div class="method-card">
+          <div class="method-icon">🚀</div>
+          <h3>Performance Obsessiva</h3>
+          <p>Cada componente é construído para carregar em menos de 1 segundo, obtendo notas máximas no Google PageSpeed e garantindo que nenhum lead seja perdido por lentidão.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="contato" class="final-cta">
+    <div class="container cta-container">
+      <span class="pill-badge" style="margin-bottom: 1.5rem;">
+        <span class="dot"></span>
+        <span>VAMOS CONVERSAR?</span>
+      </span>
+
+      <h2 class="cta-headline">
+        Pronto para elevar o nível do seu <span class="text-cyan glow-cyan">produto digital?</span>
+      </h2>
+
+      <p class="cta-sub">
+        Entre em contato para um diagnóstico gratuito do seu projeto ou escolha uma de nossas soluções validadas.
+      </p>
+
+      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20iniciar%20um%20projeto%20sob%20medida%20com%20a%20VIBE." target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1rem; padding: 1rem 2.25rem;">
+          Iniciar Projeto Sob Medida
+        </a>
+        <a href="#templates" class="btn-outline" style="font-size: 1rem; padding: 1rem 2.25rem;">
+          Conhecer o VIBE Fit Pro
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-flex">
+      <div style="display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-display); font-size: 1.25rem; font-weight: 800;">
+        <span>VIBE <span class="text-cyan">DESIGN TECH</span></span>
+      </div>
+
+      <div>
+        <p>© 2026 VIBE Design Tech. Estúdio de Produtos Digitais & Soluções de Alta Conversão.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

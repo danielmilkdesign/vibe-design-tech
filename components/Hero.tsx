@@ -31,7 +31,7 @@ export default function Hero() {
               <br />
               atrai.
               <br />
-              Seu site converte.
+              <span className="glow-cyan text-cyan">Seu site converte.</span>
             </h1>
 
             {/* Componente Interativo no Mobile */}
@@ -40,7 +40,7 @@ export default function Hero() {
             </div>
 
             <p className="subtext mt-0 md:mt-8 max-w-xl text-[0.9375rem] sm:text-base md:text-xl leading-relaxed text-fg-muted mx-auto md:mx-0">
-              Criamos sites, funis e sistemas que explicam seu método, organizam suas provas e levam o lead até o agendamento — sem depender apenas do direct ou do algoritmo.
+              Transformamos sua audiência em uma presença própria que explica seu método, organiza suas provas e leva o lead até o agendamento, sem depender apenas do direct ou do algoritmo.
             </p>
 
             <div className="hero-ctas mt-6 sm:mt-8 flex flex-row items-center justify-center md:justify-start gap-3 sm:gap-4 flex-wrap">
