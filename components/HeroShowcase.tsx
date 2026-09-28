@@ -11,8 +11,7 @@ interface Hotspot {
   description: string;
   metric: string;
   top: string;
-  left?: string;
-  right?: string;
+  left: string;
   align: "left" | "right";
 }
 
@@ -22,21 +21,21 @@ const HOTSPOTS: Hotspot[] = [
     label: "SITE",
     tag: "Estrutura Própria",
     title: "Presença & Autoridade Imediata",
-    description: "Sua casa digital com design de alto impacto, carregamento instantâneo e identidade premium.",
+    description: "Sua vitrine digital profissional de alto impacto, com carregamento instantâneo e identidade premium.",
     metric: "100% sob seu controle",
-    top: "14%",
-    left: "14%",
+    top: "24%",
+    left: "26%",
     align: "left",
   },
   {
     id: "metodo",
     label: "MÉTODO",
     tag: "Diferenciação",
-    title: "Metodologia Visual & Clara",
-    description: "Explica suas etapas de treino, nutrição e acompanhamento para valorizar o preço do seu serviço.",
+    title: "Metodologia Clara & Visual",
+    description: "Explica suas etapas de treino, nutrição e acompanhamento para valorizar o ticket do seu serviço.",
     metric: "Elimina dúvidas e objeções",
-    top: "47%",
-    left: "4%",
+    top: "48%",
+    left: "19%",
     align: "left",
   },
   {
@@ -44,10 +43,10 @@ const HOTSPOTS: Hotspot[] = [
     label: "PROVA",
     tag: "Credibilidade",
     title: "Resultados & Depoimentos Reais",
-    description: "Galeria de antes e depois com avaliações 5 estrelas que despertam desejo inegável no lead.",
+    description: "Casos de sucesso com transformações reais que geram desejo imediato e quebram qualquer dúvida.",
     metric: "+Confiança comprovada",
-    top: "58%",
-    right: "6%",
+    top: "54%",
+    left: "66%",
     align: "right",
   },
   {
@@ -57,8 +56,8 @@ const HOTSPOTS: Hotspot[] = [
     title: "Chamada de Ação Direta",
     description: "Botão estratégico direto para WhatsApp ou formulário, transformando cliques em alunos pagantes.",
     metric: "Zero atrito de fechamento",
-    top: "82%",
-    right: "8%",
+    top: "71%",
+    left: "57%",
     align: "right",
   },
 ];
@@ -78,8 +77,8 @@ export default function HeroShowcase() {
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
 
-    const rotateX = ((y - centerY) / centerY) * -9;
-    const rotateY = ((x - centerX) / centerX) * 9;
+    const rotateX = ((y - centerY) / centerY) * -8;
+    const rotateY = ((x - centerX) / centerX) * 8;
 
     setTilt({ rotateX, rotateY });
   };
@@ -108,31 +107,31 @@ export default function HeroShowcase() {
         style={{
           background: isHovered
             ? "radial-gradient(circle, rgba(85,241,239,0.35) 0%, rgba(85,241,239,0.08) 60%, transparent 80%)"
-            : "radial-gradient(circle, rgba(85,241,239,0.22) 0%, rgba(85,241,239,0.04) 60%, transparent 80%)",
+            : "radial-gradient(circle, rgba(85,241,239,0.2) 0%, rgba(85,241,239,0.04) 60%, transparent 80%)",
         }}
       />
 
       {/* 3D Card Container */}
       <div
-        className="relative overflow-visible rounded-2xl transition-transform duration-200 ease-out will-change-transform"
+        className="relative overflow-visible rounded-3xl transition-transform duration-200 ease-out will-change-transform"
         style={{
           transform: `perspective(1000px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg) scale3d(${isHovered ? 1.02 : 1}, ${isHovered ? 1.02 : 1}, 1)`,
         }}
       >
         {/* The Base Image */}
-        <div className="relative aspect-[1.12/1] w-full overflow-hidden rounded-2xl border border-cyan/20 bg-black/40 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.9),0_0_40px_rgba(85,241,239,0.15)] transition-shadow duration-500 hover:shadow-[0_25px_70px_-10px_rgba(0,0,0,0.95),0_0_50px_rgba(85,241,239,0.3)]">
+        <div className="relative aspect-[1.14/1] w-full overflow-hidden rounded-3xl border border-cyan/30 bg-[#070b0c] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.9),0_0_35px_rgba(85,241,239,0.18)] transition-all duration-500 hover:border-cyan/50 hover:shadow-[0_25px_70px_-10px_rgba(0,0,0,0.95),0_0_50px_rgba(85,241,239,0.3)]">
           <Image
-            src="/site-base.png"
-            alt="VIBE Sistema e Site Base Interativo para Saúde e Fitness"
+            src="/VICTOR.png"
+            alt="VIBE Sistema e Site Base Interativo para Saúde e Fitness no Desktop e Mobile"
             fill
             sizes="(max-width: 768px) 100vw, 620px"
             priority
-            className="object-cover object-center transition-transform duration-700 ease-out hover:scale-[1.01]"
+            className="object-cover object-center transition-transform duration-700 ease-out"
           />
 
-          {/* Cyber glass scanline overlay */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(85,241,239,0.12),_transparent_70%)]" />
+          {/* Cyber glass subtle vignette */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(85,241,239,0.08),_transparent_65%)]" />
         </div>
 
         {/* Interactive Hotspot Badges with Pointer Lines */}
@@ -146,29 +145,29 @@ export default function HeroShowcase() {
               style={{
                 top: spot.top,
                 left: spot.left,
-                right: spot.right,
+                transform: "translate(-50%, -50%)",
               }}
               onMouseEnter={() => setActiveHotspot(spot.id)}
               onMouseLeave={() => setActiveHotspot(null)}
               onClick={() => setActiveHotspot(isActive ? null : spot.id)}
             >
-              {/* Hotspot Pill Button */}
+              {/* Hotspot Pill Button matching vibe-hero-component */}
               <button
                 type="button"
-                className={`group/btn relative flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 cursor-pointer backdrop-blur-md ${
+                className={`group/btn relative flex items-center gap-2.5 rounded-full border px-3.5 py-1 text-xs font-mono font-bold tracking-wider uppercase transition-all duration-300 cursor-pointer backdrop-blur-md whitespace-nowrap ${
                   isActive
-                    ? "border-cyan bg-cyan/25 text-white shadow-[0_0_20px_rgba(85,241,239,0.8)] scale-105"
-                    : "border-cyan/40 bg-black/60 text-cyan hover:border-cyan hover:bg-cyan/15 hover:shadow-[0_0_15px_rgba(85,241,239,0.5)] hover:scale-105"
+                    ? "border-cyan bg-black/80 text-white shadow-[0_0_22px_rgba(85,241,239,0.85)] scale-110"
+                    : "border-cyan/50 bg-black/70 text-cyan hover:border-cyan hover:bg-black/85 hover:shadow-[0_0_16px_rgba(85,241,239,0.6)] hover:scale-105"
                 }`}
                 aria-label={`Ver detalhes de ${spot.label}`}
               >
-                {/* Radar pulsing dot */}
-                <span className="relative flex h-2.5 w-2.5">
+                {/* Glowing solid dot with ping aura */}
+                <span className="relative flex h-3 w-3">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan opacity-75" />
-                  <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-cyan shadow-[0_0_8px_#55f1ef]" />
+                  <span className="relative inline-flex h-3 w-3 rounded-full bg-cyan shadow-[0_0_10px_#55f1ef]" />
                 </span>
 
-                <span>{spot.label}</span>
+                <span className="drop-shadow-[0_0_8px_rgba(85,241,239,0.4)]">{spot.label}</span>
               </button>
 
               {/* Popup Tooltip Details */}
@@ -203,9 +202,9 @@ export default function HeroShowcase() {
         })}
       </div>
 
-      {/* Helper caption below showcase */}
-      <div className="mt-3 flex items-center justify-center gap-2 text-center text-[11px] font-mono text-cyan/70">
-        <span className="inline-block h-1.5 w-1.5 rounded-full bg-cyan animate-pulse" />
+      {/* Helper caption below showcase matching the exact design */}
+      <div className="mt-4 flex items-center justify-center gap-2 text-center text-xs font-mono text-cyan">
+        <span className="inline-block h-2 w-2 rounded-full bg-cyan shadow-[0_0_8px_#55f1ef] animate-pulse" />
         <span>Passe o mouse ou toque nos pontos para explorar a estrutura</span>
       </div>
     </div>
