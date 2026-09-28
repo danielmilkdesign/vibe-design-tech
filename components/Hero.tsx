@@ -1,29 +1,29 @@
 export default function Hero() {
   return (
-    <section id="top" className="hero relative overflow-hidden border-b border-line pb-16 pt-24 sm:pb-20 sm:pt-32 md:pt-36">
+    <section id="top" className="hero relative overflow-hidden border-b border-line pb-20 pt-24 sm:pb-24 sm:pt-32 md:pt-36 md:pb-28">
       {/* Background ambient glows */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div
-          className="blob h-[680px] w-[680px] opacity-40"
+          className="blob h-[720px] w-[720px] opacity-40"
           style={{ top: "-220px", right: "-180px", background: "radial-gradient(circle, rgba(85,241,239,0.35), rgba(85,241,239,0) 70%)" }}
         />
         <div
-          className="blob h-[420px] w-[420px] opacity-25"
+          className="blob h-[460px] w-[460px] opacity-25"
           style={{ bottom: "-160px", left: "-140px", background: "radial-gradient(circle, rgba(85,241,239,0.18), rgba(85,241,239,0) 70%)" }}
         />
       </div>
       <div className="grid-lines" />
 
       <div className="container-vibe relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Coluna Esquerda: Conteúdo textual */}
-          <div className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left">
+          <div className="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left">
             <p className="pill-glass text-[11px] sm:text-xs inline-flex mb-4 sm:mb-6">
               <span className="dot" />
               Sites e sistemas para negócios de saúde e fitness
             </p>
 
-            <h1 className="font-display text-[clamp(2.3rem,4.8vw,64px)] xl:text-[72px] leading-[0.98] font-extrabold uppercase tracking-tight text-white break-words">
+            <h1 className="font-display text-[clamp(2.3rem,4.5vw,60px)] xl:text-[66px] leading-[0.98] font-extrabold uppercase tracking-tight text-white break-words">
               Criamos produtos digitais
               <br />
               de alta performance que
@@ -53,11 +53,11 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Coluna Direita: Componente Interativo Genérico */}
-          <div className="lg:col-span-6 w-full flex items-center justify-center">
-            <div className="relative w-full aspect-[1760/1328] max-w-[620px] lg:max-w-none mx-auto">
+          {/* Coluna Direita: Componente Interativo Genérico (Ampliado) */}
+          <div className="lg:col-span-7 w-full flex items-center justify-center">
+            <div className="relative w-full aspect-[1760/1328] max-w-[700px] lg:max-w-none mx-auto lg:scale-[1.12] xl:scale-[1.20] origin-center transition-transform">
               {/* Glow sutil atrás do mockup interativo */}
-              <div className="pointer-events-none absolute -inset-4 rounded-3xl bg-cyan/15 blur-3xl opacity-60" />
+              <div className="pointer-events-none absolute -inset-6 rounded-3xl bg-cyan/15 blur-3xl opacity-70" />
               <iframe
                 src="/vibe-hero-interativo-generico.html"
                 title="VIBE Hero Interativo"
