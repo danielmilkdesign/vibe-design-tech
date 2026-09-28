@@ -23,15 +23,21 @@ export default function Hero() {
           <div className="hero-content lg:col-span-7 text-center md:text-left mx-auto md:mx-0">
             <p className="pill-glass text-[11px] sm:text-xs inline-flex mb-4 sm:mb-6">
               <span className="dot" />
-              Sites e sistemas para negócios de saúde e fitness
+              ⚡ DESIGN TECH • UI/UX & DIGITAL PRODUCTS
             </p>
 
             <h1 className="font-display text-[clamp(2.35rem,8.5vw,4.2rem)] leading-[0.95] font-extrabold uppercase tracking-tight text-fg sm:text-7xl sm:leading-[0.98] md:text-8xl break-words">
-              Seu Instagram
+              Criamos produtos
               <br />
-              atrai.
+              digitais de alta
               <br />
-              <span className="glow-cyan text-cyan">Seu site converte.</span>
+              performance que
+              <br />
+              <span className="glow-cyan text-cyan">
+                aceleram o seu
+                <br />
+                negócio.
+              </span>
             </h1>
 
             {/* Componente Interativo no Mobile */}
@@ -40,21 +46,21 @@ export default function Hero() {
             </div>
 
             <p className="subtext mt-0 md:mt-8 max-w-xl text-[0.9375rem] sm:text-base md:text-xl leading-relaxed text-fg-muted mx-auto md:mx-0">
-              Transformamos sua audiência em uma presença própria que explica seu método, organiza suas provas e leva o lead até o agendamento, sem depender apenas do direct ou do algoritmo.
+              Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps e soluções prontas focadas em conversão.
             </p>
 
             <div className="hero-ctas mt-6 sm:mt-8 flex flex-row items-center justify-center md:justify-start gap-3 sm:gap-4 flex-wrap">
               <a
-                href="#final-cta"
+                href="#caminhos"
                 className="btn-cyan rounded-full bg-cyan px-5 sm:px-7 py-3 sm:py-3.5 text-center font-body text-xs sm:text-sm font-semibold text-black shadow-[0_0_25px_rgba(85,241,239,0.5)] transition-transform hover:scale-[1.03] whitespace-nowrap"
               >
-                Agendar análise
+                Explorar Soluções
               </a>
               <a
-                href="#como-funciona"
+                href="#final-cta"
                 className="btn-outline rounded-full border border-white/20 bg-white/[0.04] px-5 sm:px-7 py-3 sm:py-3.5 text-center font-body text-xs sm:text-sm font-semibold text-fg transition-colors hover:border-cyan hover:text-cyan whitespace-nowrap"
               >
-                Ver como funciona
+                Agendar Diagnóstico Gratuito
               </a>
             </div>
           </div>
