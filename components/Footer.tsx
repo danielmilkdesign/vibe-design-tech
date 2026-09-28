@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="py-10 sm:py-14">
       <div className="container-vibe flex flex-col items-center justify-between gap-6 text-center md:text-left md:flex-row">
-        <Image src="/logo.png" alt="VIBE Design Tech" width={224} height={68} className="h-10 sm:h-14 w-auto opacity-90" />
+        <Image src="/LOGO VIBE TECH.png" alt="VIBE Design Tech" width={224} height={68} className="h-10 sm:h-14 w-auto opacity-90" />
 
         <p className="font-mono text-[11px] uppercase tracking-wide text-fg-muted">
           Design de alto impacto com a velocidade da inteligência artificial.
