@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 
 const links = [
-  { href: "#problema", label: "O problema" },
   { href: "#como-funciona", label: "Como funciona" },
   { href: "#planos", label: "Planos" },
   { href: "#sobre", label: "Sobre" },
