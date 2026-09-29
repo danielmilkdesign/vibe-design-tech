@@ -39,13 +39,13 @@ export default function Hero() {
             <div className="hero-ctas mt-7 sm:mt-9 flex flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 flex-wrap">
               <a
                 href="#caminhos"
-                className="btn-cyan rounded-full bg-cyan px-6 sm:px-8 py-3.5 sm:py-4 text-center font-body text-xs sm:text-sm font-semibold text-black shadow-[0_0_25px_rgba(85,241,239,0.5)] transition-transform hover:scale-[1.03] whitespace-nowrap"
+                className="btn-cyan text-xs sm:text-sm whitespace-nowrap"
               >
                 Explorar soluções
               </a>
               <a
                 href="#final-cta"
-                className="btn-outline rounded-full border border-white/20 bg-white/[0.04] px-6 sm:px-8 py-3.5 sm:py-4 text-center font-body text-xs sm:text-sm font-semibold text-fg transition-colors hover:border-cyan hover:text-cyan whitespace-nowrap"
+                className="btn-outline text-xs sm:text-sm whitespace-nowrap"
               >
                 Agendar Diagnóstico Gratuito
               </a>

@@ -119,10 +119,10 @@ export default function Plans() {
                 href={getWaLink(plan.waMsg)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`mt-8 flex items-center justify-center gap-2 rounded-full px-5 py-3.5 text-center font-body text-sm font-semibold transition-all duration-200 hover:scale-[1.02] ${
+                className={`mt-8 ${
                   plan.highlight
-                    ? "bg-cyan text-black hover:bg-cyan/90 hover:shadow-[0_0_20px_rgba(85,241,239,0.5)]"
-                    : "border border-line text-fg group-hover:border-[#1FA2A0] group-hover:text-cyan group-hover:shadow-[0_0_15px_rgba(31,162,160,0.25)]"
+                    ? "btn-cyan w-full text-center"
+                    : "btn-outline w-full text-center"
                 }`}
               >
                 <span>Falar sobre esse plano</span>

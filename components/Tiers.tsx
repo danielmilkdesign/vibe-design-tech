@@ -103,7 +103,7 @@ export default function Tiers() {
                       href={tier.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-cyan/60 bg-cyan/10 px-5 py-2.5 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-cyan transition-all duration-200 hover:border-cyan hover:bg-cyan hover:text-black hover:shadow-[0_0_20px_rgba(85,241,239,0.45)] hover:-translate-y-0.5"
+                      className="btn-model"
                     >
                       <span>VER MODELO AO VIVO</span>
                       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
