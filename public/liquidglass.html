@@ -186,6 +186,22 @@
         0% { transform: scale(0.8); opacity: 1; }
         100% { transform: scale(2.2); opacity: 0; }
       }
+    
+      .timeline-scroll-wrapper {
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-behavior: smooth !important;
+        overscroll-behavior-x: contain !important;
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+      }
+      .timeline-scroll-wrapper::-webkit-scrollbar {
+        display: none !important;
+      }
+      .timeline-card {
+        scroll-snap-align: start;
+      }
     </style>
 
 </head>
@@ -420,16 +436,26 @@
         <section id="experience" class="py-16 md:py-24 px-4 sm:px-6 lg:px-12 relative border-t border-white/5 bg-dark-bg flex flex-col justify-center">
             <div class="max-w-7xl mx-auto w-full space-y-6">
                 
-                <div class="space-y-3 max-w-3xl section-header">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-bold uppercase tracking-wider">
-                        <i data-lucide="briefcase" class="w-3.5 h-3.5"></i> Carreira
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 section-header">
+                    <div class="space-y-3 max-w-3xl">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-bold uppercase tracking-wider">
+                            <i data-lucide="briefcase" class="w-3.5 h-3.5"></i> Carreira
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-white tracking-tight">
+                            Minha Experiência
+                        </h2>
+                        <p class="text-slate-400 text-sm sm:text-base">
+                            Trajetória profissional focada em transformar desafios de negócio e UX em produtos de alto impacto. (Role ou arraste para navegar pela linha do tempo).
+                        </p>
                     </div>
-                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-heading font-extrabold text-white tracking-tight">
-                        Minha Experiência
-                    </h2>
-                    <p class="text-slate-400 text-sm sm:text-base">
-                        Trajetória profissional focada em transformar desafios de negócio e UX em produtos de alto impacto. (Role para descer e navegar pela linha do tempo).
-                    </p>
+                    <div class="flex items-center gap-2.5 shrink-0 self-start sm:self-auto">
+                        <button id="timeline-prev-btn" aria-label="Voltar card" class="p-2.5 sm:p-3 rounded-full bg-white/5 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-400 text-slate-300 hover:text-white transition-all duration-200 shadow-lg">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                        </button>
+                        <button id="timeline-next-btn" aria-label="Avançar card" class="p-2.5 sm:p-3 rounded-full bg-white/5 hover:bg-cyan-500/20 border border-white/10 hover:border-cyan-400 text-slate-300 hover:text-white transition-all duration-200 shadow-lg">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Linha conectora superior da Timeline -->
@@ -438,7 +464,7 @@
                 </div>
 
                 <!-- Container de Scroll Horizontal com suporte a Wheel Scroll -->
-                <div id="timeline-container" class="timeline-scroll-wrapper flex gap-6 sm:gap-8 md:gap-10 py-6 px-4 scrollbar-none items-stretch">
+                <div id="timeline-container" class="timeline-scroll-wrapper flex gap-6 sm:gap-8 md:gap-10 py-6 px-4 pr-24 sm:pr-36 md:pr-56 scrollbar-none items-stretch overflow-x-auto overflow-y-hidden cursor-grab active:cursor-grabbing select-none">
                     
                     <!-- Card 1: Agência Digi -->
                     <div class="timeline-card shrink-0 w-[290px] sm:w-[340px] md:w-[370px] bg-dark-card/95 border border-cyan-500/20 rounded-2xl p-5 md:p-6  relative hover:border-cyan-500/60 transition-all duration-300 flex flex-col justify-between shadow-xl">
@@ -534,7 +560,7 @@
                             <div class="flex justify-between items-start mb-3">
                                 <span class="text-xs font-semibold px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 uppercase">2012 – 2020</span>
                             </div>
-                            <h3 class="text-lg sm:text-xl font-bold text-white mb-0.5">Experiência Anterior</h3>
+                            <h3 class="text-lg sm:text-xl font-bold text-white mb-0.5">Direção de Arte &amp; Branding</h3>
                             <p class="text-cyan-400 font-medium text-xs sm:text-sm mb-3">Tterra | ULBRA Manaus | Mix Comunicação</p>
                             <ul class="text-slate-300 text-xs space-y-1.5 list-disc list-inside leading-relaxed">
                                 <li><strong>Tterra (Diretor de Arte | 2018–2020):</strong> Estratégias visuais, branding e campanhas para 15+ clientes.</li>
@@ -546,7 +572,7 @@
                     </div>
 
                     <!-- End Spacing Spacer for Full Card Pinning -->
-                    <div class="shrink-0 w-12 sm:w-24 md:w-32 pointer-events-none"></div>
+                    <div class="shrink-0 w-28 sm:w-44 md:w-72 pointer-events-none" aria-hidden="true"></div>
 
                 </div>
 
@@ -936,5 +962,55 @@
     </button>
 
     <script type="module" src="./script.js"></script>
+    <!-- Timeline Horizontal Scroll & Navigation Script -->
+    <script>
+      (function() {
+        const timeline = document.getElementById('timeline-container');
+        const prevBtn = document.getElementById('timeline-prev-btn');
+        const nextBtn = document.getElementById('timeline-next-btn');
+        
+        if (timeline) {
+          // Wheel scroll conversion
+          timeline.addEventListener('wheel', function(e) {
+            if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+              e.preventDefault();
+              timeline.scrollLeft += e.deltaY * 1.2;
+            }
+          }, { passive: false });
+
+          // Mouse drag to scroll
+          let isDown = false;
+          let startX;
+          let scrollLeft;
+
+          timeline.addEventListener('mousedown', function(e) {
+            isDown = true;
+            startX = e.pageX - timeline.offsetLeft;
+            scrollLeft = timeline.scrollLeft;
+          });
+          window.addEventListener('mouseup', function() { isDown = false; });
+          timeline.addEventListener('mouseleave', function() { isDown = false; });
+          timeline.addEventListener('mousemove', function(e) {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - timeline.offsetLeft;
+            const walk = (x - startX) * 1.5;
+            timeline.scrollLeft = scrollLeft - walk;
+          });
+
+          // Navigation buttons
+          if (prevBtn) {
+            prevBtn.addEventListener('click', function() {
+              timeline.scrollBy({ left: -400, behavior: 'smooth' });
+            });
+          }
+          if (nextBtn) {
+            nextBtn.addEventListener('click', function() {
+              timeline.scrollBy({ left: 400, behavior: 'smooth' });
+            });
+          }
+        }
+      })();
+    </script>
 </body>
 </html>
