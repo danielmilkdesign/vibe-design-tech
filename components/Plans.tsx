@@ -1,3 +1,8 @@
+"use client";
+
+import ScrollReveal from "./ScrollReveal";
+import SpotlightCard from "./SpotlightCard";
+
 const plans = [
   {
     name: "Site Base",
@@ -56,81 +61,86 @@ export default function Plans() {
   return (
     <section id="planos" className="border-b border-line bg-bg-alt py-16 md:py-28">
       <div className="container-vibe">
-        <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
-          <div>
-            <p className="eyebrow text-cyan">Planos & Investimento</p>
-            <h2 className="mt-4 max-w-2xl font-display text-3xl sm:text-5xl md:text-6xl font-extrabold uppercase leading-[1.02] text-fg break-words">
-              Entre no nível que faz sentido hoje
-            </h2>
+        <ScrollReveal direction="up" delay={50}>
+          <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
+            <div>
+              <p className="eyebrow text-cyan">Planos & Investimento</p>
+              <h2 className="mt-4 max-w-2xl font-display text-3xl sm:text-5xl md:text-6xl font-extrabold uppercase leading-[1.02] text-fg break-words">
+                Entre no nível que faz sentido hoje
+              </h2>
+            </div>
+            <p className="max-w-xs text-sm text-fg-muted">
+              Transparência total. Sem surpresas ou custos ocultos. Cancele ou faça upgrade quando quiser.
+            </p>
           </div>
-          <p className="max-w-xs text-sm text-fg-muted">
-            Transparência total. Sem surpresas ou custos ocultos. Cancele ou faça upgrade quando quiser.
-          </p>
-        </div>
+        </ScrollReveal>
 
         <div className="mt-10 sm:mt-14 grid gap-6 md:grid-cols-3">
-          {plans.map((plan) => (
-            <div
-              key={plan.name}
-              className={`relative group flex flex-col rounded-3xl border p-5 sm:p-8 transition-all duration-300 hover:-translate-y-1.5 ${
-                plan.highlight
-                  ? "border-cyan bg-white/[0.04] shadow-[0_0_60px_-20px_rgba(85,241,239,0.4)] hover:border-cyan hover:bg-[#0D5251]/20 hover:shadow-[0_16px_40px_-8px_rgba(0,0,0,0.7),0_0_45px_rgba(85,241,239,0.45),0_0_25px_rgba(31,162,160,0.5)]"
-                  : "border-line bg-white/[0.02] hover:border-[#1FA2A0] hover:bg-[#0D5251]/15 hover:shadow-[0_16px_36px_-8px_rgba(0,0,0,0.7),0_0_25px_rgba(31,162,160,0.3)]"
-              }`}
-            >
-              {plan.badge && (
-                <span
-                  className={`absolute -top-3 right-6 rounded-full px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider ${
-                    plan.highlight
-                      ? "bg-cyan text-black shadow-[0_0_15px_rgba(85,241,239,0.6)]"
-                      : "border border-white/20 bg-black text-cyan"
-                  }`}
-                >
-                  {plan.badge}
-                </span>
-              )}
-
-              <h3 className="font-display text-2xl font-bold uppercase text-fg">
-                {plan.name}
-              </h3>
-
-              <div className="mt-5 flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                <span className="font-mono text-3xl sm:text-4xl font-extrabold text-fg">{plan.price}</span>
-                {plan.period && (
-                  <span className="font-mono text-sm font-semibold text-cyan">{plan.period}</span>
-                )}
-              </div>
-              <span className="eyebrow mt-1 text-fg-muted">{plan.note}</span>
-
-              <hr className="my-6 border-white/10" />
-
-              <ul className="flex flex-1 flex-col gap-3.5">
-                {plan.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3 text-[14px] leading-snug text-fg-muted">
-                    <svg className="mt-0.5 h-4 w-4 shrink-0 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href={getWaLink(plan.waMsg)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`mt-8 ${
+          {plans.map((plan, idx) => (
+            <ScrollReveal key={plan.name} direction="up" delay={150 * (idx + 1)}>
+              <SpotlightCard
+                enableTilt
+                spotlightColor={plan.highlight ? "rgba(85, 241, 239, 0.22)" : "rgba(85, 241, 239, 0.12)"}
+                className={`relative group flex flex-col rounded-3xl border p-5 sm:p-8 transition-all duration-300 h-full ${
                   plan.highlight
-                    ? "btn-cyan w-full text-center"
-                    : "btn-outline w-full text-center"
+                    ? "border-cyan bg-white/[0.04] shadow-[0_0_60px_-20px_rgba(85,241,239,0.4)] hover:border-cyan hover:bg-[#0D5251]/20 hover:shadow-[0_16px_40px_-8px_rgba(0,0,0,0.7),0_0_45px_rgba(85,241,239,0.45),0_0_25px_rgba(31,162,160,0.5)]"
+                    : "border-line bg-white/[0.02] hover:border-[#1FA2A0] hover:bg-[#0D5251]/15 hover:shadow-[0_16px_36px_-8px_rgba(0,0,0,0.7),0_0_25px_rgba(31,162,160,0.3)]"
                 }`}
               >
-                <span>Falar sobre esse plano</span>
-                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
+                {plan.badge && (
+                  <span
+                    className={`absolute -top-3 right-6 rounded-full px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-wider ${
+                      plan.highlight
+                        ? "bg-cyan text-black shadow-[0_0_15px_rgba(85,241,239,0.6)]"
+                        : "border border-white/20 bg-black text-cyan"
+                    }`}
+                  >
+                    {plan.badge}
+                  </span>
+                )}
+
+                <h3 className="font-display text-2xl font-bold uppercase text-fg">
+                  {plan.name}
+                </h3>
+
+                <div className="mt-5 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                  <span className="font-mono text-3xl sm:text-4xl font-extrabold text-fg">{plan.price}</span>
+                  {plan.period && (
+                    <span className="font-mono text-sm font-semibold text-cyan">{plan.period}</span>
+                  )}
+                </div>
+                <span className="eyebrow mt-1 text-fg-muted">{plan.note}</span>
+
+                <hr className="my-6 border-white/10" />
+
+                <ul className="flex flex-1 flex-col gap-3.5">
+                  {plan.features.map((f) => (
+                    <li key={f} className="flex items-start gap-3 text-[14px] leading-snug text-fg-muted">
+                      <svg className="mt-0.5 h-4 w-4 shrink-0 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={getWaLink(plan.waMsg)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-8 ${
+                    plan.highlight
+                      ? "btn-cyan w-full text-center hover:scale-[1.02]"
+                      : "btn-outline w-full text-center hover:scale-[1.02]"
+                  }`}
+                >
+                  <span>Falar sobre esse plano</span>
+                  <svg className="h-4 w-4 ml-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </SpotlightCard>
+            </ScrollReveal>
           ))}
         </div>
       </div>

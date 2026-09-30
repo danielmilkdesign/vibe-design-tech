@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ScrollReveal from "./ScrollReveal";
 
 const faqItems = [
   {
@@ -68,80 +69,84 @@ export default function Faq() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Coluna Esquerda - Título e Informações */}
           <div className="lg:col-span-5 lg:sticky lg:top-28 lg:self-start">
-            <p className="eyebrow text-cyan">/ FAQ</p>
-            <h2 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase leading-[0.98] text-fg break-words">
-              ANTES DE COMEÇAR,
-              <br />
-              <span className="text-cyan glow-cyan">TIRE O RUÍDO.</span>
-            </h2>
+            <ScrollReveal direction="left" delay={100}>
+              <p className="eyebrow text-cyan">/ FAQ</p>
+              <h2 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase leading-[0.98] text-fg break-words">
+                ANTES DE COMEÇAR,
+                <br />
+                <span className="text-cyan glow-cyan">TIRE O RUÍDO.</span>
+              </h2>
 
-            <p className="mt-6 max-w-md text-sm sm:text-base leading-relaxed text-fg-muted">
-              Sem promessa nebulosa. Sem letra miúda escondida. Se ainda faltar alguma resposta, a demo é o lugar certo para perguntar.
-            </p>
+              <p className="mt-6 max-w-md text-sm sm:text-base leading-relaxed text-fg-muted">
+                Sem promessa nebulosa. Sem letra miúda escondida. Se ainda faltar alguma resposta, a demo é o lugar certo para perguntar.
+              </p>
 
-            <div className="mt-8">
-              <a
-                href={waLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 border-b border-cyan/40 pb-1 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-cyan transition-all hover:border-cyan hover:text-cyan"
-              >
-                <span>FALAR COM A EQUIPE</span>
-                <svg
-                  className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
+              <div className="mt-8">
+                <a
+                  href={waLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 border-b border-cyan/40 pb-1 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-cyan transition-all hover:border-cyan hover:text-cyan hover:scale-[1.03]"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </div>
+                  <span>FALAR COM A EQUIPE</span>
+                  <svg
+                    className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </a>
+              </div>
+            </ScrollReveal>
           </div>
 
           {/* Coluna Direita - Accordion */}
           <div className="lg:col-span-7">
-            <div className="divide-y divide-white/10 border-t border-b border-white/10">
-              {faqItems.map((item, idx) => {
-                const isOpen = openIndex === idx;
-                return (
-                  <div key={idx} className="group transition-colors duration-200">
-                    <button
-                      type="button"
-                      onClick={() => toggleItem(idx)}
-                      className="flex w-full items-center justify-between py-6 text-left transition-colors duration-200 group-hover:text-cyan focus:outline-none"
-                      aria-expanded={isOpen}
-                    >
-                      <span className="pr-4 font-display text-lg sm:text-2xl font-extrabold uppercase tracking-wide text-white transition-colors duration-200 group-hover:text-cyan">
-                        {item.question}
-                      </span>
-                      <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-cyan transition-all duration-300 group-hover:border-cyan/50 group-hover:bg-cyan/10">
-                        <svg
-                          className={`h-4 w-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </span>
-                    </button>
+            <ScrollReveal direction="right" delay={200}>
+              <div className="divide-y divide-white/10 border-t border-b border-white/10">
+                {faqItems.map((item, idx) => {
+                  const isOpen = openIndex === idx;
+                  return (
+                    <div key={idx} className="group transition-colors duration-200">
+                      <button
+                        type="button"
+                        onClick={() => toggleItem(idx)}
+                        className="flex w-full items-center justify-between py-6 text-left transition-colors duration-200 group-hover:text-cyan focus:outline-none"
+                        aria-expanded={isOpen}
+                      >
+                        <span className="pr-4 font-display text-lg sm:text-2xl font-extrabold uppercase tracking-wide text-white transition-colors duration-200 group-hover:text-cyan">
+                          {item.question}
+                        </span>
+                        <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg border border-white/10 bg-white/[0.03] text-cyan transition-all duration-300 group-hover:border-cyan/50 group-hover:bg-cyan/10">
+                          <svg
+                            className={`h-4 w-4 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </span>
+                      </button>
 
-                    <div
-                      className={`grid transition-all duration-300 ease-in-out ${
-                        isOpen ? "grid-rows-[1fr] opacity-100 pb-6" : "grid-rows-[0fr] opacity-0"
-                      }`}
-                    >
-                      <div className="overflow-hidden">
-                        <p className="text-sm sm:text-base leading-relaxed text-fg-muted font-body">
-                          {item.answer}
-                        </p>
+                      <div
+                        className={`grid transition-all duration-300 ease-in-out ${
+                          isOpen ? "grid-rows-[1fr] opacity-100 pb-6" : "grid-rows-[0fr] opacity-0"
+                        }`}
+                      >
+                        <div className="overflow-hidden">
+                          <p className="text-sm sm:text-base leading-relaxed text-fg-muted font-body">
+                            {item.answer}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
-            </div>
+                  );
+                })}
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </div>

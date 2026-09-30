@@ -9,10 +9,13 @@ import About from "@/components/About";
 import Faq from "@/components/Faq";
 import FinalCta from "@/components/FinalCta";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import ScrollProgressBar from "@/components/ScrollProgressBar";
 
 export default function Home() {
   return (
     <>
+      <ScrollProgressBar />
       <Nav />
       <main>
         <Hero />
@@ -26,6 +29,7 @@ export default function Home() {
       </main>
       <FinalCta />
       <Footer />
+      <FloatingWhatsApp />
     </>
   );
 }
