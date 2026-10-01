@@ -3,14 +3,20 @@
 import { useState } from "react";
 import Image from "next/image";
 
+interface NavProps {
+  onOpenBooking?: () => void;
+}
+
 const links = [
-  { href: "#como-funciona", label: "Como funciona" },
+  { href: "#para-quem-e", label: "Para quem é" },
+  { href: "#o-que-muda", label: "O que muda" },
+  { href: "#amostra", label: "Amostras" },
   { href: "#planos", label: "Planos" },
   { href: "#sobre", label: "Sobre" },
   { href: "#faq", label: "FAQ" },
 ];
 
-export default function Nav() {
+export default function Nav({ onOpenBooking }: NavProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -21,12 +27,12 @@ export default function Nav() {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-6 lg:gap-8 md:flex">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="eyebrow text-fg-muted transition-colors hover:text-cyan"
+              className="eyebrow text-fg-muted transition-colors hover:text-cyan text-[11px] lg:text-xs"
             >
               {link.label}
             </a>
@@ -34,9 +40,19 @@ export default function Nav() {
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <a href="#final-cta" className="pill-glass text-[10px] sm:text-xs px-3 py-1.5 sm:px-4 sm:py-2 transition-transform hover:scale-[1.03]">
-            <span className="dot"></span>Agendar análise
-          </a>
+          {onOpenBooking ? (
+            <button
+              type="button"
+              onClick={onOpenBooking}
+              className="pill-glass text-[10px] sm:text-xs px-3 py-1.5 sm:px-4 sm:py-2 transition-transform hover:scale-[1.03] cursor-pointer"
+            >
+              <span className="dot"></span>Agendar análise
+            </button>
+          ) : (
+            <a href="#final-cta" className="pill-glass text-[10px] sm:text-xs px-3 py-1.5 sm:px-4 sm:py-2 transition-transform hover:scale-[1.03]">
+              <span className="dot"></span>Agendar análise
+            </a>
+          )}
 
           {/* Mobile menu button */}
           <button

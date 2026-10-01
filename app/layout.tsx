@@ -28,21 +28,22 @@ const body = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://vibedesigntech.com.br"),
   title: {
-    default: "VIBE Design Tech — Produtos Digitais de Alta Performance, Landing Pages & IA",
+    default: "VIBE Design Tech — Presença Própria para Especialistas de Saúde e Bem-Estar",
     template: "%s | VIBE Design Tech",
   },
   description:
-    "Estúdio de design de interface de alto nível, engenharia moderna e inteligência artificial. Criamos landing pages de alta conversão, web apps sob medida e automações para acelerar o seu negócio.",
+    "Sites e sistemas de alta conversão para profissionais de saúde, bem-estar e especialistas que vendem por relacionamento. Explique seu método, organize suas provas e automatize seu agendamento.",
   keywords: [
+    "Presença Própria",
+    "Site para Personal Trainer",
+    "Site para Nutricionista",
+    "Site para Fisioterapeuta",
+    "Site para Psicólogo",
+    "Site para Clínicas e Consultórios",
+    "Agendamento Automático Saúde",
+    "Compliance Ético CFN CREFITO CFP CFM",
     "VIBE Design Tech",
-    "Landing Page de Alta Conversão",
-    "Desenvolvimento de Web Apps",
-    "Design Engineering",
-    "UI UX Design",
-    "Next.js e React",
-    "Automação WhatsApp n8n",
-    "Criação de Sites Profissionais",
-    "Estúdio de Produtos Digitais"
+    "Landing Page para Saúde"
   ],
   authors: [{ name: "VIBE Design Tech", url: "https://vibedesigntech.com.br" }],
   creator: "VIBE Design Tech",
@@ -60,23 +61,23 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "https://vibedesigntech.com.br",
     siteName: "VIBE Design Tech",
-    title: "VIBE Design Tech — Produtos Digitais de Alta Performance & IA",
+    title: "VIBE Design Tech — Presença Própria para Saúde e Bem-Estar",
     description:
-      "Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps e soluções prontas focadas em conversão.",
+      "Seu Instagram atrai. Seu site converte. Sites e sistemas que explicam seu método, organizam suas provas e levam o paciente direto para o agendamento.",
     images: [
       {
         url: "/LOGO VIBE TECH.png",
         width: 1200,
         height: 630,
-        alt: "VIBE Design Tech — Produtos Digitais de Alta Performance",
+        alt: "VIBE Design Tech — Presença Própria para Especialistas",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "VIBE Design Tech — Produtos Digitais de Alta Performance & IA",
+    title: "VIBE Design Tech — Presença Própria para Especialistas de Saúde",
     description:
-      "Design de interface de alto nível, engenharia moderna e automações de IA focadas em conversão.",
+      "Seu Instagram atrai. Seu site converte. Estruturas completas para profissionais de saúde e especialistas que vendem por relacionamento.",
     images: ["/LOGO VIBE TECH.png"],
   },
   robots: {
@@ -128,12 +129,12 @@ export default function RootLayout({
       {
         "@type": "ProfessionalService",
         "@id": "https://vibedesigntech.com.br/#service",
-        "name": "VIBE Design Tech — Soluções Digitais & IA",
+        "name": "VIBE Design Tech — Presença Própria & Sistemas para Especialistas",
         "url": "https://vibedesigntech.com.br",
         "parentOrganization": {
           "@id": "https://vibedesigntech.com.br/#organization"
         },
-        "description": "Estúdio especializado em criação de landing pages de alta conversão, web apps sob medida, design systems e automações de vendas com inteligência artificial.",
+        "description": "Criação de presença própria, sites e sistemas de agendamento de alta conversão para profissionais de saúde, bem-estar e especialistas que vendem por relacionamento.",
         "priceRange": "R$ 1.500 - R$ 15.000",
         "telephone": "+55-92-99202-7059",
         "areaServed": {
@@ -142,14 +143,14 @@ export default function RootLayout({
         },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Serviços Digitais VIBE",
+          "name": "Serviços de Presença Própria VIBE",
           "itemListElement": [
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Site Base / Landing Page de Alta Conversão",
-                "description": "One-page profissional com vitrine, sobre, serviços e integração com WhatsApp."
+                "name": "Site Base / Estrutura Validada",
+                "description": "One-page profissional com identidade personalizada, vitrine, sobre, serviços e integração com WhatsApp em até 7 dias."
               },
               "price": "1500.00",
               "priceCurrency": "BRL"
@@ -158,18 +159,18 @@ export default function RootLayout({
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Site + Personalização & Agendamento",
-                "description": "Design exclusivo, agendamento automático e manutenção mensal dedicada."
+                "name": "Site + Personalização & Agendamento Integrado",
+                "description": "Design visual exclusivo sob medida, sistema de agendamento automático, páginas dedicadas e suporte contínuo."
               },
-              "price": "399.00",
+              "price": "1800.00",
               "priceCurrency": "BRL"
             },
             {
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "App / Sistema Web Completo sob Medida",
-                "description": "Desenvolvimento full-stack, dashboards, automação de WhatsApp e CRM."
+                "name": "Sistema Sob Medida / Clínicas & Estúdios",
+                "description": "Plataforma Web, automações inteligentes de atendimento via WhatsApp API e n8n, CRM e agendamento multi-profissional."
               }
             }
           ]

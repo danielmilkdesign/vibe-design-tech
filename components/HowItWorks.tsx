@@ -63,8 +63,8 @@ export default function HowItWorks() {
               </h2>
             </div>
             <p className="max-w-md text-sm sm:text-base text-fg-muted leading-relaxed">
-              A demo não é uma apresentação genérica. A gente olha para o seu
-              negócio e mostra uma estrutura adequada ao seu momento.
+              A análise de 20 minutos não é uma conversa genérica. A gente olha para o seu
+              momento e mostra uma estrutura adequada para o seu negócio.
             </p>
           </div>
         </ScrollReveal>

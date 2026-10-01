@@ -30,7 +30,7 @@ export default function FloatingWhatsApp() {
     >
       <div className="hidden sm:flex items-center gap-2 rounded-full border border-cyan/30 bg-black/90 px-3.5 py-1.5 shadow-2xl backdrop-blur-md">
         <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-        <span className="font-body text-xs font-medium text-fg">Diagnóstico rápido no WhatsApp</span>
+        <span className="font-body text-xs font-semibold text-fg">Diagnóstico rápido no WhatsApp</span>
       </div>
 
       <a

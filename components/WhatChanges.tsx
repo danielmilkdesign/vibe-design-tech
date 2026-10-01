@@ -8,8 +8,8 @@ export default function WhatChanges() {
     {
       num: "01",
       tag: "CLAREZA",
-      title: "O visitante entende o próximo passo.",
-      body: "Seu método, sua oferta e seu diferencial deixam de depender de explicações no direct.",
+      title: "O visitante entende o método e o próximo passo.",
+      body: "Sua metodologia de atendimento ou treino, suas modalidades e seus diferenciais deixam de depender de áudios e textos soltos no direct.",
       icon: (
         <svg className="h-6 w-6 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
@@ -23,20 +23,20 @@ export default function WhatChanges() {
     },
     {
       num: "02",
-      tag: "PROVA",
-      title: "Seu resultado continua trabalhando.",
-      body: "Antes e depois, depoimentos e transformações ganham um lugar fixo para construir confiança.",
+      tag: "PROVA ÉTICA",
+      title: "Sua credibilidade trabalha continuamente.",
+      body: "Depoimentos, casos de sucesso e relatos reais organizados com elegância — sempre em conformidade com as regras éticas do seu conselho.",
       icon: (
         <svg className="h-6 w-6 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       ),
     },
     {
       num: "03",
       tag: "CONVERSÃO",
-      title: "A atenção vira ação.",
-      body: "O lead chega mais preparado ao WhatsApp, ao agendamento ou ao próximo passo da venda.",
+      title: "A atenção do seguidor vira agendamento real.",
+      body: "O paciente ou cliente chega ciente do seu posicionamento, pronto para escolher o horário na sua agenda ou avançar com segurança.",
       icon: (
         <svg className="h-6 w-6 text-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -50,10 +50,10 @@ export default function WhatChanges() {
       <div className="grid-lines" />
       <div className="container-vibe relative z-[1]">
         <ScrollReveal direction="up" delay={50}>
-          <p className="eyebrow text-cyan">/ O que muda</p>
+          <p className="eyebrow text-cyan font-mono text-xs uppercase tracking-widest">/ O que muda</p>
           <h2 className="mt-4 max-w-3xl font-display text-3xl sm:text-5xl md:text-6xl font-extrabold uppercase leading-[1.02] text-fg break-words">
             Não entregamos só um site.<br />
-            <span className="text-cyan glow-cyan">Construímos uma estrutura.</span>
+            <span className="text-cyan glow-cyan">Construímos uma presença própria.</span>
           </h2>
         </ScrollReveal>
 
@@ -70,29 +70,52 @@ export default function WhatChanges() {
                     <span className="font-mono text-2xl sm:text-3xl font-bold tracking-wider text-cyan drop-shadow-[0_0_12px_rgba(85,241,239,0.35)] transition-all duration-300 group-hover:drop-shadow-[0_0_18px_rgba(85,241,239,0.65)]">
                       {item.num}
                     </span>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] transition-all duration-300 group-hover:border-[#1FA2A0]/60 group-hover:bg-[#0D5251]/25 group-hover:scale-110">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5 transition-colors duration-300 group-hover:border-cyan/40 group-hover:bg-cyan/10">
                       {item.icon}
                     </div>
                   </div>
 
-                  <p className="mt-6 font-mono text-xs font-bold uppercase tracking-widest text-cyan">
+                  <span className="mt-4 inline-block font-mono text-xs font-semibold uppercase tracking-wider text-cyan">
                     {item.tag}
-                  </p>
+                  </span>
 
-                  <h3 className="mt-3 font-display text-2xl sm:text-[1.75rem] font-extrabold uppercase leading-tight tracking-tight text-white">
+                  <h3 className="mt-2 font-display text-xl sm:text-2xl font-extrabold uppercase leading-tight text-white">
                     {item.title}
                   </h3>
 
-                  <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-white/80">
+                  <p className="mt-3 text-sm sm:text-[15px] leading-relaxed text-fg-muted group-hover:text-white/90 transition-colors">
                     {item.body}
                   </p>
                 </div>
-
-                <div className="mt-8 border-t border-white/10 pt-2 transition-colors duration-300 group-hover:border-[#1FA2A0]/40" />
               </SpotlightCard>
             </ScrollReveal>
           ))}
         </div>
+
+        {/* Selo de Compliance Regulatório */}
+        <ScrollReveal direction="up" delay={550}>
+          <div className="mt-10 sm:mt-12 rounded-2xl border border-cyan/20 bg-cyan/[0.03] p-5 sm:p-6 backdrop-blur-sm flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3.5 text-center sm:text-left">
+              <div className="h-10 w-10 shrink-0 rounded-xl bg-cyan/15 border border-cyan/30 flex items-center justify-center text-cyan">
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="font-display text-base sm:text-lg font-bold uppercase text-white">
+                  Compliance Ético Integrado
+                </h4>
+                <p className="text-xs sm:text-sm text-fg-muted">
+                  Estruturas pensadas e validadas conforme os códigos de ética profissionais: <span className="text-cyan font-mono font-semibold">CFN (Nutrição)</span>, <span className="text-cyan font-mono font-semibold">CREFITO (Fisio)</span>, <span className="text-cyan font-mono font-semibold">CFP (Psicologia)</span> e <span className="text-cyan font-mono font-semibold">CFM (Medicina)</span>.
+                </p>
+              </div>
+            </div>
+
+            <div className="shrink-0 text-xs font-mono text-cyan/90 border border-cyan/30 rounded-full px-3.5 py-1.5 bg-cyan/10">
+              Zero Risco Ético
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
