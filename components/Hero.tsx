@@ -36,12 +36,6 @@ export default function Hero({ onOpenBooking }: HeroProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           {/* Coluna Esquerda: Conteúdo textual */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <ScrollReveal direction="up" delay={50} duration={700}>
-              <div className="inline-flex items-center gap-2 rounded-full border border-cyan/30 bg-cyan/10 px-3.5 py-1 text-xs font-mono font-semibold text-cyan mb-4 backdrop-blur-sm">
-                <span className="h-1.5 w-1.5 rounded-full bg-cyan animate-pulse" />
-                <span>/ PRESENÇA PRÓPRIA • SAÚDE & BEM-ESTAR</span>
-              </div>
-            </ScrollReveal>
 
             <ScrollReveal direction="up" delay={100} duration={800}>
               <h1 className="font-display text-[clamp(2.5rem,5vw,68px)] xl:text-[68px] leading-[0.96] font-extrabold uppercase tracking-tight text-white break-words">
