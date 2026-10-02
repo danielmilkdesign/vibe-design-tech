@@ -49,7 +49,7 @@ export default function About() {
               <span className="text-cyan glow-cyan">aplicados ao seu negócio.</span>
             </h2>
             <p className="mt-4 text-sm sm:text-base text-fg-muted leading-relaxed">
-              Não somos uma agência tradicional que usa templates lentos de WordPress. Trazemos a bagagem de engenharia e design de grandes plataformas digitais para a presença própria de especialistas e clínicas.
+              Engenharia e design de grandes plataformas digitais para a presença própria de especialistas e clínicas.
             </p>
           </div>
         </ScrollReveal>
