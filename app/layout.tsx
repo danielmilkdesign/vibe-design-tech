@@ -28,22 +28,21 @@ const body = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://vibedesigntech.com.br"),
   title: {
-    default: "VIBE Design Tech — Produtos Digitais de Alta Performance",
+    default: "VIBE Design Tech — Quem tem presença própria não depende do Instagram para vender",
     template: "%s | VIBE Design Tech",
   },
   description:
-    "Criamos produtos digitais de alta performance que aceleram seu negócio. Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps, sites e soluções prontas focadas em conversão e aumento de vendas.",
+    "Criamos o site, a prova e o caminho até o agendamento para especialistas e empresas que hoje dependem do Instagram para vender.",
   keywords: [
-    "Produtos Digitais",
+    "Presença Própria",
+    "Site para Especialistas",
+    "Site para Empresas",
     "Landing Pages de Alta Conversão",
-    "Web Apps",
-    "Design de Interface",
+    "Agendamento Automático",
     "Design Tech",
     "Sistemas Sob Medida",
-    "Presença Digital",
-    "Desenvolvimento Next.js",
     "VIBE Design Tech",
-    "Agendamento Estratégico"
+    "Conversão sem Instagram"
   ],
   authors: [{ name: "VIBE Design Tech", url: "https://vibedesigntech.com.br" }],
   creator: "VIBE Design Tech",
@@ -61,23 +60,23 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "https://vibedesigntech.com.br",
     siteName: "VIBE Design Tech",
-    title: "VIBE Design Tech — Produtos Digitais de Alta Performance",
+    title: "VIBE Design Tech — Quem tem presença própria não depende do Instagram para vender",
     description:
-      "Criamos produtos digitais de alta performance que aceleram seu negócio. Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps, sites e soluções prontas focadas em conversão e aumento de vendas.",
+      "Criamos o site, a prova e o caminho até o agendamento para especialistas e empresas que hoje dependem do Instagram para vender.",
     images: [
       {
         url: "/LOGO VIBE TECH.png",
         width: 1200,
         height: 630,
-        alt: "VIBE Design Tech — Produtos Digitais de Alta Performance",
+        alt: "VIBE Design Tech — Presença Própria para Especialistas e Empresas",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "VIBE Design Tech — Produtos Digitais de Alta Performance",
+    title: "VIBE Design Tech — Quem tem presença própria não depende do Instagram para vender",
     description:
-      "Criamos produtos digitais de alta performance que aceleram seu negócio. Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps, sites e soluções prontas focadas em conversão e aumento de vendas.",
+      "Criamos o site, a prova e o caminho até o agendamento para especialistas e empresas que hoje dependem do Instagram para vender.",
     images: ["/LOGO VIBE TECH.png"],
   },
   robots: {
@@ -129,12 +128,12 @@ export default function RootLayout({
       {
         "@type": "ProfessionalService",
         "@id": "https://vibedesigntech.com.br/#service",
-        "name": "VIBE Design Tech — Produtos Digitais de Alta Performance & Soluções Web",
+        "name": "VIBE Design Tech — Presença Própria para Especialistas e Empresas",
         "url": "https://vibedesigntech.com.br",
         "parentOrganization": {
           "@id": "https://vibedesigntech.com.br/#organization"
         },
-        "description": "Criação de produtos digitais de alta performance, landing pages, web apps e soluções completas focadas em conversão e aceleração de negócios.",
+        "description": "Criamos o site, a prova e o caminho até o agendamento para especialistas e empresas que hoje dependem do Instagram para vender.",
         "priceRange": "R$ 1.500 - R$ 15.000",
         "telephone": "+55-92-99202-7059",
         "areaServed": {

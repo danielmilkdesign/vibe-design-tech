@@ -39,17 +39,17 @@ export default function Hero({ onOpenBooking }: HeroProps) {
 
             <ScrollReveal direction="up" delay={100} duration={800}>
               <h1 className="font-display text-[clamp(2.5rem,5vw,68px)] xl:text-[68px] leading-[0.96] font-extrabold uppercase tracking-tight text-white break-words">
-                Criamos produtos digitais de alta performance
+                Quem tem presença própria
                 <br />
                 <span className="glow-cyan text-cyan">
-                  que aceleram seu negócio.
+                  não depende do Instagram para vender.
                 </span>
               </h1>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={250} duration={800}>
               <p className="subtext mt-5 sm:mt-6 max-w-xl text-[0.9375rem] sm:text-base md:text-lg leading-relaxed text-fg-muted">
-                Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps, sites e soluções prontas focadas em conversão e aumento de vendas.
+                Criamos o site, a prova e o caminho até o agendamento para especialistas e empresas que hoje dependem do Instagram para vender.
               </p>
             </ScrollReveal>
 
