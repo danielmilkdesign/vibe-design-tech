@@ -28,22 +28,22 @@ const body = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://vibedesigntech.com.br"),
   title: {
-    default: "VIBE Design Tech — Presença Própria para Especialistas de Saúde e Bem-Estar",
+    default: "VIBE Design Tech — Produtos Digitais de Alta Performance",
     template: "%s | VIBE Design Tech",
   },
   description:
-    "Sites e sistemas de alta conversão para profissionais de saúde, bem-estar e especialistas que vendem por relacionamento. Explique seu método, organize suas provas e automatize seu agendamento.",
+    "Criamos produtos digitais de alta performance que aceleram seu negócio. Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps, sites e soluções prontas focadas em conversão e aumento de vendas.",
   keywords: [
-    "Presença Própria",
-    "Site para Personal Trainer",
-    "Site para Nutricionista",
-    "Site para Fisioterapeuta",
-    "Site para Psicólogo",
-    "Site para Clínicas e Consultórios",
-    "Agendamento Automático Saúde",
-    "Compliance Ético CFN CREFITO CFP CFM",
+    "Produtos Digitais",
+    "Landing Pages de Alta Conversão",
+    "Web Apps",
+    "Design de Interface",
+    "Design Tech",
+    "Sistemas Sob Medida",
+    "Presença Digital",
+    "Desenvolvimento Next.js",
     "VIBE Design Tech",
-    "Landing Page para Saúde"
+    "Agendamento Estratégico"
   ],
   authors: [{ name: "VIBE Design Tech", url: "https://vibedesigntech.com.br" }],
   creator: "VIBE Design Tech",
@@ -61,23 +61,23 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "https://vibedesigntech.com.br",
     siteName: "VIBE Design Tech",
-    title: "VIBE Design Tech — Presença Própria para Saúde e Bem-Estar",
+    title: "VIBE Design Tech — Produtos Digitais de Alta Performance",
     description:
-      "Seu Instagram atrai. Seu site converte. Sites e sistemas que explicam seu método, organizam suas provas e levam o paciente direto para o agendamento.",
+      "Criamos produtos digitais de alta performance que aceleram seu negócio. Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps, sites e soluções prontas focadas em conversão e aumento de vendas.",
     images: [
       {
         url: "/LOGO VIBE TECH.png",
         width: 1200,
         height: 630,
-        alt: "VIBE Design Tech — Presença Própria para Especialistas",
+        alt: "VIBE Design Tech — Produtos Digitais de Alta Performance",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "VIBE Design Tech — Presença Própria para Especialistas de Saúde",
+    title: "VIBE Design Tech — Produtos Digitais de Alta Performance",
     description:
-      "Seu Instagram atrai. Seu site converte. Estruturas completas para profissionais de saúde e especialistas que vendem por relacionamento.",
+      "Criamos produtos digitais de alta performance que aceleram seu negócio. Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps, sites e soluções prontas focadas em conversão e aumento de vendas.",
     images: ["/LOGO VIBE TECH.png"],
   },
   robots: {
@@ -129,12 +129,12 @@ export default function RootLayout({
       {
         "@type": "ProfessionalService",
         "@id": "https://vibedesigntech.com.br/#service",
-        "name": "VIBE Design Tech — Presença Própria & Sistemas para Especialistas",
+        "name": "VIBE Design Tech — Produtos Digitais de Alta Performance & Soluções Web",
         "url": "https://vibedesigntech.com.br",
         "parentOrganization": {
           "@id": "https://vibedesigntech.com.br/#organization"
         },
-        "description": "Criação de presença própria, sites e sistemas de agendamento de alta conversão para profissionais de saúde, bem-estar e especialistas que vendem por relacionamento.",
+        "description": "Criação de produtos digitais de alta performance, landing pages, web apps e soluções completas focadas em conversão e aceleração de negócios.",
         "priceRange": "R$ 1.500 - R$ 15.000",
         "telephone": "+55-92-99202-7059",
         "areaServed": {

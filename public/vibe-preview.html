@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VIBE Design Tech — Atração, Conversão e Escala para Especialistas e Empresas</title>
-  <meta name="description" content="Design para redes sociais, sites de alta conversão, sistemas sob medida e assessoria contínua para profissionais da saúde e empresas venderem mais todos os dias." />
+  <title>VIBE Design Tech — Presença Própria para Especialistas de Saúde e Bem-Estar</title>
+  <meta name="description" content="Sites e sistemas de alta conversão para profissionais de saúde, bem-estar e especialistas que vendem por relacionamento. Explique seu método, organize suas provas e automatize seu agendamento." />
   <link rel="icon" type="image/png" href="FAVICON.png" />
 
   <!-- Google Fonts -->
@@ -15,16 +15,15 @@
   <style>
     :root {
       --bg: #030608;
-      --bg-card: #080e12;
-      --bg-surface: #0e171f;
+      --bg-card: #090e12;
+      --bg-surface: #0e171d;
       --fg: #ffffff;
-      --fg-muted: rgba(255, 255, 255, 0.68);
+      --fg-muted: rgba(255, 255, 255, 0.65);
       --cyan: #55f1ef;
-      --cyan-hover: #75f7f5;
       --cyan-glow: rgba(85, 241, 239, 0.4);
       --lime: #baff38;
       --line: rgba(255, 255, 255, 0.12);
-      --line-cyan: rgba(85, 241, 239, 0.35);
+      --line-cyan: rgba(85, 241, 239, 0.3);
       --font-display: 'Big Shoulders Display', sans-serif;
       --font-body: 'Inter', sans-serif;
       --font-mono: 'Space Mono', monospace;
@@ -81,7 +80,7 @@
     .text-cyan { color: var(--cyan); }
     .text-lime { color: var(--lime); }
     .glow-cyan {
-      text-shadow: 0 0 28px var(--cyan-glow);
+      text-shadow: 0 0 25px var(--cyan-glow);
     }
 
     /* Background FX */
@@ -149,8 +148,8 @@
       color: #000;
       font-family: var(--font-body);
       font-weight: 700;
-      font-size: 0.92rem;
-      padding: 0.9rem 1.9rem;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.8rem;
       border-radius: 9999px;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       box-shadow: 0 0 30px rgba(85, 241, 239, 0.35);
@@ -160,8 +159,8 @@
 
     .btn-cyan:hover {
       transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 0 45px rgba(85, 241, 239, 0.6);
-      background: var(--cyan-hover);
+      box-shadow: 0 0 45px rgba(85, 241, 239, 0.55);
+      background: #74f5f3;
     }
 
     .btn-outline {
@@ -174,8 +173,8 @@
       border: 1px solid var(--line);
       font-family: var(--font-body);
       font-weight: 600;
-      font-size: 0.92rem;
-      padding: 0.9rem 1.9rem;
+      font-size: 0.9rem;
+      padding: 0.85rem 1.8rem;
       border-radius: 9999px;
       transition: all 0.3s ease;
       backdrop-filter: blur(10px);
@@ -197,7 +196,7 @@
       right: 0;
       height: 76px;
       z-index: 50;
-      background: rgba(3, 6, 8, 0.88);
+      background: rgba(3, 6, 8, 0.85);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--line);
       display: flex;
@@ -212,7 +211,7 @@
     }
 
     .logo-img {
-      height: 42px;
+      height: 44px;
       width: auto;
     }
 
@@ -221,7 +220,7 @@
       gap: 2rem;
     }
 
-    @media (min-width: 900px) {
+    @media (min-width: 860px) {
       .nav-links { display: flex; }
     }
 
@@ -236,6 +235,24 @@
 
     .nav-link:hover {
       color: var(--cyan);
+    }
+
+    /* Cards */
+    .glass-card {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .glass-card:hover {
+      border-color: var(--line-cyan);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(85, 241, 239, 0.15);
+      background: #0d161c;
     }
 
     /* Sections */
@@ -262,56 +279,19 @@
 
     .section-title {
       font-family: var(--font-display);
-      font-size: clamp(2.3rem, 4.8vw, 3.9rem);
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
       font-weight: 800;
       text-transform: uppercase;
-      line-height: 1.02;
+      line-height: 1.05;
       letter-spacing: -0.02em;
-    }
-
-    .title-esteira {
-      font-size: clamp(1.85rem, 3.8vw, 3.4rem);
-      line-height: 1.08;
-      max-width: 920px;
-      margin: 0 auto;
-    }
-
-    .title-esteira .line-1,
-    .title-esteira .line-2 {
-      display: block;
-    }
-
-    @media (min-width: 640px) {
-      .title-esteira .line-1,
-      .title-esteira .line-2 {
-        white-space: nowrap;
-      }
     }
 
     .section-sub {
       color: var(--fg-muted);
-      font-size: 1.05rem;
-      line-height: 1.65;
+      font-size: 1rem;
+      line-height: 1.6;
       margin-top: 1rem;
-      max-width: 680px;
-    }
-
-    /* Cards */
-    .glass-card {
-      background: var(--bg-card);
-      border: 1px solid var(--line);
-      border-radius: 1.5rem;
-      padding: 2rem;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .glass-card:hover {
-      border-color: var(--line-cyan);
-      transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 25px rgba(85, 241, 239, 0.15);
-      background: #0c1419;
+      max-width: 650px;
     }
 
     /* Hero Section */
@@ -329,102 +309,18 @@
 
     @media (min-width: 1024px) {
       .hero-grid {
-        grid-template-columns: 1.08fr 1fr;
+        grid-template-columns: 1.05fr 1fr;
       }
     }
 
     .hero-title {
       font-family: var(--font-display);
-      font-size: clamp(2.9rem, 6.2vw, 4.8rem);
+      font-size: clamp(2.8rem, 6.2vw, 4.8rem);
       font-weight: 900;
       line-height: 0.95;
       text-transform: uppercase;
       letter-spacing: -0.02em;
       color: #fff;
-    }
-
-    /* Esteira 4-Step Diagram */
-    .pipeline-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3.5rem;
-      position: relative;
-    }
-
-    .pipeline-step {
-      background: #060b0e;
-      border: 1px solid var(--line);
-      border-radius: 1.25rem;
-      padding: 1.75rem;
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .pipeline-step:hover {
-      border-color: var(--cyan);
-      transform: translateY(-3px);
-      background: #091216;
-    }
-
-    .step-number {
-      font-family: var(--font-mono);
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--cyan);
-    }
-
-    /* Tab Switcher for Publico / Nichos */
-    .tab-switcher {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      border-radius: 9999px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid var(--line);
-      padding: 0.35rem;
-      gap: 0.35rem;
-      backdrop-filter: blur(12px);
-      max-width: 1100px;
-      margin: 1.5rem auto 0 auto;
-    }
-
-    .tab-btn {
-      padding: 0.55rem 1.15rem;
-      border-radius: 9999px;
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      border: 1px solid transparent;
-      background: transparent;
-      color: var(--fg-muted);
-      cursor: pointer;
-      transition: all 0.25s ease;
-      white-space: nowrap;
-    }
-
-    .tab-btn:hover {
-      color: #fff;
-      border-color: rgba(85, 241, 239, 0.3);
-      background: rgba(85, 241, 239, 0.06);
-    }
-
-    .tab-btn.active {
-      background: var(--cyan);
-      color: #030708;
-      border-color: var(--cyan);
-      box-shadow: 0 0 20px rgba(85, 241, 239, 0.4);
-    }
-
-    .niche-card {
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .niche-card:hover {
-      border-color: var(--cyan);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 25px rgba(85, 241, 239, 0.15);
-      transform: translateY(-3px);
     }
 
     /* Mockup Frame */
@@ -433,7 +329,7 @@
       border-radius: 1.5rem;
       overflow: hidden;
       background: #040d10;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.85), 0 0 40px rgba(85, 241, 239, 0.15);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.8), 0 0 40px rgba(85, 241, 239, 0.15);
       position: relative;
     }
 
@@ -464,8 +360,8 @@
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.88);
-      backdrop-filter: blur(14px);
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(12px);
       z-index: 100;
       align-items: center;
       justify-content: center;
@@ -519,235 +415,6 @@
     .faq-item.active .faq-answer {
       display: block;
     }
-
-    /* Founder Cards Matching Official Standard */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-    @media (min-width: 768px) {
-      .about-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-    .founder-card {
-      display: flex;
-      flex-direction: column;
-      border-radius: 1.5rem;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.03);
-      overflow: hidden;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    }
-    .founder-card:hover {
-      transform: translateY(-6px);
-      border-color: #1FA2A0;
-      background: rgba(13, 82, 81, 0.15);
-      box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.7), 0 0 25px rgba(31, 162, 160, 0.3);
-    }
-    .founder-img-wrap {
-      position: relative;
-      height: 260px;
-      width: 100%;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.6));
-      overflow: hidden;
-      padding-top: 1rem;
-    }
-    @media (min-width: 480px) {
-      .founder-img-wrap { height: 300px; }
-    }
-    @media (min-width: 640px) {
-      .founder-img-wrap { height: 340px; }
-    }
-    .founder-img-wrap::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 50% 40%, rgba(85, 241, 239, 0.12), transparent 70%);
-      pointer-events: none;
-    }
-    .founder-img-wrap img {
-      height: 100%;
-      width: auto;
-      object-fit: contain;
-      object-position: bottom;
-      transition: transform 0.5s ease;
-      filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.8));
-    }
-    .founder-card:hover .founder-img-wrap img {
-      transform: scale(1.04);
-    }
-    .founder-body {
-      padding: 1.5rem 1.5rem 1.75rem;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    @media (min-width: 640px) {
-      .founder-body {
-        padding: 1.75rem 2rem 2.25rem;
-      }
-    }
-    .founder-name {
-      font-family: var(--font-display);
-      font-size: 2.1rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      letter-spacing: 0.01em;
-      line-height: 1.1;
-    }
-    .founder-role {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--cyan);
-      margin-top: 0.4rem;
-    }
-    .founder-desc {
-      margin-top: 1.1rem;
-      font-size: 0.95rem;
-      line-height: 1.65;
-      color: rgba(255, 255, 255, 0.85);
-    }
-
-    /* Floating WhatsApp Button */
-    .floating-whatsapp-wrap {
-      position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
-    }
-    .floating-whatsapp-link {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      text-decoration: none;
-    }
-    .floating-whatsapp-pill {
-      display: none;
-      align-items: center;
-      gap: 0.6rem;
-      background: rgba(3, 8, 12, 0.92);
-      border: 1px solid rgba(85, 241, 239, 0.35);
-      border-radius: 9999px;
-      padding: 0.55rem 1.15rem;
-      backdrop-filter: blur(16px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7), 0 0 20px rgba(85, 241, 239, 0.1);
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: #ffffff;
-      white-space: nowrap;
-      transition: all 0.3s ease;
-    }
-    @media (min-width: 640px) {
-      .floating-whatsapp-pill {
-        display: flex;
-      }
-    }
-    .floating-whatsapp-link:hover .floating-whatsapp-pill {
-      border-color: var(--cyan);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(85, 241, 239, 0.25);
-    }
-    .dot-green {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #27c93f;
-      box-shadow: 0 0 10px #27c93f;
-      animation: pulseGreen 2s infinite;
-      flex-shrink: 0;
-    }
-    @keyframes pulseGreen {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.85); }
-    }
-    .floating-whatsapp-btn {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      background: #040a0f;
-      border: 2px solid var(--cyan);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 0 22px rgba(85, 241, 239, 0.4), 0 10px 25px rgba(0, 0, 0, 0.7);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      flex-shrink: 0;
-    }
-    .floating-whatsapp-link:hover .floating-whatsapp-btn {
-      transform: scale(1.08);
-      border-color: var(--cyan-hover);
-      box-shadow: 0 0 35px rgba(85, 241, 239, 0.7), 0 12px 30px rgba(0, 0, 0, 0.8);
-      background: #061219;
-    }
-    .wa-icon {
-      width: 26px;
-      height: 26px;
-      fill: var(--cyan);
-      transition: transform 0.3s ease;
-    }
-    .floating-whatsapp-link:hover .wa-icon {
-      transform: scale(1.1);
-    }
-
-    /* Instagram Buttons */
-    .btn-instagram {
-      border-radius: 9999px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(12px);
-      color: #FFFFFF;
-      font-family: var(--font-body);
-      font-weight: 600;
-      font-size: 0.92rem;
-      padding: 0.9rem 1.85rem;
-      transition: all 0.25s ease;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.65rem;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    .btn-instagram:hover {
-      border-color: #E1306C;
-      color: #FFFFFF;
-      background: rgba(225, 48, 108, 0.16);
-      box-shadow: 0 0 30px rgba(225, 48, 108, 0.4);
-      transform: translateY(-2px);
-    }
-    .btn-instagram-nav {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      padding: 0.45rem 1rem;
-      border-radius: 9999px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      color: var(--fg);
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-    .btn-instagram-nav:hover {
-      border-color: #E1306C;
-      color: #fff;
-      background: rgba(225, 48, 108, 0.18);
-      box-shadow: 0 0 20px rgba(225, 48, 108, 0.35);
-      transform: translateY(-1px);
-    }
   </style>
 </head>
 <body>
@@ -760,45 +427,43 @@
       </a>
 
       <nav class="nav-links">
-        <a href="#esteira" class="nav-link">A Esteira</a>
-        <a href="#para-quem-e" class="nav-link">Para Quem É</a>
-        <a href="#o-problema" class="nav-link">O Problema</a>
-        <a href="#amostras" class="nav-link">Amostras</a>
-        <a href="#planos" class="nav-link">Planos & Assessoria</a>
+        <a href="#para-quem-e" class="nav-link">Para quem é</a>
+        <a href="#o-que-muda" class="nav-link">O que muda</a>
+        <a href="#amostra" class="nav-link">Amostras</a>
+        <a href="#planos" class="nav-link">Planos</a>
         <a href="#sobre" class="nav-link">Sobre</a>
         <a href="#faq" class="nav-link">FAQ</a>
       </nav>
 
       <button onclick="openBooking()" class="pill-badge" style="cursor: pointer;">
-        <span class="dot"></span> Agendar Análise
+        <span class="dot"></span> Agendar análise
       </button>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section id="top" class="hero-section">
-    <div class="ambient-glow" style="width: 650px; height: 650px; top: -120px; right: -150px; background: rgba(85,241,239,0.18);"></div>
+    <div class="ambient-glow" style="width: 600px; height: 600px; top: -100px; right: -150px; background: rgba(85,241,239,0.18);"></div>
     <div class="grid-lines"></div>
 
     <div class="container" style="position: relative; z-index: 1;">
       <div class="hero-grid">
         <div>
           <h1 class="hero-title">
-            Atraia nas redes.<br />
-            Converta no site.<br />
-            <span class="text-cyan glow-cyan">Escale com tecnologia.</span>
+            Criamos produtos digitais de alta performance <br />
+            <span class="text-cyan glow-cyan">que aceleram seu negócio.</span>
           </h1>
 
           <p class="section-sub" style="font-size: 1.15rem; margin-top: 1.5rem; max-width: 540px;">
-            Unimos <strong>design para redes sociais</strong>, <strong>sites de alta conversão</strong> e <strong>sistemas sob medida</strong>. Uma assessoria contínua para profissionais da saúde e empresas venderem mais sem depender do improviso do direct.
+            Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps, sites e soluções prontas focadas em conversão e aumento de vendas.
           </p>
 
           <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;">
             <button onclick="openBooking()" class="btn-cyan">
-              Agendar Análise Estratégica (20 min)
+              Agendar Análise de 20 min
             </button>
-            <a href="#esteira" class="btn-outline">
-              Conhecer a Esteira Completa ↓
+            <a href="#planos" class="btn-outline">
+              Conhecer Planos & Estrutura
             </a>
           </div>
         </div>
@@ -814,240 +479,190 @@
     </div>
   </section>
 
-  <!-- A Esteira de Crescimento (Como as 4 engrenagens funcionam juntas) -->
-  <section id="esteira">
-    <div class="container">
-      <div style="text-align: center; max-width: 920px; margin: 0 auto;">
-        <span class="section-eyebrow">/ O ECOSSISTEMA INTEGRADO</span>
-        <h2 class="section-title title-esteira">
-          <span class="line-1">Como transformamos atenção em</span>
-          <span class="line-2 text-cyan glow-cyan">faturamento previsível.</span>
-        </h2>
-        <p class="section-sub" style="margin: 0.75rem auto 0 auto; max-width: 680px;">
-          Você não precisa contratar uma agência de social media, um programador de site e um consultor avulso. A VIBE integra as quatro etapas do crescimento comercial.
-        </p>
-      </div>
-
-      <div class="pipeline-grid">
-        <!-- Etapa 1 -->
-        <div class="pipeline-step">
-          <div class="step-number">01</div>
-          <span class="font-mono text-cyan" style="font-size: 0.72rem; font-weight: 700; margin-top: 0.5rem; display: block;">ATRAÇÃO</span>
-          <h3 class="font-display" style="font-size: 1.5rem; margin-top: 0.25rem;">Design para Redes Sociais</h3>
-          <p style="font-size: 0.88rem; color: var(--fg-muted); margin-top: 0.75rem;">
-            Criação de conteúdo estratégico, identidade visual refinada e linhas editoriais pensadas para atrair clientes com poder de compra — não apenas seguidores vazios.
-          </p>
-        </div>
-
-        <!-- Etapa 2 -->
-        <div class="pipeline-step">
-          <div class="step-number">02</div>
-          <span class="font-mono text-cyan" style="font-size: 0.72rem; font-weight: 700; margin-top: 0.5rem; display: block;">CONVERSÃO</span>
-          <h3 class="font-display" style="font-size: 1.5rem; margin-top: 0.25rem;">Sites de Alta Conversão</h3>
-          <p style="font-size: 0.88rem; color: var(--fg-muted); margin-top: 0.75rem;">
-            A sua casa digital. Tira o lead do direct caótico, explica o seu método com autoridade, apresenta provas éticas e conduz o visitante direto ao fechamento.
-          </p>
-        </div>
-
-        <!-- Etapa 3 -->
-        <div class="pipeline-step">
-          <div class="step-number">03</div>
-          <span class="font-mono text-cyan" style="font-size: 0.72rem; font-weight: 700; margin-top: 0.5rem; display: block;">EFICIÊNCIA</span>
-          <h3 class="font-display" style="font-size: 1.5rem; margin-top: 0.25rem;">Sistemas & Automações</h3>
-          <p style="font-size: 0.88rem; color: var(--fg-muted); margin-top: 0.75rem;">
-            Automação de WhatsApp (n8n/API), agendamento automático de consultas/reuniões e painéis de CRM para você ou sua equipe gerenciarem clientes sem perda de dados.
-          </p>
-        </div>
-
-        <!-- Etapa 4 -->
-        <div class="pipeline-step">
-          <div class="step-number">04</div>
-          <span class="font-mono text-cyan" style="font-size: 0.72rem; font-weight: 700; margin-top: 0.5rem; display: block;">CRESCIMENTO</span>
-          <h3 class="font-display" style="font-size: 1.5rem; margin-top: 0.25rem;">Assessoria Contínua</h3>
-          <p style="font-size: 0.88rem; color: var(--fg-muted); margin-top: 0.75rem;">
-            Acompanhamento mensal com os fundadores para calibrar ofertas, ajustar gargalos de conversão, atualizar o site e manter a sua máquina de vendas funcionando.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Para Quem É (Nichos & Segmentos Estratégicos) -->
-  <section id="para-quem-e" style="background: #020608;">
-    <div class="container">
-      <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-        <span class="section-eyebrow">/ SEGMENTOS & SOLUÇÕES SOB MEDIDA</span>
-        <h2 class="section-title">
-          Para quem é a <span class="text-cyan glow-cyan">VIBE Design Tech?</span>
-        </h2>
-        <p class="section-sub" style="margin: 0.75rem auto 1.5rem auto;">
-          Adaptamos o vocabulário, as normas éticas e o funil comercial de acordo com o seu segmento de atuação:
-        </p>
-
-        <!-- Seletor de Trilha / Nichos -->
-        <div class="tab-switcher" role="tablist" aria-label="Filtro de Segmentos">
-          <button class="tab-btn active" onclick="switchNiche('todos', this)">✦ Todos os Setores</button>
-          <button class="tab-btn" onclick="switchNiche('empresas', this)">Empresas</button>
-          <button class="tab-btn" onclick="switchNiche('saude', this)">Saúde & Bem-Estar</button>
-          <button class="tab-btn" onclick="switchNiche('clinicas', this)">Clínicas</button>
-          <button class="tab-btn" onclick="switchNiche('contabilidade', this)">Contabilidade</button>
-          <button class="tab-btn" onclick="switchNiche('advocacia', this)">Advocacia</button>
-          <button class="tab-btn" onclick="switchNiche('personal', this)">Personal Trainers</button>
-          <button class="tab-btn" onclick="switchNiche('demais', this)">Demais Setores</button>
-        </div>
-      </div>
-
-      <!-- Grid de Nichos -->
-      <div id="nichesGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-top: 3.5rem;">
-        
-        <!-- Nicho 1: Empresas -->
-        <div class="glass-card niche-card" data-niche="empresas">
-          <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0;">Empresas & Negócios</h3>
-          <div style="margin-top: 1rem; font-size: 0.88rem; color: var(--fg-muted);">
-            <p><strong style="color: #ff5f56;">O gargalo:</strong> Dependência de indicações boca a boca, envio de propostas frias por PDF que ninguém lê e dificuldade de justificar valor diante da concorrência.</p>
-            <p style="margin-top: 0.75rem;"><strong style="color: var(--cyan);">A solução VIBE:</strong> Posicionamento corporativo de alto padrão nas redes + site institucional que transmite solidez imediata e formulário inteligente de orçamento.</p>
-          </div>
-        </div>
-
-        <!-- Nicho 2: Saúde e Bem-Estar -->
-        <div class="glass-card niche-card" data-niche="saude">
-          <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0;">Saúde & Bem-Estar</h3>
-          <div style="margin-top: 1rem; font-size: 0.88rem; color: var(--fg-muted);">
-            <p><strong style="color: #ff5f56;">O gargalo:</strong> Perder horas tirando dúvidas repetitivas no direct, falta de triagem prévia do paciente e insegurança ética com órgãos reguladores (CFN, CFP, CREFITO).</p>
-            <p style="margin-top: 0.75rem;"><strong style="color: var(--cyan);">A solução VIBE:</strong> Design elegante para posts educativos + site próprio apresentando seu método, etapas da consulta e agendamento digital sem atrito.</p>
-          </div>
-        </div>
-
-        <!-- Nicho 3: Clínicas -->
-        <div class="glass-card niche-card" data-niche="clinicas">
-          <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0;">Clínicas Médicas & Odonto</h3>
-          <div style="margin-top: 1rem; font-size: 0.88rem; color: var(--fg-muted);">
-            <p><strong style="color: #ff5f56;">O gargalo:</strong> Múltiplos especialistas com agendas concorrentes, recepção sobrecarregada no WhatsApp e perda de pacientes por demora no atendimento.</p>
-            <p style="margin-top: 0.75rem;"><strong style="color: var(--cyan);">A solução VIBE:</strong> Portal completo com vitrine de profissionais da clínica, roteamento inteligente de horários para WhatsApp e automação de lembretes.</p>
-          </div>
-        </div>
-
-        <!-- Nicho 4: Contabilidade -->
-        <div class="glass-card niche-card" data-niche="contabilidade">
-          <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0;">Contabilidade & BPO</h3>
-          <div style="margin-top: 1rem; font-size: 0.88rem; color: var(--fg-muted);">
-            <p><strong style="color: #ff5f56;">O gargalo:</strong> Clientes que enxergam a contabilidade apenas como "emissora de guias", guerra predatória de honorários e atração de leads desqualificados.</p>
-            <p style="margin-top: 0.75rem;"><strong style="color: var(--cyan);">A solução VIBE:</strong> Posicionamento de consultoria estratégica nas redes + site focado em inteligência tributária e BPO financeiro que atrai empresários qualificados.</p>
-          </div>
-        </div>
-
-        <!-- Nicho 5: Advocacia -->
-        <div class="glass-card niche-card" data-niche="advocacia">
-          <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0;">Advocacia & Jurídico</h3>
-          <div style="margin-top: 1rem; font-size: 0.88rem; color: var(--fg-muted);">
-            <p><strong style="color: #ff5f56;">O gargalo:</strong> Rigor do Código de Ética e Provimento 205 da OAB, receio de infrações por propaganda e dificuldade de gerar consultas formais sem mercantilismo.</p>
-            <p style="margin-top: 0.75rem;"><strong style="color: var(--cyan);">A solução VIBE:</strong> Comunicação institucional sóbria e 100% ética, artigos de autoridade jurídica nas redes e página institucional para triagem e agendamento reservado.</p>
-          </div>
-        </div>
-
-        <!-- Nicho 6: Personal Trainers -->
-        <div class="glass-card niche-card" data-niche="personal">
-          <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0;">Personal Trainers & Fitness</h3>
-          <div style="margin-top: 1rem; font-size: 0.88rem; color: var(--fg-muted);">
-            <p><strong style="color: #ff5f56;">O gargalo:</strong> Passar horas respondendo preços soltos no direct, antes/depois esquecidos no feed e alunos perdidos por negociações informais.</p>
-            <p style="margin-top: 0.75rem;"><strong style="color: var(--cyan);">A solução VIBE:</strong> Posicionamento de treinador de elite no Instagram + página de consultoria com tabela de planos, fases de treino e avaliação física agendada no WhatsApp.</p>
-          </div>
-        </div>
-
-        <!-- Nicho 7: Demais Setores -->
-        <div class="glass-card niche-card" data-niche="demais" style="grid-column: 1 / -1; border-color: rgba(85,241,239,0.3); background: linear-gradient(135deg, rgba(8,21,24,0.9), rgba(4,10,14,0.95));">
-          <div style="display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: 1.5rem;">
-            <div style="max-width: 850px;">
-              <h3 class="font-display" style="font-size: 1.8rem; margin-top: 0;">Demais Setores & Especialistas</h3>
-              <div style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--fg-muted); line-height: 1.65;">
-                <p><strong style="color: #ff5f56;">O gargalo comum:</strong> Ter um excelente produto ou serviço, mas parecer amador na internet por não ter um ecossistema digital integrado, dependendo apenas do boca a boca ou de postagens esporádicas.</p>
-                <p style="margin-top: 0.5rem;"><strong style="color: var(--cyan);">A solução VIBE:</strong> Desenhamos a esteira ideal para o seu modelo de negócio: redes sociais com design de autoridade, site próprio de alta conversão e automações para transformar visitantes em contratos fechados.</p>
-              </div>
-            </div>
-            <div style="margin-top: 0.5rem;">
-              <a href="https://wa.me/5592992027059?text=Ol%C3%A1!%20Meu%20setor%20%C3%A9%20espec%C3%ADfico%20e%20gostaria%20de%20saber%20como%20ficaria%20a%20esteira%20da%20VIBE%20para%20mim." target="_blank" rel="noopener noreferrer" class="btn-cyan" style="font-size: 0.85rem; padding: 0.75rem 1.5rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
-                Analisar Meu Setor no WhatsApp →
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- O Problema (A dor real de quem precisa vender mais) -->
-  <section id="o-problema">
-    <div class="container">
-      <span class="section-eyebrow">/ A DOR DAS EMPRESAS HOJE</span>
+  <!-- Para Quem É -->
+  <section id="para-quem-e">
+    <div class="grid-lines"></div>
+    <div class="container" style="position: relative; z-index: 1;">
+      <span class="section-eyebrow">/ PARA QUEM É • ESPECIALISTAS & SAÚDE</span>
       <h2 class="section-title">
-        Por que a maioria das empresas <br />
-        <span class="text-cyan glow-cyan">perde vendas todos os dias?</span>
+        Presença Própria para quem vende por <span class="text-cyan glow-cyan">confiança.</span>
       </h2>
       <p class="section-sub">
-        Não adianta postar todo dia se o seu processo comercial não fecha negócios. Conheça os 3 gargalos que travam o seu faturamento:
+        Se o seu cliente ou paciente precisa entender seu método antes de contratar, seu negócio não pode depender do improviso do direct.
       </p>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3.5rem;">
-        <div class="glass-card" style="padding: 0;">
-          <img src="problem-funil.jpg" alt="Gargalo no Direct" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;" />
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+        <div class="glass-card">
+          <span class="font-mono text-cyan" style="font-size: 0.72rem; font-weight: 700;">FITNESS & PERFORMANCE</span>
+          <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0.5rem;">Personal Trainers & Consultorias</h3>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--fg-muted);">
+            <p><strong style="color: #ff5f56;">O gargalo:</strong> Valores perdidos em conversas soltas, fotos de antes/depois esquecidas nos stories.</p>
+            <p style="margin-top: 0.75rem;"><strong style="color: var(--cyan);">Com Presença Própria:</strong> Apresentação do método de treino, planos claros e agendamento de avaliação.</p>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <span class="font-mono text-cyan" style="font-size: 0.72rem; font-weight: 700;">SAÚDE & METABOLISMO</span>
+          <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0.5rem;">Nutricionistas Clínicos & Esportivos</h3>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--fg-muted);">
+            <p><strong style="color: #ff5f56;">O gargalo:</strong> Pacientes confusos sobre consultas, exames, retorno e planos de acompanhamento.</p>
+            <p style="margin-top: 0.75rem;"><strong style="color: var(--cyan);">Com Presença Própria:</strong> Explicação da consulta e cardápios, 100% dentro do código de ética do CFN.</p>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <span class="font-mono text-cyan" style="font-size: 0.72rem; font-weight: 700;">REABILITAÇÃO & MOVIMENTO</span>
+          <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0.5rem;">Fisioterapeutas & Reabilitação</h3>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--fg-muted);">
+            <p><strong style="color: #ff5f56;">O gargalo:</strong> Pacientes com dor que precisam entender protocolos de tratamento antes de agendar.</p>
+            <p style="margin-top: 0.75rem;"><strong style="color: var(--cyan);">Com Presença Própria:</strong> Autoridade clínica, patologias tratadas e triagem prévia rápida.</p>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <span class="font-mono text-cyan" style="font-size: 0.72rem; font-weight: 700;">SAÚDE MENTAL</span>
+          <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0.5rem;">Psicólogos & Terapeutas</h3>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--fg-muted);">
+            <p><strong style="color: #ff5f56;">O gargalo:</strong> Postura ética rígida sem poder usar promessas de resultado ou antes/depois comercial.</p>
+            <p style="margin-top: 0.75rem;"><strong style="color: var(--cyan);">Com Presença Própria:</strong> Enquadramento ético, acolhimento da abordagem e conformidade com o CFP.</p>
+          </div>
+        </div>
+
+        <div class="glass-card">
+          <span class="font-mono text-cyan" style="font-size: 0.72rem; font-weight: 700;">CLÍNICAS & ESTÚDIOS</span>
+          <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0.5rem;">Clínicas & Consultórios</h3>
+          <div style="margin-top: 1rem; font-size: 0.85rem; color: var(--fg-muted);">
+            <p><strong style="color: #ff5f56;">O gargalo:</strong> Múltiplos profissionais com agendas concorrentes e perda de pacientes por demora no WhatsApp.</p>
+            <p style="margin-top: 0.75rem;"><strong style="color: var(--cyan);">Com Presença Própria:</strong> Vitrine do corpo clínico, roteamento de especialidades e confirmação de horários.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O Problema -->
+  <section id="problema" style="background: #050a0d;">
+    <div class="container">
+      <span class="section-eyebrow">/ O PROBLEMA • A LOJA ALUGADA</span>
+      <h2 class="section-title">
+        O link da bio é uma porta.<br />
+        <span class="text-cyan glow-cyan">Não é uma casa.</span>
+      </h2>
+      <p class="section-sub">
+        Você pode continuar refém das oscilações do algoritmo — ou começar a construir uma estrutura própria que trabalha pelo seu posicionamento 24h por dia.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem;">
+        <div class="glass-card" style="padding: 0; overflow: hidden;">
+          <img src="problem-funil.jpg" alt="Sem Funil" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;" />
           <div style="padding: 1.5rem;">
-            <span class="font-mono text-cyan" style="font-size: 0.72rem; font-weight: 700;">GARGALO 01</span>
-            <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0.25rem;">O Buraco Negro do Direct</h3>
+            <span class="font-mono text-cyan" style="font-size: 0.72rem;">CONVERSÃO TRAVADA</span>
+            <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0.25rem;">Sem Funil no Direct</h3>
             <p style="font-size: 0.88rem; color: var(--fg-muted); margin-top: 0.5rem;">
-              Você gasta tempo criando posts, as pessoas perguntam preço no direct e depois somem. Sem uma página própria que filtra, educa e prepara a venda, 90% dos interessados são perdidos.
+              Todo lead cai na mesma conversa desorganizada do direct. Sem uma página que filtra e explica o método, você fecha por insistência — não por processo.
             </p>
           </div>
         </div>
 
-        <div class="glass-card" style="padding: 0;">
-          <img src="problem-recorrencia.jpg" alt="Percepção de Preço Baixa" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;" />
+        <div class="glass-card" style="padding: 0; overflow: hidden;">
+          <img src="problem-prova.jpg" alt="Sem Prova Estruturada" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;" />
           <div style="padding: 1.5rem;">
-            <span class="font-mono text-cyan" style="font-size: 0.72rem; font-weight: 700;">GARGALO 02</span>
+            <span class="font-mono text-cyan" style="font-size: 0.72rem;">CONFIANÇA EFÊMERA</span>
+            <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0.25rem;">Sem Prova Estruturada</h3>
+            <p style="font-size: 0.88rem; color: var(--fg-muted); margin-top: 0.5rem;">
+              Seus resultados e depoimentos viram stories que somem em 24h. Sem um lugar fixo e profissional, cada novo prospect começa a confiar do zero.
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding: 0; overflow: hidden;">
+          <img src="problem-recorrencia.jpg" alt="Percepção de Valor Travada" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;" />
+          <div style="padding: 1.5rem;">
+            <span class="font-mono text-cyan" style="font-size: 0.72rem;">PREÇO COMPARADO</span>
             <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0.25rem;">Percepção de Valor Travada</h3>
             <p style="font-size: 0.88rem; color: var(--fg-muted); margin-top: 0.5rem;">
-              Sem um site próprio impecável, sua entrega parece amadora. O cliente te compara com quem cobra mais barato no Instagram, em vez de valorizar a metodologia do seu serviço ou empresa.
+              Seu preço trava porque a apresentação parece informal. Sem presença própria, o cliente compara seu valor com o de qualquer amador nas redes.
             </p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O Que Muda & Compliance -->
+  <section id="o-que-muda">
+    <div class="container">
+      <span class="section-eyebrow">/ O QUE MUDA</span>
+      <h2 class="section-title">
+        Não entregamos só um site.<br />
+        <span class="text-cyan glow-cyan">Construímos uma presença própria.</span>
+      </h2>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+        <div class="glass-card">
+          <span class="font-mono text-cyan" style="font-size: 2rem; font-weight: 800;">01</span>
+          <p class="font-mono text-cyan" style="font-size: 0.75rem; margin-top: 0.5rem;">CLAREZA</p>
+          <h3 class="font-display" style="font-size: 1.5rem; margin-top: 0.5rem;">O visitante entende o método e o próximo passo.</h3>
+          <p style="font-size: 0.9rem; color: var(--fg-muted); margin-top: 0.75rem;">
+            Sua metodologia de atendimento ou treino deixa de depender de áudios e textos soltos no direct.
+          </p>
         </div>
 
-        <div class="glass-card" style="padding: 0;">
-          <img src="problem-prova.jpg" alt="Falta de Automação" style="width: 100%; aspect-ratio: 4/3; object-fit: cover;" />
-          <div style="padding: 1.5rem;">
-            <span class="font-mono text-cyan" style="font-size: 0.72rem; font-weight: 700;">GARGALO 03</span>
-            <h3 class="font-display" style="font-size: 1.6rem; margin-top: 0.25rem;">Atendimento Lento e Manual</h3>
-            <p style="font-size: 0.88rem; color: var(--fg-muted); margin-top: 0.5rem;">
-              A demora para responder no WhatsApp esfria o cliente que queria comprar agora. Sem automações e agendamento digital, sua empresa perde contratos para concorrentes mais rápidos.
-            </p>
-          </div>
+        <div class="glass-card">
+          <span class="font-mono text-cyan" style="font-size: 2rem; font-weight: 800;">02</span>
+          <p class="font-mono text-cyan" style="font-size: 0.75rem; margin-top: 0.5rem;">PROVA ÉTICA</p>
+          <h3 class="font-display" style="font-size: 1.5rem; margin-top: 0.5rem;">Sua credibilidade trabalha continuamente.</h3>
+          <p style="font-size: 0.9rem; color: var(--fg-muted); margin-top: 0.75rem;">
+            Depoimentos, casos de sucesso e relatos reais organizados com elegância — dentro das normas éticas do seu conselho.
+          </p>
         </div>
+
+        <div class="glass-card">
+          <span class="font-mono text-cyan" style="font-size: 2rem; font-weight: 800;">03</span>
+          <p class="font-mono text-cyan" style="font-size: 0.75rem; margin-top: 0.5rem;">CONVERSÃO</p>
+          <h3 class="font-display" style="font-size: 1.5rem; margin-top: 0.5rem;">A atenção do seguidor vira agendamento real.</h3>
+          <p style="font-size: 0.9rem; color: var(--fg-muted); margin-top: 0.75rem;">
+            O paciente ou cliente chega ciente do seu posicionamento, pronto para escolher o horário na sua agenda ou avançar com segurança.
+          </p>
+        </div>
+      </div>
+
+      <!-- Selo de Compliance -->
+      <div style="margin-top: 2.5rem; background: rgba(85,241,239,0.04); border: 1px solid rgba(85,241,239,0.25); border-radius: 1rem; padding: 1.5rem 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+        <div>
+          <h4 class="font-display" style="font-size: 1.3rem; color: #fff;">Compliance Ético Integrado</h4>
+          <p style="font-size: 0.88rem; color: var(--fg-muted); margin-top: 0.25rem;">
+            Estruturas pensadas e validadas conforme os códigos de ética profissionais: <strong class="text-cyan">CFN (Nutrição)</strong>, <strong class="text-cyan">CREFITO (Fisio)</strong>, <strong class="text-cyan">CFP (Psicologia)</strong> e <strong class="text-cyan">CFM (Medicina)</strong>.
+          </p>
+        </div>
+        <span class="pill-badge">Zero Risco Ético</span>
       </div>
     </div>
   </section>
 
   <!-- Amostras de Entrega -->
-  <section id="amostras" style="background: #020507;">
+  <section id="amostra" style="background: #020608;">
     <div class="container">
-      <span class="section-eyebrow">/ CASOS REAIS E MODELOS DE DEMONSTRAÇÃO</span>
+      <span class="section-eyebrow">/ AMOSTRAS DE ENTREGA</span>
       <h2 class="section-title">
-        Estruturas que constroem <span class="text-cyan glow-cyan">autoridade e vendas.</span>
+        Do primeiro clique ao <span class="text-cyan glow-cyan">próximo passo.</span>
       </h2>
 
-      <div style="display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-top: 3.5rem;">
-        <!-- Amostra 1: Personal Trainer -->
-        <div class="glass-card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+      <div style="display: grid; grid-template-columns: 1fr; gap: 2.5rem; margin-top: 3rem;">
+        <!-- Card 1: Victor Belichar -->
+        <div class="glass-card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: center;">
           <div>
             <span class="pill-badge" style="margin-bottom: 1rem;">CASE REAL EM PRODUÇÃO</span>
-            <h3 class="font-display" style="font-size: 2.2rem;">Victor Belichar Treinador</h3>
+            <h3 class="font-display" style="font-size: 2.2rem;">Victor Belichar</h3>
             <p class="font-mono text-cyan" style="font-size: 0.8rem;">Treinador & Consultoria Esportiva</p>
             <p style="color: var(--fg-muted); font-size: 0.95rem; margin-top: 1rem;">
-              Do direct caótico para um funil de alto ticket: apresentação clara da metodologia, tabela de planos de consultoria e botão direto para WhatsApp que converte leads diariamente.
+              Estrutura validada com apresentação das fases de treino, prova social organizada e funil de conversão direto para WhatsApp.
             </p>
             <div style="margin-top: 1.5rem; display: flex; gap: 1rem; align-items: center;">
-              <a href="https://victor-belichar-personal.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-cyan" style="font-size: 0.82rem; padding: 0.65rem 1.4rem;">
+              <a href="https://victor-belichar-personal.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-cyan" style="font-size: 0.8rem; padding: 0.6rem 1.4rem;">
                 Acessar Site no Ar ↗
               </a>
-              <span class="font-mono" style="font-size: 0.72rem; color: var(--fg-muted);">victor-belichar-personal.vercel.app</span>
+              <span class="font-mono" style="font-size: 0.75rem; color: var(--fg-muted);">victor-belichar-personal.vercel.app</span>
             </div>
           </div>
           <div class="mockup-frame">
@@ -1055,20 +670,20 @@
           </div>
         </div>
 
-        <!-- Amostra 2: Nutricionista -->
-        <div class="glass-card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+        <!-- Card 2: Nutricionista Demo -->
+        <div class="glass-card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; align-items: center;">
           <div>
-            <span class="pill-badge" style="margin-bottom: 1rem;">MODELO INTERATIVO • SAÚDE</span>
+            <span class="pill-badge" style="margin-bottom: 1rem;">MODELO INTERATIVO • DEMO</span>
             <h3 class="font-display" style="font-size: 2.2rem;">Dra. Marina Santos</h3>
             <p class="font-mono text-cyan" style="font-size: 0.8rem;">Nutrição Clínica & Integrativa (CRN)</p>
             <p style="color: var(--fg-muted); font-size: 0.95rem; margin-top: 1rem;">
-              Metodologia de consulta e agendamento digital: página desenhada dentro do código de ética do CFN, com explicação das fases do cardápio e escolha de horários integrada.
+              Modelo estruturado dentro do código do CFN: explicação dos planos alimentares, exames e sistema de marcação de horários integrado.
             </p>
             <div style="margin-top: 1.5rem; display: flex; gap: 1rem; align-items: center;">
-              <button onclick="openBooking()" class="btn-cyan" style="font-size: 0.82rem; padding: 0.65rem 1.4rem;">
-                Ver Demonstração de Agenda
+              <button onclick="openBooking()" class="btn-cyan" style="font-size: 0.8rem; padding: 0.6rem 1.4rem;">
+                Agendar Demonstração
               </button>
-              <span class="font-mono" style="font-size: 0.72rem; color: var(--fg-muted);">demo-nutri.vibedesigntech.com.br</span>
+              <span class="font-mono" style="font-size: 0.75rem; color: var(--fg-muted);">demo-nutri.vibedesigntech.com.br</span>
             </div>
           </div>
           <div class="mockup-frame">
@@ -1079,31 +694,30 @@
     </div>
   </section>
 
-  <!-- Planos & Assessoria (Setup + Parceria Contínua) -->
+  <!-- Planos & Investimento -->
   <section id="planos">
     <div class="container">
-      <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-        <span class="section-eyebrow">/ MODELOS DE ENGAJAMENTO & PARCERIA</span>
+      <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+        <span class="section-eyebrow">/ SOLUÇÕES & INVESTIMENTO</span>
         <h2 class="section-title">
-          Planos claros.<br />
-          <span class="text-cyan glow-cyan">Sem surpresas no contrato.</span>
+          Estruturas claras.<br />
+          <span class="text-cyan glow-cyan">Sem custos ocultos.</span>
         </h2>
         <p class="section-sub" style="margin: 0.75rem auto 0 auto;">
-          Do projeto de entrada com entrega rápida à assessoria completa de redes sociais, site e automações.
+          Do modelo de entrada em 7 dias a sistemas sob medida para clínicas. Escolha o caminho ideal para o seu momento.
         </p>
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3.5rem;">
-        
-        <!-- Nível 1: Presença Própria -->
-        <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <!-- Plano 1: Site Base -->
+        <div class="glass-card" style="display: flex; flex-col; justify-content: space-between;">
           <div>
-            <img src="site-base.png" alt="Presença Própria" style="width: 100%; border-radius: 0.75rem; aspect-ratio: 16/10; object-fit: cover;" />
-            <span class="pill-badge" style="margin-top: 1rem; font-size: 0.68rem;">START RÁPIDO</span>
-            <h3 class="font-display" style="font-size: 2rem; margin-top: 0.5rem;">Presença Própria</h3>
-            <p style="font-size: 0.85rem; color: var(--fg-muted);">Site Base de alta conversão para sair do improviso em até 7 dias úteis.</p>
+            <img src="site-base.png" alt="Site Base" style="width: 100%; border-radius: 0.75rem; aspect-ratio: 16/10; object-fit: cover;" />
+            <span class="pill-badge" style="margin-top: 1rem; font-size: 0.68rem;">ENTRADA RÁPIDA</span>
+            <h3 class="font-display" style="font-size: 2rem; margin-top: 0.5rem;">Site Base</h3>
+            <p style="font-size: 0.85rem; color: var(--fg-muted);">One-page completa e otimizada entregue em até 7 dias úteis.</p>
 
-            <div style="margin: 1.25rem 0; padding: 1.1rem; background: rgba(255,255,255,0.03); border-radius: 0.75rem;">
+            <div style="margin: 1.25rem 0; padding: 1rem; background: rgba(255,255,255,0.03); border-radius: 0.75rem;">
               <span class="font-display" style="font-size: 2.2rem; font-weight: 800;">R$ 1.500</span>
               <span class="font-mono text-cyan" style="font-size: 0.9rem;">+ R$ 99/mês</span>
               <p class="font-mono" style="font-size: 0.7rem; color: var(--fg-muted); margin-top: 0.25rem;">Setup em até 3x • Hospedagem e suporte inclusos</p>
@@ -1111,16 +725,16 @@
 
             <ul style="font-size: 0.85rem; list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
               <li>✓ One-page: Apresentação, Método, Prova e Contato</li>
-              <li>✓ Identidade personalizada com suas cores e fotos</li>
-              <li>✓ Painel intuitivo para você editar fotos e textos</li>
-              <li>✓ Hospedagem ultrarrápida inclusa</li>
-              <li>✓ Botão WhatsApp direto e rastreamento de cliques</li>
+              <li>✓ Identidade personalizada (suas cores, fotos e logotipo)</li>
+              <li>✓ Painel intuitivo para editar textos e fotos</li>
+              <li>✓ Hospedagem de alta performance inclusa</li>
+              <li>✓ Botão WhatsApp direto e rastreamento</li>
             </ul>
           </div>
 
           <div style="margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 1.5rem;">
             <p style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--cyan); margin-bottom: 1rem;">
-              ✓ Domínio 100% de sua propriedade. Cancele a hospedagem quando quiser.
+              ✓ O domínio é 100% seu. Cancele a hospedagem quando quiser.
             </p>
             <button onclick="openBooking()" class="btn-outline" style="width: 100%;">
               Agendar Análise de 20 min
@@ -1128,131 +742,110 @@
           </div>
         </div>
 
-        <!-- Nível 2: Esteira de Crescimento (Mais Escolhido) -->
-        <div class="glass-card" style="border-color: var(--cyan); background: #081518; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 0 45px rgba(85,241,239,0.22);">
+        <!-- Plano 2: Site + Personalização -->
+        <div class="glass-card" style="border-color: var(--cyan); background: #081518; display: flex; flex-col; justify-content: space-between; box-shadow: 0 0 40px rgba(85,241,239,0.2);">
           <div>
-            <img src="site-personalizacao.png" alt="Esteira de Crescimento" style="width: 100%; border-radius: 0.75rem; aspect-ratio: 16/10; object-fit: cover;" />
-            <span id="esteiraBadge" class="pill-badge" style="margin-top: 1rem; font-size: 0.68rem; background: var(--cyan); color: #000;">MAIS ESCOLHIDO</span>
-            <h3 class="font-display" style="font-size: 2rem; margin-top: 0.5rem;">Esteira de Crescimento</h3>
-            <p id="esteiraDesc" style="font-size: 0.85rem; color: var(--fg-muted);">Site Exclusivo + Design para Redes Sociais & Assessoria Mensal.</p>
+            <img src="site-personalizacao.png" alt="Site + Personalização" style="width: 100%; border-radius: 0.75rem; aspect-ratio: 16/10; object-fit: cover;" />
+            <span class="pill-badge" style="margin-top: 1rem; font-size: 0.68rem; background: var(--cyan); color: #000;">MAIS ESCOLHIDO</span>
+            <h3 class="font-display" style="font-size: 2rem; margin-top: 0.5rem;">Site + Personalização</h3>
+            <p style="font-size: 0.85rem; color: var(--fg-muted);">Design exclusivo sob medida + Agendamento integrado em 10 a 14 dias úteis.</p>
 
-            <!-- Seletor de Modalidade da Esteira (5 artes vs 12 artes) -->
-            <div style="display: flex; gap: 0.35rem; background: rgba(0,0,0,0.55); padding: 0.3rem; border-radius: 9999px; border: 1px solid rgba(85,241,239,0.22); margin-top: 1rem;">
-              <button type="button" id="btnEsteiraSimples" onclick="setEsteiraTier('simples')" style="flex: 1; padding: 0.45rem 0.5rem; border-radius: 9999px; border: none; font-size: 0.73rem; font-family: var(--font-mono); font-weight: 700; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--fg-muted);">
-                5 Artes • R$ 390/mês
-              </button>
-              <button type="button" id="btnEsteiraCompleta" onclick="setEsteiraTier('completa')" style="flex: 1; padding: 0.45rem 0.5rem; border-radius: 9999px; border: none; font-size: 0.73rem; font-family: var(--font-mono); font-weight: 700; cursor: pointer; transition: all 0.2s; background: var(--cyan); color: #000; box-shadow: 0 0 15px rgba(85,241,239,0.35);">
-                12 Artes • R$ 890/mês ★
-              </button>
-            </div>
-
-            <div style="margin: 1.25rem 0; padding: 1.1rem; background: rgba(85,241,239,0.06); border-radius: 0.75rem; border: 1px solid rgba(85,241,239,0.25);">
-              <span class="font-display" style="font-size: 2.2rem; font-weight: 800;">R$ 2.200</span>
-              <span id="esteiraMonthlyPrice" class="font-mono text-cyan" style="font-size: 0.88rem;">+ R$ 890/mês</span>
-              <p id="esteiraMonthlyDetail" class="font-mono" style="font-size: 0.7rem; color: var(--fg-muted); margin-top: 0.25rem;">Setup do Site + Assessoria Mensal de Redes & Otimização</p>
-            </div>
-
-            <ul id="esteiraDeliverables" style="font-size: 0.85rem; list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
-              <li>✓ <strong>Site Exclusivo:</strong> Layout desenhado sob medida + Agendamento</li>
-              <li>✓ <strong>Design para Redes Sociais:</strong> 12 artes estratégicas por mês</li>
-              <li>✓ <strong>Copywriting Estratégico:</strong> Textos focados em converter seguidores</li>
-              <li>✓ <strong>Compliance Ético:</strong> Conteúdo dentro das regras do seu conselho</li>
-              <li>✓ <strong>Assessoria Mensal:</strong> Reuniões de calibração para vender mais</li>
-            </ul>
-          </div>
-
-          <div style="margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 1.5rem;">
-            <p id="esteiraNote" style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--cyan); margin-bottom: 1rem;">
-              ✓ Parceria contínua focada em geração real de leads e agendamentos.
-            </p>
-            <button onclick="openBooking()" class="btn-cyan" style="width: 100%;">
-              Agendar Análise Estratégica
-            </button>
-          </div>
-        </div>
-
-        <!-- Nível 3: Ecossistema Completo -->
-        <div class="glass-card" style="display: flex; flex-direction: column; justify-content: space-between;">
-          <div>
-            <img src="app-sistema-completo.png" alt="Ecossistema Completo" style="width: 100%; border-radius: 0.75rem; aspect-ratio: 16/10; object-fit: cover;" />
-            <span class="pill-badge" style="margin-top: 1rem; font-size: 0.68rem;">CLÍNICAS & EMPRESAS</span>
-            <h3 class="font-display" style="font-size: 2rem; margin-top: 0.5rem;">Ecossistema Completo</h3>
-            <p style="font-size: 0.85rem; color: var(--fg-muted);">Plataforma Web, Automações WhatsApp, Redes e CRM dedicado.</p>
-
-            <div style="margin: 1.25rem 0; padding: 1.1rem; background: rgba(255,255,255,0.03); border-radius: 0.75rem;">
-              <span class="font-display" style="font-size: 2.2rem; font-weight: 800;">Sob consulta</span>
-              <p class="font-mono" style="font-size: 0.7rem; color: var(--fg-muted); margin-top: 0.25rem;">Projeto desenhado sob medida para a sua operação</p>
+            <div style="margin: 1.25rem 0; padding: 1rem; background: rgba(85,241,239,0.06); border-radius: 0.75rem; border: 1px solid rgba(85,241,239,0.2);">
+              <span class="font-display" style="font-size: 2.2rem; font-weight: 800;">R$ 1.800</span>
+              <span class="font-mono text-cyan" style="font-size: 0.9rem;">+ R$ 149/mês</span>
+              <p class="font-mono" style="font-size: 0.7rem; color: var(--fg-muted); margin-top: 0.25rem;">Setup em até 12x • Suporte mensal dedicado</p>
             </div>
 
             <ul style="font-size: 0.85rem; list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
-              <li>✓ Gestão de múltiplos profissionais e agendas da clínica</li>
-              <li>✓ Automações inteligentes de atendimento via WhatsApp API & n8n</li>
-              <li>✓ Dashboard de métricas, prontuário simplificado e CRM</li>
-              <li>✓ Produção contínua de conteúdo e autoridade institucional</li>
-              <li>✓ Consultoria técnica e de produto semanalmente</li>
+              <li>✓ Tudo do Site Base com layout desenhado exclusivamente</li>
+              <li>✓ Sistema de agendamento automático integrado</li>
+              <li>✓ Páginas ou seções dedicadas para cada especialidade</li>
+              <li>✓ Conformidade ética com seu conselho (CFN, CREFITO, CFP, CFM)</li>
+              <li>✓ Otimização técnica de SEO e velocidade máxima</li>
             </ul>
           </div>
 
           <div style="margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 1.5rem;">
             <p style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--cyan); margin-bottom: 1rem;">
-              ✓ Escala operacional com tecnologia de grandes empresas.
+              ✓ Domínio próprio garantido. Suporte contínuo sem multas.
             </p>
-            <a href="https://wa.me/5592992027059?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20o%20Ecossistema%20Completo." target="_blank" rel="noopener noreferrer" class="btn-outline" style="width: 100%;">
-              Conversar com os Fundadores
-            </a>
+            <button onclick="openBooking()" class="btn-cyan" style="width: 100%;">
+              Agendar Análise de 20 min
+            </button>
           </div>
         </div>
 
+        <!-- Plano 3: Sistema Sob Medida -->
+        <div class="glass-card" style="display: flex; flex-col; justify-content: space-between;">
+          <div>
+            <img src="app-sistema-completo.png" alt="Sistema Sob Medida" style="width: 100%; border-radius: 0.75rem; aspect-ratio: 16/10; object-fit: cover;" />
+            <span class="pill-badge" style="margin-top: 1rem; font-size: 0.68rem;">CLÍNICAS & ESTÚDIOS</span>
+            <h3 class="font-display" style="font-size: 2rem; margin-top: 0.5rem;">Sistema Sob Medida</h3>
+            <p style="font-size: 0.85rem; color: var(--fg-muted);">Plataforma Web, automações WhatsApp e gestão sob medida.</p>
+
+            <div style="margin: 1.25rem 0; padding: 1rem; background: rgba(255,255,255,0.03); border-radius: 0.75rem;">
+              <span class="font-display" style="font-size: 2.2rem; font-weight: 800;">Sob consulta</span>
+              <p class="font-mono" style="font-size: 0.7rem; color: var(--fg-muted); margin-top: 0.25rem;">Projeto arquitetado sob medida para sua clínica</p>
+            </div>
+
+            <ul style="font-size: 0.85rem; list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li>✓ Plataforma Web totalmente personalizada em Next.js</li>
+              <li>✓ Automações de atendimento inteligente via WhatsApp API & n8n</li>
+              <li>✓ Agendamento multi-profissional para clínicas e secretárias</li>
+              <li>✓ Dashboard de métricas, gestão e CRM</li>
+              <li>✓ Consultoria contínua de tecnologia e arquitetura</li>
+            </ul>
+          </div>
+
+          <div style="margin-top: 2rem; border-top: 1px solid var(--line); padding-top: 1.5rem;">
+            <p style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--cyan); margin-bottom: 1rem;">
+              ✓ Infraestrutura dedicada com total autonomia técnica.
+            </p>
+            <a href="https://wa.me/5592992027059?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20o%20Sistema%20Sob%20Medida." target="_blank" rel="noopener noreferrer" class="btn-outline" style="width: 100%;">
+              Conversar com a Equipe
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Sobre os Fundadores -->
+  <!-- Sobre -->
   <section id="sobre" style="background: #030709;">
     <div class="container">
-      <div style="text-align: center; max-width: 700px; margin: 0 auto;">
-        <span class="section-eyebrow">/ OS FUNDADORES</span>
+      <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+        <span class="section-eyebrow">/ SOBRE A VIBE</span>
         <h2 class="section-title">
-          Quem faz o seu projeto <br />
-          <span class="text-cyan glow-cyan">acontecer.</span>
+          Projetos de produto de verdade <br />
+          <span class="text-cyan glow-cyan">aplicados ao seu negócio.</span>
         </h2>
         <p class="section-sub" style="margin: 0.75rem auto 0 auto;">
-          Você não é atendido por estagiários nem terceirizados. Trabalha diretamente com os sócios fundadores da VIBE.
+          Não somos uma agência tradicional que usa templates lentos de WordPress. Trazemos a bagagem de engenharia e design de grandes plataformas para a presença própria de especialistas e clínicas.
         </p>
       </div>
 
-      <div class="about-grid" style="margin-top: 3.5rem;">
-        <!-- Card 1: Victor Belichar -->
-        <div class="founder-card">
-          <div class="founder-img-wrap">
-            <img src="VICTOR2.png" alt="Victor Belichar" />
-          </div>
-          <div class="founder-body">
-            <h3 class="founder-name">VICTOR BELICHAR</h3>
-            <p class="founder-role">CEO - COMERCIAL E RELACIONAMENTO</p>
-            <p class="founder-desc">Estrutura as ofertas, atende cada cliente e mantém o Instagram da VIBE — a ponte entre quem procura presença própria e o produto certo.</p>
-            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-              <button type="button" onclick="openMinibioModal('victor')" class="pill-badge" style="cursor: pointer; font-size: 0.75rem; padding: 0.45rem 1.1rem; display: inline-flex; align-items: center; gap: 0.5rem; color: var(--cyan); border-color: rgba(85,241,239,0.35); background: rgba(85,241,239,0.08); transition: all 0.2s;">
-                <span class="dot"></span>Minibio &gt;
-              </button>
-            </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; margin-top: 3.5rem;">
+        <div class="glass-card" style="padding: 2.5rem;">
+          <h3 class="font-display" style="font-size: 2rem;">VICTOR BELICHAR</h3>
+          <p class="font-mono text-cyan" style="font-size: 0.8rem;">Co-fundador • Estratégia Comercial & Relacionamento</p>
+          <p style="color: var(--fg-muted); font-size: 0.95rem; margin-top: 1rem; line-height: 1.7;">
+            12+ anos em estratégia de marca, UX/UI e posicionamento comercial. É a ponte entre a complexidade do seu método e uma presença digital magnética que atrai os pacientes certos.
+          </p>
+          <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="pill-badge" style="font-size: 0.65rem;">12+ ANOS EXP</span>
+            <span class="pill-badge" style="font-size: 0.65rem;">UX & MARCAS</span>
           </div>
         </div>
 
-        <!-- Card 2: Daniel Leite -->
-        <div class="founder-card">
-          <div class="founder-img-wrap">
-            <img src="DANIEL.png" alt="Daniel Leite" />
-          </div>
-          <div class="founder-body">
-            <h3 class="founder-name">DANIEL LEITE</h3>
-            <p class="founder-role">CTO - TECNOLOGIA E PRODUTO</p>
-            <p class="founder-desc">Constrói cada site e sistema — da estrutura técnica ao design final. É quem faz a presença online acontecer com os mais altos padrões de qualidade.</p>
-            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
-              <button type="button" onclick="openMinibioModal('daniel')" class="pill-badge" style="cursor: pointer; font-size: 0.75rem; padding: 0.45rem 1.1rem; display: inline-flex; align-items: center; gap: 0.5rem; color: var(--cyan); border-color: rgba(85,241,239,0.35); background: rgba(85,241,239,0.08); transition: all 0.2s;">
-                <span class="dot"></span>Minibio &gt;
-              </button>
-            </div>
+        <div class="glass-card" style="padding: 2.5rem;">
+          <h3 class="font-display" style="font-size: 2rem;">DANIEL LEITE</h3>
+          <p class="font-mono text-cyan" style="font-size: 0.8rem;">Co-fundador • Engenharia de Produto & Tecnologia</p>
+          <p style="color: var(--fg-muted); font-size: 0.95rem; margin-top: 1rem; line-height: 1.7;">
+            16 anos de trajetória em design e 6+ anos em engenharia de produtos digitais complexos (healthtech, fintechs e fluxos críticos de pagamento). Constrói cada site com código limpo, Next.js e velocidade máxima no Google.
+          </p>
+          <div style="margin-top: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="pill-badge" style="font-size: 0.65rem;">16 ANOS DESIGN</span>
+            <span class="pill-badge" style="font-size: 0.65rem;">HEALTHTECH & FINTECH</span>
           </div>
         </div>
       </div>
@@ -1261,7 +854,7 @@
 
   <!-- FAQ -->
   <section id="faq">
-    <div class="container" style="max-width: 820px;">
+    <div class="container" style="max-width: 800px;">
       <span class="section-eyebrow">/ DÚVIDAS FREQUENTES</span>
       <h2 class="section-title">
         Perguntas & <span class="text-cyan glow-cyan">Respostas</span>
@@ -1269,37 +862,37 @@
 
       <div style="margin-top: 2.5rem;">
         <div class="faq-item active" onclick="this.classList.toggle('active')">
-          <div class="faq-question">Como funciona o design para redes sociais junto com o site? <span>▼</span></div>
+          <div class="faq-question">Serve para a minha profissão na área de saúde ou bem-estar? <span>▼</span></div>
           <div class="faq-answer">
-            Nós cuidamos da linha editorial, do design das postagens e dos roteiros do seu Instagram com foco em vendas. As postagens atraem os seguidores qualificados e direcionam o tráfego para o seu site próprio, onde o cliente entende o seu método e fecha o agendamento sem gargalos no direct.
+            Sim. Nossa estrutura é desenhada especificamente para profissionais que vendem por confiança e relacionamento: Personal Trainers, Nutricionistas, Fisioterapeutas, Psicólogos, Médicos e Clínicas Integradas. Adaptamos a linguagem do método e a exibição de provas conforme as normas éticas da sua profissão.
           </div>
         </div>
 
         <div class="faq-item" onclick="this.classList.toggle('active')">
-          <div class="faq-question">A VIBE atende tanto profissionais da saúde quanto empresas gerais? <span>▼</span></div>
+          <div class="faq-question">Quanto tempo leva para o meu site ficar pronto? <span>▼</span></div>
           <div class="faq-answer">
-            Sim. Para profissionais da saúde (Nutrição, Personal, Fisio, Psicologia), focamos em confiança pessoal, agendamento de consultas e estrito cumprimento dos conselhos éticos (CFN, CREFITO, CFP, CFM). Para empresas e clínicas, focamos em captação de leads em escala, automação de WhatsApp e CRM de atendimento.
+            Para o Site Base, a entrega é em até 7 dias úteis após o envio dos materiais básicos (fotos, logotipo e dados de contato). Para o Site + Personalização, o prazo é de 10 a 14 dias úteis devido ao desenho visual exclusivo e integração de agenda.
           </div>
         </div>
 
         <div class="faq-item" onclick="this.classList.toggle('active')">
-          <div class="faq-question">Quanto tempo leva para o meu projeto entrar no ar? <span>▼</span></div>
+          <div class="faq-question">Como funcionam o setup, a mensalidade e o cancelamento? <span>▼</span></div>
           <div class="faq-answer">
-            Para o plano Presença Própria (Site Base), a entrega é feita em até 7 dias úteis após o envio dos materiais. Para a Esteira de Crescimento (com redes sociais e agendamento integrado), o prazo é de 10 a 14 dias úteis para colocarmos o site no ar e iniciarmos as publicações.
+            A taxa de setup cobre o desenvolvimento e a personalização da sua estrutura. A mensalidade cobre a hospedagem de alta performance, manutenções e suporte. O domínio é sempre 100% de sua propriedade. Você pode cancelar a hospedagem quando quiser, sem multas.
           </div>
         </div>
 
         <div class="faq-item" onclick="this.classList.toggle('active')">
-          <div class="faq-question">O domínio do site fica no meu nome? <span>▼</span></div>
+          <div class="faq-question">Como é garantido o compliance com meu conselho (CFN, CREFITO, CFP, CFM)? <span>▼</span></div>
           <div class="faq-answer">
-            Sempre. O domínio é registrado e fica 100% de sua propriedade. Caso você decida pausar ou cancelar os serviços de assessoria, o domínio continua sendo seu sem nenhuma taxa de rescisão ou retenção.
+            Conhecemos as resoluções de cada categoria sobre garantias de emagrecimento, mercantilização e restrições de antes/depois. Construímos uma comunicação que gera autoridade e desejo sem infringir as normas do seu conselho regional.
           </div>
         </div>
 
         <div class="faq-item" onclick="this.classList.toggle('active')">
-          <div class="faq-question">O que acontece na Análise Estratégica de 20 minutos? <span>▼</span></div>
+          <div class="faq-question">O que acontece na Análise de 20 minutos? <span>▼</span></div>
           <div class="faq-answer">
-            É uma reunião rápida e sem compromisso direto com os fundadores. Mapeamos os gargalos de vendas do seu Instagram e WhatsApp e mostramos na prática a esteira ideal para o seu negócio vender mais. A contratação só acontece se fizer total sentido para o seu momento.
+            É uma conversa rápida com os fundadores da VIBE para mapear seu momento, identificar os gargalos do seu direct e mostrar na tela a estrutura ideal para o seu negócio, sem pressão comercial.
           </div>
         </div>
       </div>
@@ -1311,11 +904,11 @@
     <div class="container">
       <span class="pill-badge" style="margin-bottom: 1.5rem;">/ ANÁLISE ESTRATÉGICA SEM COMPROMISSO</span>
       <h2 class="section-title">
-        Sua máquina de vendas começa numa <br />
+        Sua presença própria começa numa <br />
         <span class="text-cyan glow-cyan">conversa de 20 minutos.</span>
       </h2>
       <p class="section-sub" style="margin: 1rem auto 0 auto;">
-        Mostramos como ficaria a esteira completa para o seu negócio (redes sociais, site próprio e automações), sem empurrar contratações. Você decide com total clareza.
+        Mostramos como ficaria a estrutura ideal para seu consultório ou assessoria, sem empurrar vendas. Você decide os próximos passos com clareza total.
       </p>
 
       <div style="margin-top: 2.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
@@ -1323,29 +916,20 @@
           Agendar Análise de 20 min
         </button>
         <a href="https://wa.me/5592992027059" target="_blank" rel="noopener noreferrer" class="btn-outline">
-          Tirar Dúvidas no WhatsApp
-        </a>
-        <a href="https://www.instagram.com/vibedesigntech/" target="_blank" rel="noopener noreferrer" class="btn-instagram" title="Instagram @vibedesigntech">
-          <svg style="width:18px;height:18px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          <span>Instagram @vibedesigntech</span>
+          Tirar dúvidas no WhatsApp
         </a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer style="background: #010304; border-top: 1px solid var(--line); padding: 3.5rem 0; font-size: 0.85rem; color: var(--fg-muted);">
+  <footer style="background: #010304; border-top: 1px solid var(--line); padding: 3rem 0; font-size: 0.82rem; color: var(--fg-muted);">
     <div class="container" style="display: flex; flex-direction: column; gap: 1.5rem;">
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
         <img src="LOGO VIBE TECH.png" alt="VIBE Design Tech" style="height: 38px; width: auto;" />
-        <div style="display: flex; align-items: center; gap: 1.25rem; font-family: var(--font-mono); flex-wrap: wrap;">
-          <a href="https://wa.me/5592992027059" target="_blank" rel="noopener noreferrer" style="color: var(--fg-muted); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#55F1EF'" onmouseout="this.style.color='var(--fg-muted)'">
-            WhatsApp: (92) 99202-7059
-          </a>
-          <a href="https://www.instagram.com/vibedesigntech/" target="_blank" rel="noopener noreferrer" class="btn-instagram-nav" style="font-size: 0.78rem;">
-            <svg style="width:14px;height:14px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            <span>@vibedesigntech</span>
-          </a>
+        <div style="display: flex; gap: 1.5rem; font-family: var(--font-mono);">
+          <span>WhatsApp: (92) 99202-7059</span>
+          <span>@vibedesigntech</span>
         </div>
       </div>
 
@@ -1431,75 +1015,7 @@
     </div>
   </div>
 
-  <!-- Modal Minibio Dinâmico -->
-  <div id="minibioModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.85); backdrop-filter:blur(12px); align-items:center; justify-content:center; padding:1rem;" onclick="closeMinibioModal()">
-    <div style="position:relative; width:100%; max-width:560px; background:#080d11; border:1px solid rgba(85,241,239,0.35); border-radius:1.5rem; padding:1.75rem; box-shadow:0 0 50px rgba(85,241,239,0.2); color:#fff;" onclick="event.stopPropagation()">
-      <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:1.25rem; margin-bottom:1.25rem;">
-        <div style="display:flex; align-items:center; gap:1rem;">
-          <img id="minibioImg" src="VICTOR2.png" alt="Foto" style="width:56px; height:56px; border-radius:1rem; border:1px solid rgba(85,241,239,0.3); object-fit:cover; object-position:top;">
-          <div>
-            <span class="pill-badge" style="font-size:0.65rem; padding:0.2rem 0.5rem; margin-bottom:0.25rem; display:inline-flex;"><span class="dot"></span>Minibio</span>
-            <h3 id="minibioName" style="font-family:var(--font-display); font-size:1.4rem; font-weight:800; text-transform:uppercase; margin:0;">Victor Belichar</h3>
-            <p id="minibioRole" style="font-family:var(--font-mono); font-size:0.7rem; color:var(--cyan); margin:0.15rem 0 0; text-transform:uppercase;">CEO - COMERCIAL E RELACIONAMENTO</p>
-          </div>
-        </div>
-        <button type="button" onclick="closeMinibioModal()" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.15); color:var(--fg-muted); width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:1rem; line-height:1;" aria-label="Fechar">✕</button>
-      </div>
-      <div style="max-height:60vh; overflow-y:auto; line-height:1.7; font-size:0.925rem; color:#e2e8f0;">
-        <p id="minibioText" style="margin:0;"></p>
-      </div>
-      <div style="margin-top:1.5rem; display:flex; justify-content:flex-end;">
-        <button type="button" onclick="closeMinibioModal()" class="btn-cyan" style="font-size:0.8rem; padding:0.5rem 1.25rem; cursor:pointer;">Fechar</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Botão Flutuante do WhatsApp (Padrão Oficial com Diagnóstico Rápido) -->
-  <aside aria-label="Atendimento via WhatsApp" class="floating-whatsapp-wrap">
-    <a href="https://wa.me/5592992027059?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20VIBE%20Design%20Tech%20e%20gostaria%20de%20um%20diagn%C3%B3stico%20r%C3%A1pido%20para%20o%20meu%20projeto." target="_blank" rel="noopener noreferrer" class="floating-whatsapp-link">
-      <div class="floating-whatsapp-pill">
-        <span class="dot-green"></span>
-        <span>Diagnóstico rápido no WhatsApp</span>
-      </div>
-      <div class="floating-whatsapp-btn" aria-label="Falar no WhatsApp">
-        <svg viewBox="0 0 24 24" class="wa-icon" aria-hidden="true">
-          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-        </svg>
-      </div>
-    </a>
-  </aside>
-
   <script>
-    const bios = {
-      victor: {
-        name: "Victor Belichar",
-        role: "CEO - COMERCIAL E RELACIONAMENTO",
-        image: "VICTOR2.png",
-        text: "Victor Belichar é Coordenador de Projetos de Design com mais de 12 anos de experiência na criação e gestão de produtos digitais, marcas e estratégias visuais. Com sólida bagagem em UX/UI, Design Thinking e Direção de Criação, lidera equipes multidisciplinares alinhando inovação, organização de processos e foco nos objetivos de negócio e na experiência do usuário. Une visão estratégica de produto, facilidade de comunicação e gestão ágil para orquestrar entregas eficientes entre times de design, desenvolvimento e clientes, transformando problemas complexos em soluções intuitivas e de alto impacto."
-      },
-      daniel: {
-        name: "Daniel Leite",
-        role: "CTO - TECNOLOGIA E PRODUTO",
-        image: "DANIEL.png",
-        text: "Daniel Rodrigo Leite é Senior Product Designer e Engenheiro de Interface com mais de 16 anos de trajetória em design e 6+ anos dedicados a produtos digitais complexos (healthtech, fintech e sistemas de pagamento). Especialista em Product Discovery, UX Research e Design Systems, combina metodologia sólida com IA Generativa para construir experiências digitais simples, escaláveis e orientadas a resultados. Desenvolve cada site e sistema com arquitetura Next.js, segurança e velocidade máxima."
-      }
-    };
-
-    function openMinibioModal(personKey) {
-      const data = bios[personKey] || bios.victor;
-      document.getElementById('minibioImg').src = data.image;
-      document.getElementById('minibioName').textContent = data.name;
-      document.getElementById('minibioRole').textContent = data.role;
-      document.getElementById('minibioText').textContent = data.text;
-      const m = document.getElementById('minibioModal');
-      if (m) m.style.display = 'flex';
-    }
-
-    function closeMinibioModal() {
-      const m = document.getElementById('minibioModal');
-      if (m) m.style.display = 'none';
-    }
-
     function openBooking() {
       document.getElementById('bookingModal').classList.add('active');
     }
@@ -1520,101 +1036,6 @@
       const url = `https://wa.me/5592992027059?text=${encodeURIComponent(message)}`;
       window.open(url, '_blank');
       closeBooking();
-    }
-
-    function switchNiche(nicheKey, btnElement) {
-      document.querySelectorAll('.tab-switcher .tab-btn').forEach(btn => btn.classList.remove('active'));
-      if (btnElement) {
-        btnElement.classList.add('active');
-      }
-
-      const cards = document.querySelectorAll('.niche-card');
-      cards.forEach(card => {
-        if (nicheKey === 'todos' || card.getAttribute('data-niche') === nicheKey) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    function switchTrack(track) {
-      if (track === 'saude') {
-        const btn = document.querySelector('[onclick*="saude"]');
-        switchNiche('saude', btn);
-      } else {
-        const btn = document.querySelector('[onclick*="empresas"]');
-        switchNiche('empresas', btn);
-      }
-    }
-
-    function setEsteiraTier(tier) {
-      const btnSimples = document.getElementById('btnEsteiraSimples');
-      const btnCompleta = document.getElementById('btnEsteiraCompleta');
-      const badge = document.getElementById('esteiraBadge');
-      const desc = document.getElementById('esteiraDesc');
-      const monthlyPrice = document.getElementById('esteiraMonthlyPrice');
-      const monthlyDetail = document.getElementById('esteiraMonthlyDetail');
-      const deliverables = document.getElementById('esteiraDeliverables');
-      const note = document.getElementById('esteiraNote');
-
-      if (!btnSimples || !btnCompleta) return;
-
-      if (tier === 'simples') {
-        btnSimples.style.background = 'var(--cyan)';
-        btnSimples.style.color = '#000';
-        btnSimples.style.boxShadow = '0 0 15px rgba(85,241,239,0.35)';
-
-        btnCompleta.style.background = 'transparent';
-        btnCompleta.style.color = 'var(--fg-muted)';
-        btnCompleta.style.boxShadow = 'none';
-
-        if (badge) {
-          badge.textContent = 'ESSENCIAL • 5 ARTES';
-          badge.style.background = 'rgba(255,255,255,0.08)';
-          badge.style.color = '#fff';
-        }
-        if (desc) desc.textContent = 'Site Exclusivo + 5 artes para redes sociais, 5 alterações do site e manutenção.';
-        if (monthlyPrice) monthlyPrice.textContent = '+ R$ 390/mês';
-        if (monthlyDetail) monthlyDetail.textContent = 'Setup do Site + 5 Artes/mês, 5 Alterações e Manutenção';
-        if (deliverables) {
-          deliverables.innerHTML = `
-            <li>✓ <strong>Site Exclusivo:</strong> Layout desenhado sob medida + Agendamento</li>
-            <li>✓ <strong>Design para Redes Sociais:</strong> 5 artes para redes sociais por mês</li>
-            <li>✓ <strong>Alterações no Site:</strong> Até 5 alterações de fotos/textos por mês</li>
-            <li>✓ <strong>Manutenção & Suporte:</strong> Hospedagem rápida e suporte técnico contínuo</li>
-            <li>✓ <strong>Compliance Ético:</strong> Conteúdo alinhado às regras do seu conselho</li>
-          `;
-        }
-        if (note) note.textContent = '✓ Ideal para manter o site atualizado e presença profissional nas redes.';
-      } else {
-        btnCompleta.style.background = 'var(--cyan)';
-        btnCompleta.style.color = '#000';
-        btnCompleta.style.boxShadow = '0 0 15px rgba(85,241,239,0.35)';
-
-        btnSimples.style.background = 'transparent';
-        btnSimples.style.color = 'var(--fg-muted)';
-        btnSimples.style.boxShadow = 'none';
-
-        if (badge) {
-          badge.textContent = 'MAIS ESCOLHIDO';
-          badge.style.background = 'var(--cyan)';
-          badge.style.color = '#000';
-        }
-        if (desc) desc.textContent = 'Site Exclusivo + Design para Redes Sociais & Assessoria Mensal.';
-        if (monthlyPrice) monthlyPrice.textContent = '+ R$ 890/mês';
-        if (monthlyDetail) monthlyDetail.textContent = 'Setup do Site + Assessoria Mensal de Redes & Otimização';
-        if (deliverables) {
-          deliverables.innerHTML = `
-            <li>✓ <strong>Site Exclusivo:</strong> Layout desenhado sob medida + Agendamento</li>
-            <li>✓ <strong>Design para Redes Sociais:</strong> 12 artes estratégicas por mês</li>
-            <li>✓ <strong>Copywriting Estratégico:</strong> Textos focados em converter seguidores</li>
-            <li>✓ <strong>Compliance Ético:</strong> Conteúdo dentro das regras do seu conselho</li>
-            <li>✓ <strong>Assessoria Mensal:</strong> Reuniões de calibração para vender mais</li>
-          `;
-        }
-        if (note) note.textContent = '✓ Parceria contínua focada em geração real de leads e agendamentos.';
-      }
     }
   </script>
 </body>

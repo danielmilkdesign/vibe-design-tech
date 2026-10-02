@@ -39,17 +39,17 @@ export default function Hero({ onOpenBooking }: HeroProps) {
 
             <ScrollReveal direction="up" delay={100} duration={800}>
               <h1 className="font-display text-[clamp(2.5rem,5vw,68px)] xl:text-[68px] leading-[0.96] font-extrabold uppercase tracking-tight text-white break-words">
-                Seu Instagram atrai.
+                Criamos produtos digitais de alta performance
                 <br />
                 <span className="glow-cyan text-cyan">
-                  Seu site converte.
+                  que aceleram seu negócio.
                 </span>
               </h1>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={250} duration={800}>
               <p className="subtext mt-5 sm:mt-6 max-w-xl text-[0.9375rem] sm:text-base md:text-lg leading-relaxed text-fg-muted">
-                Sites e sistemas que explicam seu método, organizam suas provas e levam o paciente ou cliente até o agendamento.
+                Unimos design de interface de alto nível, engenharia moderna e IA para construir landing pages, web apps, sites e soluções prontas focadas em conversão e aumento de vendas.
               </p>
             </ScrollReveal>
 
@@ -79,20 +79,6 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                 >
                   Conhecer Planos & Estrutura
                 </a>
-              </div>
-            </ScrollReveal>
-
-            {/* Micro-prova de confiança */}
-            <ScrollReveal direction="up" delay={550} duration={800}>
-              <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 text-xs text-fg-muted">
-                <div className="flex items-center gap-1.5 rounded-full bg-white/[0.03] border border-white/10 px-3 py-1 backdrop-blur-sm transition-all hover:border-cyan/40">
-                  <span className="h-1.5 w-1.5 rounded-full bg-cyan animate-pulse" />
-                  <span>Entrega em até 7 dias úteis</span>
-                </div>
-                <div className="flex items-center gap-1.5 rounded-full bg-white/[0.03] border border-white/10 px-3 py-1 backdrop-blur-sm transition-all hover:border-emerald-400/40">
-                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span>Identidade visual personalizada</span>
-                </div>
               </div>
             </ScrollReveal>
           </div>
