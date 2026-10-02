@@ -6,7 +6,7 @@ export default function FloatingWhatsApp() {
   const [visible, setVisible] = useState(false);
   const waUrl =
     "https://wa.me/5592992027059?text=" +
-    encodeURIComponent("Olá! Vim pelo site da VIBE Design Tech e gostaria de agendar uma análise rápida para o meu projeto.");
+    encodeURIComponent("Olá! Vim pelo site da VIBE Design Tech e gostaria de agendar uma Análise de 20 minutos para o meu projeto.");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +30,7 @@ export default function FloatingWhatsApp() {
     >
       <div className="hidden sm:flex items-center gap-2 rounded-full border border-cyan/30 bg-black/90 px-3.5 py-1.5 shadow-2xl backdrop-blur-md">
         <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-        <span className="font-body text-xs font-semibold text-fg">Diagnóstico rápido no WhatsApp</span>
+        <span className="font-body text-xs font-semibold text-fg">Análise de 20 minutos no WhatsApp</span>
       </div>
 
       <a

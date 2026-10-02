@@ -61,7 +61,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                     onClick={onOpenBooking}
                     className="btn-cyan text-xs sm:text-sm whitespace-nowrap shadow-[0_0_25px_rgba(85,241,239,0.35)] transition-transform hover:scale-[1.03] active:scale-[0.98]"
                   >
-                    Agendar Análise de 20 min
+                    Agendar Análise de 20 minutos
                   </button>
                 ) : (
                   <a
@@ -70,7 +70,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                     rel="noopener noreferrer"
                     className="btn-cyan text-xs sm:text-sm whitespace-nowrap shadow-[0_0_25px_rgba(85,241,239,0.35)] transition-transform hover:scale-[1.03] active:scale-[0.98]"
                   >
-                    Agendar Análise de 20 min
+                    Agendar Análise de 20 minutos
                   </a>
                 )}
                 <a

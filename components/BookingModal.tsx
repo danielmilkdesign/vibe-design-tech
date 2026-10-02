@@ -37,7 +37,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     const finalGoal = goal.trim() || "Apresentação da esteira de crescimento VIBE";
-    const text = `Olá Victor e Daniel! Gostaria de agendar uma Análise Estratégica de 20 minutos:\n\n• Nome: ${name.trim()}\n• Segmento: ${segment}\n• Melhor período: ${period}\n• Objetivo: ${finalGoal}`;
+    const text = `Olá Victor e Daniel! Gostaria de agendar uma Análise de 20 minutos:\n\n• Nome: ${name.trim()}\n• Segmento: ${segment}\n• Melhor período: ${period}\n• Objetivo: ${finalGoal}`;
     const url = `https://wa.me/5592992027059?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
     onClose();
@@ -63,7 +63,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
             <div className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-cyan animate-pulse" />
               <p className="eyebrow text-cyan font-mono text-xs uppercase tracking-wider">
-                Análise Estratégica de 20 minutos
+                Análise de 20 minutos
               </p>
             </div>
             <h3 className="mt-1 font-display text-xl sm:text-2xl font-bold uppercase text-white">

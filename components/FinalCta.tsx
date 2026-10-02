@@ -31,7 +31,7 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
         <ScrollReveal direction="up" delay={50}>
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan/30 bg-cyan/10 px-4 py-1.5 text-xs font-mono font-semibold text-cyan mb-4 backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-cyan animate-pulse" />
-            <span>/ ANÁLISE ESTRATÉGICA SEM COMPROMISSO</span>
+            <span>/ ANÁLISE DE 20 MINUTOS SEM COMPROMISSO</span>
           </div>
         </ScrollReveal>
 
@@ -56,7 +56,7 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
                 onClick={onOpenBooking}
                 className="btn-cyan gap-3 px-8 py-4 font-body text-sm font-semibold transition-transform hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_35px_rgba(85,241,239,0.5)] cursor-pointer"
               >
-                <span>Agendar Análise de 20 min</span>
+                <span>Agendar Análise de 20 minutos</span>
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -68,7 +68,7 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
                 rel="noopener noreferrer"
                 className="btn-cyan gap-3 px-8 py-4 font-body text-sm font-semibold transition-transform hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_35px_rgba(85,241,239,0.5)]"
               >
-                <span>Agendar Análise de 20 min</span>
+                <span>Agendar Análise de 20 minutos</span>
               </a>
             )}
 

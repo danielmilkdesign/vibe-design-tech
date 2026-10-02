@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-6 text-center md:text-left md:flex-row border-b border-white/5 pb-8">
           <div>
             <Image
-              src="/LOGO VIBE TECH.png"
+              src="/logo-vibe-tech.png"
               alt="VIBE Design Tech"
               width={224}
               height={68}

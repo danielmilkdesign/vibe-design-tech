@@ -33,7 +33,7 @@ export default function Home() {
         <Problem />
         <WhatChanges />
         <SampleDelivery />
-        <HowItWorks />
+        <HowItWorks onOpenBooking={openBooking} />
         <Plans onOpenBooking={openBooking} />
         <About />
         <Faq />

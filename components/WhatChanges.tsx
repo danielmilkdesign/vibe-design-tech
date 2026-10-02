@@ -112,7 +112,7 @@ export default function WhatChanges() {
             </div>
 
             <div className="shrink-0 text-xs font-mono text-cyan/90 border border-cyan/30 rounded-full px-3.5 py-1.5 bg-cyan/10">
-              Zero Risco Ético
+              Ética em primeiro lugar
             </div>
           </div>
         </ScrollReveal>

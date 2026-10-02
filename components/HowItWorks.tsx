@@ -4,7 +4,11 @@ import React from "react";
 import ScrollReveal from "./ScrollReveal";
 import SpotlightCard from "./SpotlightCard";
 
-export default function HowItWorks() {
+interface HowItWorksProps {
+  onOpenBooking?: () => void;
+}
+
+export default function HowItWorks({ onOpenBooking }: HowItWorksProps) {
   const steps = [
     {
       num: "01",
@@ -151,25 +155,50 @@ export default function HowItWorks() {
             </div>
 
             <div>
-              <a
-                href="#final-cta"
-                className="btn-cyan group flex w-full md:w-auto items-center justify-center gap-2 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-black bg-cyan rounded-full px-6 py-3 transition-all hover:scale-[1.03] active:scale-[0.98] shadow-[0_18px_50px_-14px_rgba(85,241,239,0.55)]"
-              >
-                <span>QUERO AGENDAR MINHA ANÁLISE</span>
-                <svg
-                  className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
+              {onOpenBooking ? (
+                <button
+                  type="button"
+                  onClick={onOpenBooking}
+                  className="btn-cyan group flex w-full md:w-auto items-center justify-center gap-2 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-black bg-cyan rounded-full px-6 py-3 transition-all hover:scale-[1.03] active:scale-[0.98] shadow-[0_18px_50px_-14px_rgba(85,241,239,0.55)] cursor-pointer"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2.5"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  />
-                </svg>
-              </a>
+                  <span>Agendar Análise de 20 minutos</span>
+                  <svg
+                    className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2.5"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </button>
+              ) : (
+                <a
+                  href="https://wa.me/5592992027059?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20VIBE%20Design%20Tech%20e%20gostaria%20de%20agendar%20uma%20An%C3%A1lise%20de%2020%20minutos%20para%20o%20meu%20projeto."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-cyan group flex w-full md:w-auto items-center justify-center gap-2 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-black bg-cyan rounded-full px-6 py-3 transition-all hover:scale-[1.03] active:scale-[0.98] shadow-[0_18px_50px_-14px_rgba(85,241,239,0.55)]"
+                >
+                  <span>Agendar Análise de 20 minutos</span>
+                  <svg
+                    className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2.5"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </a>
+              )}
             </div>
           </div>
         </ScrollReveal>

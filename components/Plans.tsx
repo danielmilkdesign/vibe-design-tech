@@ -50,7 +50,7 @@ const plans: PlanItem[] = [
     id: "esteira-crescimento",
     name: "Esteira de Crescimento",
     tagline: "Site Exclusivo + Design para Redes Sociais & Assessoria Mensal.",
-    badge: "MAIS ESCOLHIDO • GERAÇÃO DE LEADS",
+    badge: "RECOMENDADO • GERAÇÃO DE LEADS",
     setupPrice: "R$ 2.200",
     monthlyPrice: "+ R$ 890/mês",
     billingDetail: "Setup do Site + Assessoria Mensal de Redes & Otimização",
@@ -66,7 +66,7 @@ const plans: PlanItem[] = [
       "Assessoria Mensal: Reuniões de calibração para vender mais",
     ],
     ownershipNote: "Domínio próprio garantido. Parceria contínua focada em geração real de leads e agendamentos.",
-    waMsg: "Olá! Gostaria de agendar uma análise para a Esteira de Crescimento (R$ 2.200 setup + R$ 890/mês).",
+    waMsg: "Olá! Gostaria de agendar uma Análise de 20 minutos para a Esteira de Crescimento (R$ 2.200 setup + R$ 890/mês).",
   },
   {
     id: "sistema-completo",
@@ -89,7 +89,7 @@ const plans: PlanItem[] = [
       "Consultoria contínua de tecnologia e arquitetura de produto",
     ],
     ownershipNote: "Código e infraestrutura dedicados com total autonomia para o seu negócio.",
-    waMsg: "Olá! Gostaria de um orçamento para o Sistema Sob Medida / Clínica Pro.",
+    waMsg: "Olá! Gostaria de agendar uma Análise de 20 minutos para o Sistema Sob Medida.",
   },
 ];
 
@@ -139,7 +139,7 @@ export default function Plans({ onOpenBooking }: PlansProps) {
             const currentBadge = isEsteira
               ? esteiraTier === "simples"
                 ? "5 ARTES • MANUTENÇÃO"
-                : "MAIS ESCOLHIDO • 12 ARTES & ASSESSORIA"
+                : "RECOMENDADO • 12 ARTES & ASSESSORIA"
               : plan.badge;
 
             const currentTagline = isEsteira
@@ -321,7 +321,7 @@ export default function Plans({ onOpenBooking }: PlansProps) {
                               : "btn-outline hover:border-cyan/50 hover:scale-[1.02]"
                           }`}
                         >
-                          Agendar Análise Estratégica
+                          Agendar Análise de 20 minutos
                         </button>
                       ) : (
                         <a

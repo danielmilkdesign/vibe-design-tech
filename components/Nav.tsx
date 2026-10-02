@@ -23,7 +23,7 @@ export default function Nav({ onOpenBooking }: NavProps) {
     <header className="fixed top-0 left-0 right-0 w-full z-50 border-b border-line bg-black/80 backdrop-blur-xl">
       <div className="container-vibe flex h-16 sm:h-20 md:h-24 items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
-          <Image src="/LOGO VIBE TECH.png" alt="VIBE Design Tech" width={264} height={80} priority className="h-8 sm:h-11 md:h-14 w-auto" />
+          <Image src="/logo-vibe-tech.png" alt="VIBE Design Tech" width={264} height={80} priority className="h-8 sm:h-11 md:h-14 w-auto" />
         </a>
 
         {/* Desktop nav */}
@@ -46,11 +46,11 @@ export default function Nav({ onOpenBooking }: NavProps) {
               onClick={onOpenBooking}
               className="pill-glass text-[10px] sm:text-xs px-3 py-1.5 sm:px-4 sm:py-2 transition-transform hover:scale-[1.03] cursor-pointer"
             >
-              <span className="dot"></span>Agendar análise
+              <span className="dot"></span>Análise de 20 minutos
             </button>
           ) : (
             <a href="#final-cta" className="pill-glass text-[10px] sm:text-xs px-3 py-1.5 sm:px-4 sm:py-2 transition-transform hover:scale-[1.03]">
-              <span className="dot"></span>Agendar análise
+              <span className="dot"></span>Análise de 20 minutos
             </a>
           )}
 

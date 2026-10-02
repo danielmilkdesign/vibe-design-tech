@@ -25,8 +25,10 @@ const body = localFont({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://vibe-design-tech.vercel.app";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://vibedesigntech.com.br"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "VIBE Design Tech — Quem tem presença própria não depende do Instagram para vender",
     template: "%s | VIBE Design Tech",
@@ -58,14 +60,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://vibedesigntech.com.br",
+    url: siteUrl,
     siteName: "VIBE Design Tech",
     title: "VIBE Design Tech — Quem tem presença própria não depende do Instagram para vender",
     description:
       "Criamos o site, a prova e o caminho até o agendamento para especialistas e empresas que hoje dependem do Instagram para vender.",
     images: [
       {
-        url: "/LOGO VIBE TECH.png",
+        url: "/logo-vibe-tech.png",
         width: 1200,
         height: 630,
         alt: "VIBE Design Tech — Presença Própria para Especialistas e Empresas",
@@ -77,7 +79,7 @@ export const metadata: Metadata = {
     title: "VIBE Design Tech — Quem tem presença própria não depende do Instagram para vender",
     description:
       "Criamos o site, a prova e o caminho até o agendamento para especialistas e empresas que hoje dependem do Instagram para vender.",
-    images: ["/LOGO VIBE TECH.png"],
+    images: ["/logo-vibe-tech.png"],
   },
   robots: {
     index: true,
@@ -107,12 +109,12 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://vibedesigntech.com.br/#organization",
+        "@id": `${siteUrl}/#organization`,
         "name": "VIBE Design Tech",
-        "url": "https://vibedesigntech.com.br",
+        "url": siteUrl,
         "logo": {
           "@type": "ImageObject",
-          "url": "https://vibedesigntech.com.br/LOGO%20VIBE%20TECH.png"
+          "url": `${siteUrl}/logo-vibe-tech.png`
         },
         "sameAs": [
           "https://instagram.com/vibedesigntech"
@@ -127,11 +129,11 @@ export default function RootLayout({
       },
       {
         "@type": "ProfessionalService",
-        "@id": "https://vibedesigntech.com.br/#service",
+        "@id": `${siteUrl}/#service`,
         "name": "VIBE Design Tech — Presença Própria para Especialistas e Empresas",
-        "url": "https://vibedesigntech.com.br",
+        "url": siteUrl,
         "parentOrganization": {
-          "@id": "https://vibedesigntech.com.br/#organization"
+          "@id": `${siteUrl}/#organization`
         },
         "description": "Criamos o site, a prova e o caminho até o agendamento para especialistas e empresas que hoje dependem do Instagram para vender.",
         "priceRange": "R$ 1.500 - R$ 15.000",

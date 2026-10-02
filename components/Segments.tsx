@@ -24,7 +24,7 @@ const segments: Segment[] = [
     title: "Empresas & Negócios",
     pain: "Dependência de indicações boca a boca, envio de propostas frias por PDF que ninguém lê e dificuldade de justificar valor diante da concorrência.",
     solution: "Posicionamento corporativo de alto padrão nas redes + site institucional que transmite solidez imediata e formulário inteligente de orçamento.",
-    sampleLink: "https://wa.me/5592992027059?text=Ol%C3%A1!%20Tenho%20uma%20empresa%20e%20gostaria%20de%20um%20diagn%C3%B3stico%20de%20vendas.",
+    sampleLink: "https://wa.me/5592992027059?text=Ol%C3%A1!%20Tenho%20uma%20empresa%20e%20gostaria%20de%20uma%20An%C3%A1lise%20de%2020%20minutos.",
     sampleLabel: "Consultoria para Empresas",
   },
   {
@@ -84,7 +84,7 @@ const segments: Segment[] = [
     title: "Demais Setores & Especialistas",
     pain: "Ter um excelente produto ou serviço, mas parecer amador na internet por não ter um ecossistema digital integrado, dependendo apenas de postagens avulsas.",
     solution: "Desenhamos a esteira ideal para o seu modelo de negócio: redes sociais com design de autoridade, site próprio de alta conversão e automações de vendas.",
-    sampleLink: "https://wa.me/5592992027059?text=Ol%C3%A1!%20Meu%20setor%20%C3%A9%20espec%C3%ADfico%20e%20gostaria%20de%20uma%20an%C3%A1lise.",
+    sampleLink: "https://wa.me/5592992027059?text=Ol%C3%A1!%20Meu%20setor%20%C3%A9%20espec%C3%ADfico%20e%20gostaria%20de%20uma%20An%C3%A1lise%20de%2020%20minutos.",
     sampleLabel: "Analisar Meu Setor",
     isFullWidth: true,
   },
