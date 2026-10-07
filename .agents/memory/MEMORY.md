@@ -1,5 +1,8 @@
 # Memory Index
 
+## User
+- [user] Sempre acionar as Squads e Agentes da Vibe Tech em qualquer criação de site, melhoria ou projeto → user-preferences.md
+
 ## Project
 - [project] Always create a new dedicated branch for major code changes → project-conventions.md
 - [project] AG Kit only supports Gemini CLI and Google Antigravity (not other AI coding tools) → project-conventions.md
