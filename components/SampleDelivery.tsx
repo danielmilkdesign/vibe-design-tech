@@ -54,6 +54,23 @@ const samples: SampleItem[] = [
       { title: "Agenda Integrada", subtitle: "Paciente escolhe o melhor horário", iconBg: "bg-[#55F1EF]", isPulse: true },
     ],
   },
+  {
+    id: "estetica",
+    tabLabel: "Clínica de Estética",
+    badge: "DESIGN EXCLUSIVO • AGENDAMENTO 24/7",
+    isLive: true,
+    name: "Lumière Estética Avançada",
+    segment: "Estética Avançada, Dermatologia & Spa",
+    headline: "Experiência de luxo com agendamento online inteligente.",
+    description: "Design exclusivo em paleta nude/caramelo inspirado em clínicas europeias de alto padrão. Catálogo de tratamentos, comparador Antes/Depois interativo e fluxo de agendamento em 4 etapas direto para o WhatsApp.",
+    urlDisplay: "lumiereestetica-jdxv.vercel.app",
+    linkUrl: "https://lumiereestetica-jdxv.vercel.app/",
+    image: "/site-estetica.png",
+    tags: [
+      { title: "Agendamento Integrado", subtitle: "Calendário interativo & seleção de slots", iconBg: "bg-[#B88A58]" },
+      { title: "Design Exclusivo Nude", subtitle: "Tipografia editorial & estética de luxo", iconBg: "bg-[#55F1EF]", isPulse: true },
+    ],
+  },
 ];
 
 export default function SampleDelivery() {
