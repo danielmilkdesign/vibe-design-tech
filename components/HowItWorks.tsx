@@ -61,13 +61,13 @@ export default function HowItWorks({ onOpenBooking }: HowItWorksProps) {
             <div className="max-w-2xl">
               <p className="eyebrow text-cyan">/ Como funciona</p>
               <h2 className="mt-4 font-display text-3xl sm:text-5xl md:text-6xl font-extrabold uppercase leading-[1.02] text-fg break-words">
-                EM 20 MINUTOS, VOCÊ SAI
+                EM 30 MINUTOS, VOCÊ SAI
                 <br />
                 <span className="text-cyan glow-cyan">COM CLAREZA.</span>
               </h2>
             </div>
             <p className="max-w-md text-sm sm:text-base text-fg-muted leading-relaxed">
-              A análise de 20 minutos não é uma conversa genérica. A gente olha para o seu
+              A análise de 30 minutos não é uma conversa genérica. A gente olha para o seu
               momento e mostra uma estrutura adequada para o seu negócio.
             </p>
           </div>
@@ -150,7 +150,7 @@ export default function HowItWorks({ onOpenBooking }: HowItWorksProps) {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span>Duração aproximada: 20 minutos</span>
+                <span>Duração aproximada: 30 minutos</span>
               </div>
             </div>
 
@@ -161,7 +161,7 @@ export default function HowItWorks({ onOpenBooking }: HowItWorksProps) {
                   onClick={onOpenBooking}
                   className="btn-cyan group flex w-full md:w-auto items-center justify-center gap-2 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-black bg-cyan rounded-full px-6 py-3 transition-all hover:scale-[1.03] active:scale-[0.98] shadow-[0_18px_50px_-14px_rgba(85,241,239,0.55)] cursor-pointer"
                 >
-                  <span>Agendar Análise de 20 minutos</span>
+                  <span>Agendar Análise de 30 minutos</span>
                   <svg
                     className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
                     viewBox="0 0 24 24"
@@ -178,12 +178,12 @@ export default function HowItWorks({ onOpenBooking }: HowItWorksProps) {
                 </button>
               ) : (
                 <a
-                  href="https://wa.me/5592992027059?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20VIBE%20Design%20Tech%20e%20gostaria%20de%20agendar%20uma%20An%C3%A1lise%20de%2020%20minutos%20para%20o%20meu%20projeto."
+                  href="https://wa.me/5592992027059?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20VIBE%20Design%20Tech%20e%20gostaria%20de%20agendar%20uma%20An%C3%A1lise%20de%2030%20minutos%20para%20o%20meu%20projeto."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-cyan group flex w-full md:w-auto items-center justify-center gap-2 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-black bg-cyan rounded-full px-6 py-3 transition-all hover:scale-[1.03] active:scale-[0.98] shadow-[0_18px_50px_-14px_rgba(85,241,239,0.55)]"
                 >
-                  <span>Agendar Análise de 20 minutos</span>
+                  <span>Agendar Análise de 30 minutos</span>
                   <svg
                     className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
                     viewBox="0 0 24 24"

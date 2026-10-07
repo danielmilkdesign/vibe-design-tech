@@ -25,7 +25,7 @@ const faqItems = [
       "Conhecemos as restrições éticas de cada categoria — como as regras do CFN sobre garantias de emagrecimento, as normas do CREFITO e CFM sobre mercantilização e a vedação rigorosa do CFP sobre antes/depois. Construímos uma autoridade elegante baseada em depoimentos e metodologia, sem risco de você receber notificações do seu conselho de classe.",
   },
   {
-    question: "O que acontece na Análise de 20 minutos?",
+    question: "O que acontece na Análise de 30 minutos?",
     answer:
       "É uma reunião rápida e objetiva com os fundadores da VIBE. Nós analisamos seu momento, mapeamos os gargalos de conversão do seu direct e apresentamos a estrutura de presença própria mais adequada. A contratação só acontece se você enxergar retorno real para o seu negócio.",
   },

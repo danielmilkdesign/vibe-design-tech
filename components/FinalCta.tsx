@@ -10,7 +10,7 @@ interface FinalCtaProps {
 export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
   const waLink =
     "https://wa.me/5592992027059?text=" +
-    encodeURIComponent("Olá! Vim pelo site da VIBE Design Tech e gostaria de agendar uma Análise de 20 minutos para o meu projeto.");
+    encodeURIComponent("Olá! Vim pelo site da VIBE Design Tech e gostaria de agendar uma Análise de 30 minutos para o meu projeto.");
 
   return (
     <section id="final-cta" className="relative overflow-hidden border-b border-line py-16 sm:py-24 md:py-32 bg-[#020507]">
@@ -31,14 +31,14 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
         <ScrollReveal direction="up" delay={50}>
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan/30 bg-cyan/10 px-4 py-1.5 text-xs font-mono font-semibold text-cyan mb-4 backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-cyan animate-pulse" />
-            <span>/ ANÁLISE DE 20 MINUTOS SEM COMPROMISSO</span>
+            <span>/ ANÁLISE DE 30 MINUTOS SEM COMPROMISSO</span>
           </div>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={150}>
           <h2 className="mx-auto max-w-3xl font-display text-3xl sm:text-5xl md:text-6xl font-extrabold uppercase leading-[1.02] text-fg break-words">
             Sua presença própria começa numa <br />
-            <span className="text-cyan glow-cyan">conversa de 20 minutos.</span>
+            <span className="text-cyan glow-cyan">conversa de 30 minutos.</span>
           </h2>
         </ScrollReveal>
 
@@ -56,7 +56,7 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
                 onClick={onOpenBooking}
                 className="btn-cyan gap-3 px-8 py-4 font-body text-sm font-semibold transition-transform hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_35px_rgba(85,241,239,0.5)] cursor-pointer"
               >
-                <span>Agendar Análise de 20 minutos</span>
+                <span>Agendar Análise de 30 minutos</span>
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -68,7 +68,7 @@ export default function FinalCta({ onOpenBooking }: FinalCtaProps) {
                 rel="noopener noreferrer"
                 className="btn-cyan gap-3 px-8 py-4 font-body text-sm font-semibold transition-transform hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_35px_rgba(85,241,239,0.5)]"
               >
-                <span>Agendar Análise de 20 minutos</span>
+                <span>Agendar Análise de 30 minutos</span>
               </a>
             )}
 

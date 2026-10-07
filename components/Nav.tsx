@@ -46,11 +46,11 @@ export default function Nav({ onOpenBooking }: NavProps) {
               onClick={onOpenBooking}
               className="pill-glass text-[10px] sm:text-xs px-3 py-1.5 sm:px-4 sm:py-2 transition-transform hover:scale-[1.03] cursor-pointer"
             >
-              <span className="dot"></span>Análise de 20 minutos
+              <span className="dot"></span>Análise de 30 minutos
             </button>
           ) : (
             <a href="#final-cta" className="pill-glass text-[10px] sm:text-xs px-3 py-1.5 sm:px-4 sm:py-2 transition-transform hover:scale-[1.03]">
-              <span className="dot"></span>Análise de 20 minutos
+              <span className="dot"></span>Análise de 30 minutos
             </a>
           )}
 

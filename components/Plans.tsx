@@ -66,7 +66,7 @@ const plans: PlanItem[] = [
       "Assessoria Mensal: Reuniões de calibração para vender mais",
     ],
     ownershipNote: "Domínio próprio garantido. Parceria contínua focada em geração real de leads e agendamentos.",
-    waMsg: "Olá! Gostaria de agendar uma Análise de 20 minutos para a Esteira de Crescimento (R$ 2.200 setup + R$ 890/mês).",
+    waMsg: "Olá! Gostaria de agendar uma Análise de 30 minutos para a Esteira de Crescimento (R$ 2.200 setup + R$ 890/mês).",
   },
   {
     id: "sistema-completo",
@@ -89,7 +89,7 @@ const plans: PlanItem[] = [
       "Consultoria contínua de tecnologia e arquitetura de produto",
     ],
     ownershipNote: "Código e infraestrutura dedicados com total autonomia para o seu negócio.",
-    waMsg: "Olá! Gostaria de agendar uma Análise de 20 minutos para o Sistema Sob Medida.",
+    waMsg: "Olá! Gostaria de agendar uma Análise de 30 minutos para o Sistema Sob Medida.",
   },
 ];
 
@@ -321,7 +321,7 @@ export default function Plans({ onOpenBooking }: PlansProps) {
                               : "btn-outline hover:border-cyan/50 hover:scale-[1.02]"
                           }`}
                         >
-                          Agendar Análise de 20 minutos
+                          Agendar Análise de 30 minutos
                         </button>
                       ) : (
                         <a

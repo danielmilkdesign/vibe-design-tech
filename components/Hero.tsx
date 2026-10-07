@@ -61,16 +61,16 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                     onClick={onOpenBooking}
                     className="btn-cyan text-xs sm:text-sm whitespace-nowrap shadow-[0_0_25px_rgba(85,241,239,0.35)] transition-transform hover:scale-[1.03] active:scale-[0.98]"
                   >
-                    Agendar Análise de 20 minutos
+                    Agendar Análise de 30 minutos
                   </button>
                 ) : (
                   <a
-                    href="https://wa.me/5592992027059?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20VIBE%20Design%20Tech%20e%20gostaria%20de%20uma%20an%C3%A1lise%20de%2020%20minutos%20para%20o%20meu%20projeto."
+                    href="https://wa.me/5592992027059?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20VIBE%20Design%20Tech%20e%20gostaria%20de%20uma%20an%C3%A1lise%20de%2030%20minutos%20para%20o%20meu%20projeto."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-cyan text-xs sm:text-sm whitespace-nowrap shadow-[0_0_25px_rgba(85,241,239,0.35)] transition-transform hover:scale-[1.03] active:scale-[0.98]"
                   >
-                    Agendar Análise de 20 minutos
+                    Agendar Análise de 30 minutos
                   </a>
                 )}
                 <a
