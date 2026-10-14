@@ -28,7 +28,7 @@ const plans: PlanItem[] = [
     name: "Presença Própria",
     tagline: "Estrutura validada com identidade personalizada",
     badge: "ENTRADA RÁPIDA • ESTRUTURA VALIDADA",
-    setupPrice: "R$ 1.500",
+    setupPrice: "R$ 1.200",
     monthlyPrice: "+ R$ 99/mês",
     billingDetail: "Setup em até 3x • Hospedagem e suporte inclusos",
     deliveryTime: "Entrega em até 7 dias úteis",
@@ -44,7 +44,7 @@ const plans: PlanItem[] = [
       "Design 100% responsivo para celular, tablet e computador",
     ],
     ownershipNote: "O domínio é 100% seu. Cancele a hospedagem quando quiser sem multas.",
-    waMsg: "Olá! Gostaria de saber mais sobre o plano Presença Própria (R$ 1.500 setup + R$ 99/mês).",
+    waMsg: "Olá! Gostaria de saber mais sobre o plano Presença Própria (R$ 1.200 setup + R$ 99/mês).",
   },
   {
     id: "esteira-crescimento",

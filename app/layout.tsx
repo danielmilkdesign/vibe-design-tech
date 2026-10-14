@@ -139,7 +139,7 @@ export default function RootLayout({
           "@id": `${siteUrl}/#organization`
         },
         "description": "Criamos o site, a prova e o caminho até o agendamento para especialistas e empresas que hoje dependem do Instagram para vender.",
-        "priceRange": "R$ 1.500 - R$ 15.000",
+        "priceRange": "R$ 1.200 - R$ 15.000",
         "telephone": "+55-92-99202-7059",
         "areaServed": {
           "@type": "Country",
@@ -156,7 +156,7 @@ export default function RootLayout({
                 "name": "Site Base / Estrutura Validada",
                 "description": "One-page profissional com identidade personalizada, vitrine, sobre, serviços e integração com WhatsApp em até 7 dias."
               },
-              "price": "1500.00",
+              "price": "1200.00",
               "priceCurrency": "BRL"
             },
             {
